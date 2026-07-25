@@ -1,0 +1,13 @@
+title: 'Einführung'
+format:
+  html:
+    code-links:
+      - text: In Colab öffnen
+        icon: rocket-takeoff
+        href: https://colab.research.google.com/github/SkriptenMk/I_bW_26-30/blob/main/notebooks/260818_einfuehrung/260818_einfuehrung.ipynb
+      - text: In Binder öffnen
+        icon: box-arrow-up-right
+        href: https://mybinder.org/v2/gh/SkriptenMk/I_bW_26-30/main?labpath=notebooks%2F260818_einfuehrung%2F260818_einfuehrung.ipynb
+      - text: Notebook herunterladen
+        icon: download
+        href: 260818_einfuehrung.ipynb

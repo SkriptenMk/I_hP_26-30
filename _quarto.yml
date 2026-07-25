@@ -18,9 +18,9 @@ book:
     - index.qmd
     - part: "Einführung"
       chapters:
-        - notebooks/260818_einfuehrung/260818_einfuehrung.ipynb
-        - notebooks/260825_arbeitsumgebung/260825_arbeitsumgebung.ipynb
-        - notebooks/260825_einf_python/260825_einf_python.ipynb
+        - notebooks/260819_einfuehrung/260819_einfuehrung.ipynb
+        - notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.ipynb
+        - notebooks/260826_einf_python/260826_einf_python.ipynb
 
 format:
   html:

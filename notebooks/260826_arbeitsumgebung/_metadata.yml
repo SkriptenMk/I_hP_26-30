@@ -1,0 +1,12 @@
+format:
+  html:
+    code-links:
+      - text: In Colab öffnen
+        icon: rocket-takeoff
+        href: https://colab.research.google.com/github/SkriptenMk/I_bW_26-30/blob/main/notebooks/260825_arbeitsumgebung/260825_arbeitsumgebung.ipynb
+      - text: In Binder öffnen
+        icon: box-arrow-up-right
+        href: https://mybinder.org/v2/gh/SkriptenMk/I_bW_26-30/main?labpath=notebooks%2F260825_arbeitsumgebung%2F260825_arbeitsumgebung.ipynb
+      - text: Notebook herunterladen
+        icon: download
+        href: 260825_arbeitsumgebung.ipynb
