@@ -10,7 +10,26 @@ Das Programm entspricht dem aktuellen Stand der Planung. Es kann zu
 
 | Datum | Thema |
 | ----- | ----- |
-
+| 19.08.2026 | Einstieg und Arbeitsumgebung |
+| 26.08.2026 | Arbeitsumgebung Jupyter Notebooks |
+| 02.09.2026 | Problemlösung: Flaggen zeichnen I |
+| 09.09.2026 | Problemlösung: Flaggen zeichnen II |
+| 16.09.2026 | Variabeln in Python I |
+| 23.09.2026 | Variabeln in Python II |
+| 21.10.2026 | Wiederholungen: For-Loops |
+| 28.10.2026 | For-Loops: Anwendungsübung |
+| 04.11.2026 | Programmverzweigungen |
+| 11.11.2026 | Einfache Funktionen und Prüfungsvorbereitung |
+| 18.11.2026 | Prüfung 1: Python-Grundlagen |
+| 25.11.2026 | Datenstrukturen: Listen I |
+| 02.12.2026 | Datenstrukturen: Listen II |
+| 09.12.2026 | Datenstrukturen: Listen III |
+| 16.12.2026 | Datenstrukturen: Dictionary |
+| 06.01.2027 | Beurteilung von Algorithmen |
+| 13.01.2027 | Prüfungsvorbereitung 2 |
+| 20.01.2027 | Prüfung 2: Listen, Dictionaries, Sortieralgorithmen |
+| 27.01.2027 | Divide and Conquer: Rekursion |
+| 03.02.2027 | Rekursion II und Semesterabschluss |
 
 ## Hilfsmittel für den Unterricht {.unnumbered}
 
