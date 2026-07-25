@@ -1,0 +1,6 @@
+# requirements.txt — nur direkte Abhängigkeiten der Notebooks
+jupyterlab
+matplotlib
+numpy
+pandas
+pytamaro

@@ -1,0 +1,58 @@
+# Obligatorisches Fach Informatik (1bW) {.unnumbered}
+
+In diesem Repository werden die Unterlagen für das obligatorische Fach Informatik zur Verfügung gestellt.
+
+## Programm {.unnumbered}
+
+Das Programm entspricht dem aktuellen Stand der Planung. Es kann zu
+Änderungen kommen.
+
+
+| Datum | Thema |
+| ----- | ----- |
+| 18.08.2026 | Einstieg und Arbeitsorganisation |
+| 25.08.2026 | Arbeitsumgebung Jupyter Notebooks |
+| 01.09.2026 | Problemlösung: Flaggen zeichnen I |
+| 08.09.2026 | Problemlösung: Flaggen zeichnen II |
+| 15.09.2026 | Variabeln in Python I |
+| 22.09.2026 | Variabeln in Python II |
+| 20.10.2026 | Wiederholungen: For-Loops |
+| 27.10.2026 | For-Loops: Anwendungsübung |
+| 03.11.2026 | Programmverzweigungen |
+| 10.11.2026 | Einfache Funktionen und Prüfungsvorbereitung |
+| 17.11.2026 | Prüfung 1: Python-Grundlagen |
+| 24.11.2026 | Datenstrukturen: Listen I |
+| 01.12.2026 | Datenstrukturen: Listen II |
+| 08.12.2026 | Datenstrukturen: Listen III |
+| 15.12.2026 | Datenstrukturen: Dictionary |
+| 05.01.2027 | Beurteilung von Algorithmen |
+| 12.01.2027 | Prüfungsvorbereitung 2 |
+| 19.01.2027 | Prüfung 2: Listen,  Dictionaries,  Sortieralgorithmen |
+| 26.01.2027 | Divide and Conquer: Rekursion |
+| 02.02.2027 | Rekursion II und Semesterabschluss |
+
+
+## Hilfsmittel für den Unterricht {.unnumbered}
+
+Der Unterricht findet über weite Strecken am Computer statt. Die Anleitungen
+für die Installation von Python bzw. der Jupyter Notebooks sind in der
+Seitenliste aufrufbar.
+
+
+## Beurteilung {.unnumbered}
+
+Die Note wird aus dem Durchschnitt der beiden schriftlichen Prüfungen
+sowie der Benotung der mündlichen Beteiligung berechnet. Der
+Durchschnitt der Prüfungen zählt zu 90%, die mündliche Beteiligung zu
+10%.  
+Ab dem zweiten Semester wird konstruktive Kritik an den Unterlagen,
+welche durch ein mir zugewiesenes Issue (der Zugang findet sich unter dem
+GitHub-Logo
+![](octocat_klein.png) 
+in der Kopfzeile) eingebracht wird, mit maximal einem
+Notenpunkt auf die jeweils thematisch passende Prüfung angerechnet.
+
+Falls jemand eine persönliche Besprechung wünscht, 
+<a href="https://calendar.app.google/UynTL5ttVPHhK1Hc8" target="_blank">
+kann hier einen Termin für eine Sprechstunde reserviert werden
+(Rent-A-Mock)</a>.
