@@ -1,0 +1,174 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Unterlagen für das obligatorische Fach Informatik in der Klasse 1bW",
+    "section": "",
+    "text": "Obligatorisches Fach Informatik (1bW)\nIn diesem Repository werden die Unterlagen für das obligatorische Fach Informatik zur Verfügung gestellt.",
+    "crumbs": [
+      "Obligatorisches Fach Informatik (1bW)"
+    ]
+  },
+  {
+    "objectID": "index.html#programm",
+    "href": "index.html#programm",
+    "title": "Unterlagen für das obligatorische Fach Informatik in der Klasse 1bW",
+    "section": "Programm",
+    "text": "Programm\nDas Programm entspricht dem aktuellen Stand der Planung. Es kann zu Änderungen kommen.\n\n\n\nDatum\nThema\n\n\n\n\n19.08.2026\nEinstieg und Arbeitsumgebung\n\n\n26.08.2026\nArbeitsumgebung Jupyter Notebooks\n\n\n02.09.2026\nProblemlösung: Flaggen zeichnen I\n\n\n09.09.2026\nProblemlösung: Flaggen zeichnen II\n\n\n16.09.2026\nVariabeln in Python I\n\n\n23.09.2026\nVariabeln in Python II\n\n\n21.10.2026\nWiederholungen: For-Loops\n\n\n28.10.2026\nFor-Loops: Anwendungsübung\n\n\n04.11.2026\nProgrammverzweigungen\n\n\n11.11.2026\nEinfache Funktionen und Prüfungsvorbereitung\n\n\n18.11.2026\nPrüfung 1: Python-Grundlagen\n\n\n25.11.2026\nDatenstrukturen: Listen I\n\n\n02.12.2026\nDatenstrukturen: Listen II\n\n\n09.12.2026\nDatenstrukturen: Listen III\n\n\n16.12.2026\nDatenstrukturen: Dictionary\n\n\n06.01.2027\nBeurteilung von Algorithmen\n\n\n13.01.2027\nPrüfungsvorbereitung 2\n\n\n20.01.2027\nPrüfung 2: Listen, Dictionaries, Sortieralgorithmen\n\n\n27.01.2027\nDivide and Conquer: Rekursion\n\n\n03.02.2027\nRekursion II und Semesterabschluss",
+    "crumbs": [
+      "Obligatorisches Fach Informatik (1bW)"
+    ]
+  },
+  {
+    "objectID": "index.html#hilfsmittel-für-den-unterricht",
+    "href": "index.html#hilfsmittel-für-den-unterricht",
+    "title": "Unterlagen für das obligatorische Fach Informatik in der Klasse 1bW",
+    "section": "Hilfsmittel für den Unterricht",
+    "text": "Hilfsmittel für den Unterricht\nDer Unterricht findet über weite Strecken am Computer statt. Die Anleitungen für die Installation von Python bzw. der Jupyter Notebooks sind in der Seitenliste aufrufbar.",
+    "crumbs": [
+      "Obligatorisches Fach Informatik (1bW)"
+    ]
+  },
+  {
+    "objectID": "index.html#beurteilung",
+    "href": "index.html#beurteilung",
+    "title": "Unterlagen für das obligatorische Fach Informatik in der Klasse 1bW",
+    "section": "Beurteilung",
+    "text": "Beurteilung\nDie Note wird aus dem Durchschnitt der beiden schriftlichen Prüfungen sowie der Benotung der mündlichen Beteiligung berechnet. Der Durchschnitt der Prüfungen zählt zu 90%, die mündliche Beteiligung zu 10%.\nAb dem zweiten Semester wird konstruktive Kritik an den Unterlagen, welche durch ein mir zugewiesenes Issue (der Zugang findet sich unter dem GitHub-Logo  in der Kopfzeile) eingebracht wird, mit maximal einem Notenpunkt auf die jeweils thematisch passende Prüfung angerechnet.\nFalls jemand eine persönliche Besprechung wünscht,  kann hier einen Termin für eine Sprechstunde reserviert werden (Rent-A-Mock).",
+    "crumbs": [
+      "Obligatorisches Fach Informatik (1bW)"
+    ]
+  },
+  {
+    "objectID": "notebooks/260819_einfuehrung/260819_einfuehrung.html",
+    "href": "notebooks/260819_einfuehrung/260819_einfuehrung.html",
+    "title": "1  ‘Organisation’ von Information auf einem Computer",
+    "section": "",
+    "text": "1.1 In welcher Form Daten auf dem Computer abgelegt werden\nUm eine wissenschaftliche Disziplin zu beschreiben, hilft es, wenn man sich überlegt, welche Frage sie in ihrem Kern zu beantworten versucht. Diese Grundfrage lautet für die Informatik:\nKann diese Aufgabe algorithmisch gelöst werden?\nBevor wir uns dieser Grundfrage nähern, müssen wir allerdings klären, in welcher Umgebung Algorithmen verarbeitet werden. In der Informatik ist das der Computer.\nEin Algorithmus muss Daten lesen, verändern und abspeichern können. Aus Sicht der Software wird Information dabei auf dem Computer primär in zwei grundlegenden Kategorien verwaltet:\nInformation bzw. Daten werden auf dem Computer als Datei (engl. File) gespeichert. Dabei werden im Alltag zwei grundlegende Arten von Dateien unterschieden:",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260819_einfuehrung/260819_einfuehrung.html#in-welcher-form-daten-auf-dem-computer-abgelegt-werden",
+    "href": "notebooks/260819_einfuehrung/260819_einfuehrung.html#in-welcher-form-daten-auf-dem-computer-abgelegt-werden",
+    "title": "1  ‘Organisation’ von Information auf einem Computer",
+    "section": "",
+    "text": "Binärdateien\nTextdateien\n\n\n1.1.1 Binärdateien\nBinärdateien sind Dateien, die nur mit einem spezifischen Programm sinnvoll gelesen und bearbeitet werden können. Ein Beispiel für eine Binärdatei ist eine Word-Datei. Die Datei text.docx kann nur in Word oder in Programmen, welche Word-kompatibel sind, korrekt angezeigt und bearbeitet werden. Ein anderes Beispiel ist eine PDF-Datei (text.pdf), die einen PDF-Reader benötigt. Versucht man, eine solche Datei in einem einfachen Texteditor zu öffnen, sieht man meist nur einen unleserlichen Buchstabensalat.\n\n\n1.1.2 Textdateien\nEine Textdatei kann im Gegensatz dazu in jedem beliebigen Texteditor geöffnet und sofort gelesen werden. Ein Texteditor ist ein einfaches Programm, mit welchem reiner Text verarbeitet wird. Reiner Text zeichnet sich durch das Fehlen jeglicher optischer Formatierungen (wie Fettgedrucktes, unterschiedliche Schriftgrössen oder Farben) aus. Entsprechend besitzen diese Editoren auch keine Formatierungsmenüs. Optisch erinnern sie ein bisschen an ein weisses Blatt Papier in einer Schreibmaschine.\nGenau genommen bestehen alle Dateien aus Bits; bei Textdateien folgt deren Interpretation aber einem allgemein bekannten Standard.\nTexteditoren sind in allen Betriebssystemen vorinstalliert:\n\nUnter Windows heisst dieses Standardprogramm schlicht Editor (bzw. Notepad).\nAuf dem Mac nutzt man dafür TextEdit (wobei man das Programm erst über das Menü „Format“ in den Modus „In reinen Text umwandeln“ versetzen muss).\nWer auf einem Linux-Rechner arbeitet, nutzt meist Editoren wie Nano, Gedit oder Vim.",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260819_einfuehrung/260819_einfuehrung.html#die-organisation-des-massenspeichers-unter-windows",
+    "href": "notebooks/260819_einfuehrung/260819_einfuehrung.html#die-organisation-des-massenspeichers-unter-windows",
+    "title": "1  ‘Organisation’ von Information auf einem Computer",
+    "section": "1.2 Die Organisation des Massenspeichers unter Windows",
+    "text": "1.2 Die Organisation des Massenspeichers unter Windows\nText- und Binärdateien werden im Massenspeicher abgelegt. Die nächste Hürde, die es zu überwinden gilt, ist die Organisation der Dateiablage. Auf einem Computer sind unzählige Dateien gespeichert. Um den Überblick zu behalten, ist der Massenspeicher hierarchisch in einer Ordnerstruktur (auch Verzeichnisstruktur genannt) organisiert.\nUnter Windows 11 wird jedes Speichergerät mit einem Laufwerksbuchstaben, gefolgt von einem Doppelpunkt, gekennzeichnet.\n\n1.2.1 Der Start bei „C:“ – Ein historisches Überbleibsel\nWer den Windows-Explorer öffnet, sieht fast immer ein Hauptlaufwerk namens C: (oft beschriftet mit „Lokaler Datenträger“). Auf diesem Laufwerk ist das Betriebssystem Windows 11 selbst sowie all deine installierten Programme und persönlichen Daten abgelegt.\nDass das Hauptlaufwerk den Buchstaben C trägt, liegt an der technischen Entwicklungsgeschichte der Computerspeicher. Laufwerk A: und B: waren Anfangs der 1980er-Jahren für Diskettenlaufwerke (Floppy Disks) reserviert. Speicher war extrem teuer, Computer verfügten daher noch nicht über interne Festplatten. Das Betriebssystem wurde daher über eine Diskette im Laufwerk A: gestartet. Die eigenen Dateien speicherte man auf einer zweiten Diskette im Laufwerk B:. Laufwerk C: kam erst ins Spiel, als die ersten Festplatten für PCs auf den Markt kamen. Da A: und B: bereits fest für die Disketten verplant waren, bekam die Festplatte einfach den nächsten freien Buchstaben: das C:.\n\n\n1.2.2 Weitere Buchstaben im Alphabet\nWenn zusätzliche Speichermedien am Computer angeschlossen werden, verteilt Windows die nächsten freien Buchstaben im Alphabet einfach weiter. D:, E:, F:… werden für weitere eingebaute Festplatten, DVD-Laufwerke oder eingesteckte USB-Sticks und externe Festplatten verwendet. Netzlaufwerke, wie beispielsweise ein Schulserver, werden ebenfalls als Laufwerke eingebunden. Um Verwechslungen zu vermeiden, werden dafür oft Buchstaben vom Ende des Alphabets (wie z. B. Z:) verwendet.",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260819_einfuehrung/260819_einfuehrung.html#die-dateiadresse",
+    "href": "notebooks/260819_einfuehrung/260819_einfuehrung.html#die-dateiadresse",
+    "title": "1  ‘Organisation’ von Information auf einem Computer",
+    "section": "1.3 Die Dateiadresse",
+    "text": "1.3 Die Dateiadresse\nDamit eine Datei auf dem Computer angezeigt bzw. bearbeitet werden kann, muss sie über eine Adresse bzw. den sogenannten Pfad angesprochen werden können.\n\n1.3.1 Wie ein Pfad aufgebaut ist\nEin typischer Pfad unter Windows 11 sieht beispielsweise so aus:\nC:\\Schule\\Informatik\\hausaufgabe.txt\nVon links nach rechts gelesen, beginnt der Pfad mit dem Buchstaben des Laufwerks. Anschliessend kommt ein Ordner (hier Schule) und dann ein Unterordner (hier Informatik) und dann die Datei (hier hausaufgabe.txt). Die Anzahl der Unterordner ist dabei theoretisch unbegrenzt. Windows trennt dabei die einzelnen Ebenen durch einen Backslash (\\) voneinander ab.\nWindows nutzt traditionell den nach links geneigten Backslash (im Schweizerdeutschen Tastaturlayout erzeugt über die Tastenkombination Alt Gr + &lt;). Das ist ein historisches Erbe aus den Urzeiten von Microsofts Betriebssystem DOS. Fast der ganze Rest der Computerwelt - darunter das Internet (URLs wie [https://google.com/suche](https://google.com/suche); eine URL funktioniert nach demselben Prinzip wie ein Dateipfad: eine hierarchische Adresse), macOS, iPhones und Linux - nutzt den nach rechts geneigten normalen Schrägstrich (/).",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Einführung</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.html",
+    "href": "notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.html",
+    "title": "2  Einrichten der Arbeitsumgebung",
+    "section": "",
+    "text": "2.1 Installation von Python\nIm Unterricht arbeiten wir mit der Programmiersprache Python. Über weite Strecken verwenden wir sogenannte Jupyter Notebooks, in denen Text und ausführbare Programmteile (Code-Snippets) direkt kombiniert werden können.\nIm Hintergrund sind diese Notebooks wie reine Textdateien aufgebaut. Damit wir sie im Unterricht komfortabel und übersichtlich bearbeiten können, nutzen wir einen modernen Editor: Visual Studio Code (kurz VS Code). Diese Software hat sich weltweit als Standard etabliert.\nIm Folgenden wird die Installation der erforderlichen Programme Schritt für Schritt erklärt.\nIn der Grundinstallation von Windows 11 ist Python nicht installiert. Hier finden Sie die Schritt für Schritt Anleitung zur Installation von Python in der im Unterricht verwendeten Version.",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Einrichten der Arbeitsumgebung</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.html#installation-von-python",
+    "href": "notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.html#installation-von-python",
+    "title": "2  Einrichten der Arbeitsumgebung",
+    "section": "",
+    "text": "Rufen Sie die Seite python.org auf.\nWählen Sie den Menüpunkt Downloads.\nKlicken Sie auf die Schaltfläche Download Python install manager. In der Grundeinstellung wird der Python-Installer im Ordner Downloads abgelegt. Allenfalls öffnet sich ein Dialogfenster, in dem der Speicherort ausgewählt werden kann. Wählen Sie den Ordner Downloads.\nÖffnen Sie den Dateimanager (Windows Explorer) und navigieren Sie in den Ordner Downloads.\nStarten Sie die Installation durch Doppelklick auf die Datei python-manager-xx.x. Im sich öffnenden Dialogfenster klicken Sie auf die Schaltfläche Install Python.\nDer Installer stellt im Terminal mehrere Fragen. Beantworten Sie alle mit y und Enter. Einzige Ausnahme: Die Frage, ob die Online-Hilfe angezeigt werden soll, beantworten Sie mit n.\nKontrollieren Sie die Installation. Öffnen Sie dazu ein Terminal (Windows-Menü, nach Terminal suchen, Öffnen klicken). Im sich öffnenden Terminal geben Sie python ein und bestätigen die Eingabe durch die Enter-Taste. Im Terminal erscheinen auf der untersten Zeile &gt;&gt;&gt; als Eingabeaufforderung. Schreiben Sie\nprint('Hello World')\nbestätigen Sie diese Eingabe durch die Enter-Taste. Im Terminal sollte Hello World ausgegeben werden. Wenn das geklappt hat, haben Sie erfolgreich Ihren ersten Python-Befehl ausgeführt. Sie können Python beenden, indem Sie quit() eingeben und durch die Enter-Taste bestätigen. Das Terminal schliessen Sie durch die Eingabe von exit und die Bestätigung durch die Enter-Taste.",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Einrichten der Arbeitsumgebung</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.html#installation-von-visual-studio-code-vs-code",
+    "href": "notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.html#installation-von-visual-studio-code-vs-code",
+    "title": "2  Einrichten der Arbeitsumgebung",
+    "section": "2.2 Installation von Visual Studio Code (VS Code)",
+    "text": "2.2 Installation von Visual Studio Code (VS Code)\n\nRufen Sie die Seite https://code.visualstudio.com/download (kurz-URL https://t1p.de/jt3ge) auf.\nKlicken Sie die Schaltfläche Windows. In der Grundeinstellung wird der VS Code-Installer im Ordner Downloads abgelegt. Allenfalls öffnet sich ein Dialogfenster, in dem der Speicherort ausgewählt werden kann. Wählen Sie den Ordner Downloads.\nÖffnen Sie den Dateimanager (Windows Explorer) und navigieren Sie in den Ordner Downloads.\nStarten Sie die Installation durch Doppelklick auf die Datei VSCodeUserSetup-x64-xxx. Im sich öffnenden Dialogfenster akzeptieren Sie die Lizenzbedingungen und klicken Sie auf Weiter.\nAkzeptieren Sie den Standard-Ziel-Ordner durch Weiter.\nAkzeptieren Sie den Startmenü-Ordner mit Weiter.\nIm Dialog Zusätzliche Aufgaben auswählen kreuzen Sie die vier untersten Boxen an.\nBestätigen Sie alle getroffenen Wahlmöglichkeiten durch Installieren.\nSchliessen Sie die Installation durch klicken auf Fertigstellen ab.\nWenn sich VS Code zum ersten Mal öffnet, klicken Sie Continue without Signing in.\nWählen Sie im nächsten Dialog ein Farbschema, das Ihnen gefällt und bestätigen Sie Ihre Wahl durch einen Klick auf Continue.\nSchliessen Sie das Set-Up ab durch anklicken von Get Started.",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Einrichten der Arbeitsumgebung</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.html#das-erste-eigene-jupyter-notebook",
+    "href": "notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.html#das-erste-eigene-jupyter-notebook",
+    "title": "2  Einrichten der Arbeitsumgebung",
+    "section": "2.3 Das erste eigene Jupyter Notebook",
+    "text": "2.3 Das erste eigene Jupyter Notebook\nIn der Einleitung habe ich einen grundlegenden Überblick über die Dateiorganisation gegeben. Die dort beschriebene Struktur können Sie beim Erstellen des ersten eigenen Jupyter Notebooks nutzen. Das stellt sicher, dass Sie die einmal erstellte Datei auch wieder finden.\nIch gehe davon aus, dass Sie die folgende Ordnerhierarchie verwenden:\nC:\\Users\\username\\Documents\\Schule\\Informatik\nusername ist durch Ihren Windows-Benutzername zu ersetzen. Falls Sie die entsprechenden Ordner noch nicht angelegt haben, ist jetzt der Zeitpunkt, das zu tun. Legen Sie im Ordner Informatik zusätzlich einen Unterordner mit dem Namen YYMMDD_einfuehrung an; für den 19. August 2026 also 260819_einfuehrung.\nWenn der Ordner angelegt ist, öffnen Sie VS Code (Windows Menü &gt; VS Code).\nDas VS Code Fenster ist im ersten Moment etwas verwirrend.\n\n\n\nVS Code Fenster beim Start.\n\n\nGehen wir die einzelnen Elemente des Fensters der Reihe nach durch. Im Zentrum des VS Code-Fensters findet sich der Arbeitsbereich.\n\n\n\nVS Code Arbeitsbereich.\n\n\nLinks davon befindet sich die Navigationsleiste. Hier kann der neu angelegte Ordner als Arbeitsverzeichnis ausgewählt werden.\n\n\n\nVS Code Navigationsleiste.\n\n\nDazu muss man die Schaltfläche Open Folder anklicken und sich im Dialog bis zum gewünschten Ordner durchklicken. Wenn man im gewünschten Ordner angekommen ist, wird die Auswahl mit dem Schalter Select folder bestätigt.\nSobald der gewünschte Ordner ausgewählt worden ist, verändert sich das Aussehen des Fensters geringfügig.\n\n\n\nVS Code mit ausgewähltem Arbeitsverzeichnis.\n\n\nDie auffälligste Änderung ist der Balken mit dem Text ‘Restricted Mode is intended for safe code browsing. Trust this folder to enable all features. Manage Learn More’ zwischen Menüzeile und Arbeitsbereich. Klicken Sie auf Manage und wählen Sie im Dialog Trust. Anschliessend können Sie das Dialogfenster schliessen. Damit ist der Hinweisbalken verschwunden.\nEine zweite, etwas weniger auffällige Veränderung im Fenster ist der Titel des ausgewählten Ordners in der Navigationsleiste. Weil der Ordner im Moment noch leer ist, steht nur der Titel des Ordners da. Sobald wir eine Datei anlegen, erscheint diese auch in der Navigationsleiste. Bevor wir eine Datei anlegen aber noch der Hinweis auf den letzten bisher noch nicht besprochenen Teil des VS Code-Fensters.\n\n\n\nVS Code AI Chat.\n\n\nMicrosoft als Herausgeber von VS Code will die Benutzer mit einem KI Chatbot unterstützen. Dabei handelt es sich um ein Freemium-Angebot; d.h. ein bescheidener Funktionsumfang steht gratis zur Verfügung und für den vollen Funktionsumfang muss man ein Abonnement lösen. Da wir im Informatikunterricht herausfinden wollen, wie Programme funktionieren, können wir diese Chat-Leiste wegklicken.\nUm eine neue Datei anzulegen, fahren Sie mit der Maus in die Navigationsleiste. Dann erscheinen dort neben dem Namen des Ordners mehrere kleine Symbole. Das Symbol ganz links sieht aus, wie eine leere Seite Papier mit einem kleinen Plus an der unteren rechten Ecke. Dieses Symbol steht für das Anlegen einer neuen Datei. Wenn Sie das Symbol anklicken, öffnet sich in der Navigationsleiste ein Eingabefeld. Dort geben Sie den Namen der neuen Datei ein. Verwenden Sie den Namen test.ipynb. Dabei ist test der eigentliche Name der Datei und .ipynb die Dateinamenserweiterung für ein Jupyter Notebook. Damit erkennt VS Code, wie mit dieser Datei zu verfahren ist.\n\n\n\n\n\n\nFigure 2.1: VS Code mit einem offenen, aber leeren, Jupyter Notebook.\n\n\n\nDas Fenster sollte jetzt wie Figure 2.1 aussehen.\nBevor Sie in diesem Notebook Python-Code ausführen können, müssen Sie mit der Schaltfläche Select Kernel oben rechts auswählen, wie VS Code Ihren Code ausführen soll. Der Kernel ist das Programm, das Ihren Python-Code im Notebook tatsächlich ausführt – VS Code muss einmalig pro Arbeitsverzeichnis wissen, welches Python es verwenden soll.\nWählen Sie…\n\n… Install Python and Jupyter.\n… Python Environments....\n… + Create Python Environment.\n… Quick Create.\n\nNach diesen Arbeitsschritten steht oben rechts nicht mehr Select Kernel sondern neu .venv ....\nJetzt können Sie mit der Schaltfläche + Code eine sogenannte Code-Zelle öffnen. In dieser Zelle können Sie Ihren Python-Code schreiben. Damit Sie das Prüfen können, geben Sie in dieser Zelle print('Hello World') ein. Sie können die Code-Zelle ausführen, in dem Sie auf den Play-Knopf am linken Rand der Zelle klicken oder indem Sie die Umschalttaste und die Enter Taste drücken.\nWenn Sie eine neue Zelle anlegen wollen, fahren Sie mit der Maus in der Mitte einer schon bestehenden Zelle entweder an den oberen oder unteren Rand der schon bestehenden Zelle. Sie können dann auswählen, ob Sie eine Code- oder eine Markdown-Zelle anlegen wollen. Markdown-Zellen sind für die Eingabe von Text vorgesehen. Sie können diesen Text mit Formatierungsbefehlen formatieren. Die entsprechenden Befehle finden Sie auf der Website von Markdown Guide.",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Einrichten der Arbeitsumgebung</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260826_einf_python/260826_einf_python.html",
+    "href": "notebooks/260826_einf_python/260826_einf_python.html",
+    "title": "3  Eine sehr kurze Einführung in Python",
+    "section": "",
+    "text": "3.1 Rechnen mit Python\nIn diesem Jupyter Notebook erhalten Sie einen ganz kurzen Überblick über die wichtigsten Elemente der Programmiersprache Python. Damit wird die Grundlage für die kommenden Themen gelegt.\nWenn Sie dieses Jupyter Notebook durchgearbeitet haben, sollten Sie in der Lage sein\nEs gibt verschiedene Möglichkeiten mit Hilfe eines Computers arithmetische Operationen durchzuführen. Hier lernen Sie, wie Sie solche mit Python vornehmen können.\nPython stellt Ihnen die folgenden arithmetischen Operationen zur Verfügung:\nPython ist so programmiert, dass die Rangfolge der verschiedenen arithmetischen Operationen (Punkt vor Strich, Klammern zuerst) eingehalten wird.\nDamit Sie ein Gefühl für die Funktionsweise von Python als ‘Rechner’ erhalten, führen Sie die folgenden Berechnungen durch. Die Berechnung kann direkt in der Code-Zelle unterhalb der jeweiligen Aufgabenstellung durchgeführt werden.\n# TODO: Berechnung durchführen\n# TODO: Berechnung durchführen\n# TODO: Berechnung durchführen\n# TODO: Berechnung durchführen\n# TODO: Berechnung durchführen",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Eine sehr kurze Einführung in Python</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260826_einf_python/260826_einf_python.html#rechnen-mit-python",
+    "href": "notebooks/260826_einf_python/260826_einf_python.html#rechnen-mit-python",
+    "title": "3  Eine sehr kurze Einführung in Python",
+    "section": "",
+    "text": "Table 3.1: Zusammenstellung der Grundrechenarten.\n\n\n\n\n\n\n\n\n\n\n\n\nOperation\nOperationszeichen\nAlgebraisch\nPython\nNumerisch\n\n\n\n\nAddition\n\\(+\\)\n\\(a + b\\)\n4 + 5\n\\(4 + 5 = 9\\)\n\n\nSubtraktion\n\\(-\\)\n\\(a - b\\)\n5 - 4\n\\(5 - 4 = 1\\)\n\n\nMultiplikation\n\\(\\cdot\\)\n\\(a \\cdot b\\)\n3 * 4\n\\(3 \\cdot 4 = 12\\)\n\n\nPotenzierung\n\n\\(a ^ b\\)\n2 ** 3\n\\(2 ^ 3 = 8\\)\n\n\nDivision\n\\(\\frac{}{}\\)\n\\(\\frac{a}{b}\\)\n7 / 2\n\\(\\frac{7}{2} = 3.5\\)\n\n\nGanzzahldivision\n\\(\\lfloor \\rfloor\\)\n\\(\\lfloor \\frac{a}{b} \\rfloor\\)\n7 // 2\n\\(\\lfloor \\frac{7}{2} \\rfloor = 3\\)\n\n\nModulo\n\\(\\mod\\)\n\\(a\\mod b\\)\n7 % 2\n\\(7 \\mod 2 = 1\\)\n\n\n\n\n\n\n\n\n\n\\(2 + 3 \\cdot 4\\)\n\n\n\n\\((2 + 3) \\cdot 4\\)\n\n\n\n\\(2^5+2^3+2^1\\)\n\n\n\n\\(\\lfloor \\frac{40}{7} \\rfloor\\)\n\n\n\n\\(40 \\mod 7\\)",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Eine sehr kurze Einführung in Python</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260826_einf_python/260826_einf_python.html#werte-variablen-zuweisen",
+    "href": "notebooks/260826_einf_python/260826_einf_python.html#werte-variablen-zuweisen",
+    "title": "3  Eine sehr kurze Einführung in Python",
+    "section": "3.2 Werte Variablen zuweisen",
+    "text": "3.2 Werte Variablen zuweisen\nDie oben durchgeführten Berechnungen haben das Resultat jeweils direkt ausgegeben. In vielen Fällen ist das Resultat einer konkreten Berechnung jedoch lediglich ein Zwischenresultat. In diesen Fällen will man mit diesem Zwischenresultat weiterrechnen können. Hier kommen Variablen ins Spiel.\nDie Resultate Ihrer Berechnungen werden nicht nur angezeigt, sie werden auch im Arbeitsspeicher abgelegt. Variablen dienen nun dazu, einen ansprechbaren Verweis auf den Ort des abgelegten Resultates anzulegen. Das heisst, wir können die Resultate der Berechnungen nicht nur ausgeben, wir können sie einer Variable zuweisen. Dazu wird in Python das Zeichen = verwendet (ich habe das Zeichen in diesem Zusammenhang bewusst nicht Gleichheitszeichen genannt, weil es hier keine Gleichheit, sondern eine Zuweisung zum Ausdruck bringt). Dabei muss die Variable links des Zuweisungszeichens und der zuzuweisende Wert rechts davon stehen.\nVariablennamen dürfen aus Buchstaben, Ziffern und Unterstrichen bestehen, dürfen aber nicht mit einer Ziffer beginnen. Ausgenommen sind die sogenannten ‘reservierten Wörter’. Diese Wörter haben in Python eine feste Bedeutung und dürfen deshalb nicht als Variablennamen verwendet werden. Als Konvention hat sich eingebürgert, dass Python-Variablen in Snake Case geschrieben werden. Snake Case sieht folgendermassen aus: ich_bin_eine_python_variable. Dies ermöglicht es, Variablen mit Namen zu versehen, welche eine kurze Erklärung zu den ihnen zugewiesenen Werten abgeben.\nFür die erste Berechnung von oben kann das folgendermassen aussehen:\n\nresultat_a = 2 + 3 * 4\n\nNun wird das Resultat der Berechnung der Variable resultat_a zugewiesen und nicht mehr ausgegeben. Wir können den zugewiesenen Wert jederzeit ausgeben, indem wir die Variable aufrufen.\n\nresultat_a\n\nDie Berechnung und der Aufruf der Variable können auch in der gleichen Code-Zelle stehen. Ausgegeben wird allerdings immer nur der Wert der letzten Code-Zeile.\n\nresultat_a = 2 + 3 * 4\nresultat_a\n\nSpielen Sie die verschiedenen Möglichkeiten mit allen obigen Berechnungen durch.\n\n# TODO: Resultate von Berechnungen Variablen zuweisen\n\nVariablen können jedoch nicht ausschliesslich Werte von Berechnungen zugewiesen werden. Es ist auch möglich, Variablen direkt Werte zuzuweisen. Ausserdem kann mit den Variablen weitergerechnet werden. Das zeigt das folgende Beispiel.\n\na = 3\nb = 4\nc = (a**2 + b**2)**(1/2)\nc\n\n5.0\n\n\nDiese Berechnung ermöglicht noch eine Ergänzung zu den oben in der Tabelle angeführten arithmetischen Operationen. Wurzeln können als Potenz dargestellt werden. Für die Quadratwurzel ist der Exponent ein Zweitel, für die dritte Wurzel ein Drittel etc. Dabei dürfen die Exponenten auch als Dezimalzahl geschrieben werden.\nFühren Sie die obige Berechnung mit den Zahlen a = 5 und b = 12 durch.\n\n# TODO: Berechnung mit a = 5 und b = 12 durchführen",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Eine sehr kurze Einführung in Python</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260826_einf_python/260826_einf_python.html#einfache-python-funktionen-aufrufen",
+    "href": "notebooks/260826_einf_python/260826_einf_python.html#einfache-python-funktionen-aufrufen",
+    "title": "3  Eine sehr kurze Einführung in Python",
+    "section": "3.3 Einfache Python Funktionen aufrufen",
+    "text": "3.3 Einfache Python Funktionen aufrufen\nDie erste Funktion, welche bei der Neuinstallation einer Programmiersprache traditionellerweise aufgerufen wird, haben Sie bereits kennengelernt.\nprint('Hello World')\nDie Funktion print() gibt aus, was ihr innerhalb der Klammern übergeben wird. Was einer Funktion beim Aufruf übergeben wird, nennt man Argument. So, wie wir die Funktion bisher verwendet haben, ist das Argument die Zeichenfolge in den Anführungszeichen. Anstelle eines solchen Strings (Zeichenkette, ein von Python zur Verfügung gestellter Datentyp - was genau Datentypen sind, wird gleich unten angetönt und später im Detail besprochen) können der Funktion auch Variablen übergeben werden. So kann ihr zum Beispiel die Variable resultat_a aus obigen Berechnungen übergeben werden.\n\nprint(resultat_a)\n\n\nHinweis: Erscheint hier die Fehlermeldung NameError: name 'resultat_a' is not defined, wurde die Zelle, in der die Variable definiert wird, in dieser Sitzung noch nicht ausgeführt. Führen Sie zuerst die Zelle mit der Zuweisung aus und anschliessend diese Zelle noch einmal.\n\nDer Unterschied zum direkten Aufruf einer Variable: Ohne print() zeigt das Notebook nur den Wert der letzten Zeile einer Code-Zelle an. Mit print() können Sie beliebig viele Werte an beliebiger Stelle einer Code-Zelle ausgeben. Probieren Sie das aus, indem Sie in der folgenden Code-Zelle alle von Ihnen bisher verwendeten Variablen nacheinander mit print() ausgeben.\n\n# TODO: Ausgabe der bisher definierten Variablen\n\nEine zweite nützliche Funktion, die Python direkt zur Verfügung stellt, ist type(). Sie verrät, welchen Datentyp ein Wert hat. Wie bei print() wird der zu untersuchende Wert als Argument in den Klammern übergeben.\n\ntype(7)\n\nDie Ausgabe int steht für Integer, den Datentyp der ganzen Zahlen. Untersuchen Sie in der folgenden Code-Zelle nacheinander die Werte 3.5, 'Hello World' sowie die Variablen resultat_a und c. Verwenden Sie dazu print() in Kombination mit type(), also zum Beispiel print(type(3.5)) - so werden alle Resultate untereinander ausgegeben.\nSie werden dabei neben int auf zwei weitere Datentypen stossen: float (Dezimalzahlen, sogenannte Fliesskommazahlen) und str (Strings, also Zeichenketten). Was es mit diesen Datentypen im Einzelnen auf sich hat, wird später im Detail besprochen. Für den Moment genügt es zu wissen, dass jeder Wert in Python einen Datentyp hat und dass type() diesen sichtbar macht.\n\n# TODO: Datentypen der angegebenen Werte und Variablen ausgeben",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Eine sehr kurze Einführung in Python</span>"
+    ]
+  }
+]
