@@ -1,4 +1,4 @@
-# Obligatorisches Fach Informatik (1bW) {.unnumbered}
+# Obligatorisches Fach Informatik (1pH) {.unnumbered}
 
 In diesem Repository werden die Unterlagen für das obligatorische Fach Informatik zur Verfügung gestellt.
 
