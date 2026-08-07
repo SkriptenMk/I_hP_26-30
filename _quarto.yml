@@ -9,7 +9,7 @@ execute:
   freeze: true                 # niemals Code beim Build neu ausführen
 
 book:
-  title: "Unterlagen für das obligatorische Fach Informatik in der Klasse 1bW"
+  title: "Unterlagen für das obligatorische Fach Informatik in der Klasse 1hP"
   author: "Jacques Mock Schindler"
   date: today
   date-format: "DD. MMMM YYYY"
