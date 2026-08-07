@@ -2,41 +2,41 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Unterlagen für das obligatorische Fach Informatik in der Klasse 1bW",
+    "title": "Unterlagen für das obligatorische Fach Informatik in der Klasse 1hP",
     "section": "",
-    "text": "Obligatorisches Fach Informatik (1pH)\nIn diesem Repository werden die Unterlagen für das obligatorische Fach Informatik zur Verfügung gestellt.",
+    "text": "Obligatorisches Fach Informatik (1hP)\nIn diesem Repository werden die Unterlagen für das obligatorische Fach Informatik zur Verfügung gestellt.",
     "crumbs": [
-      "Obligatorisches Fach Informatik (1pH)"
+      "Obligatorisches Fach Informatik (1hP)"
     ]
   },
   {
     "objectID": "index.html#programm",
     "href": "index.html#programm",
-    "title": "Unterlagen für das obligatorische Fach Informatik in der Klasse 1bW",
+    "title": "Unterlagen für das obligatorische Fach Informatik in der Klasse 1hP",
     "section": "Programm",
     "text": "Programm\nDas Programm entspricht dem aktuellen Stand der Planung. Es kann zu Änderungen kommen.\n\n\n\nDatum\nThema\n\n\n\n\n19.08.2026\nEinstieg und Arbeitsumgebung\n\n\n26.08.2026\nArbeitsumgebung Jupyter Notebooks\n\n\n02.09.2026\nProblemlösung: Flaggen zeichnen I\n\n\n09.09.2026\nProblemlösung: Flaggen zeichnen II\n\n\n16.09.2026\nVariabeln in Python I\n\n\n23.09.2026\nVariabeln in Python II\n\n\n21.10.2026\nWiederholungen: For-Loops\n\n\n28.10.2026\nFor-Loops: Anwendungsübung\n\n\n04.11.2026\nProgrammverzweigungen\n\n\n11.11.2026\nEinfache Funktionen und Prüfungsvorbereitung\n\n\n18.11.2026\nPrüfung 1: Python-Grundlagen\n\n\n25.11.2026\nDatenstrukturen: Listen I\n\n\n02.12.2026\nDatenstrukturen: Listen II\n\n\n09.12.2026\nDatenstrukturen: Listen III\n\n\n16.12.2026\nDatenstrukturen: Dictionary\n\n\n06.01.2027\nBeurteilung von Algorithmen\n\n\n13.01.2027\nPrüfungsvorbereitung 2\n\n\n20.01.2027\nPrüfung 2: Listen, Dictionaries, Sortieralgorithmen\n\n\n27.01.2027\nDivide and Conquer: Rekursion\n\n\n03.02.2027\nRekursion II und Semesterabschluss",
     "crumbs": [
-      "Obligatorisches Fach Informatik (1pH)"
+      "Obligatorisches Fach Informatik (1hP)"
     ]
   },
   {
     "objectID": "index.html#hilfsmittel-für-den-unterricht",
     "href": "index.html#hilfsmittel-für-den-unterricht",
-    "title": "Unterlagen für das obligatorische Fach Informatik in der Klasse 1bW",
+    "title": "Unterlagen für das obligatorische Fach Informatik in der Klasse 1hP",
     "section": "Hilfsmittel für den Unterricht",
     "text": "Hilfsmittel für den Unterricht\nDer Unterricht findet über weite Strecken am Computer statt. Die Anleitungen für die Installation von Python bzw. der Jupyter Notebooks sind in der Seitenliste aufrufbar.",
     "crumbs": [
-      "Obligatorisches Fach Informatik (1pH)"
+      "Obligatorisches Fach Informatik (1hP)"
     ]
   },
   {
     "objectID": "index.html#beurteilung",
     "href": "index.html#beurteilung",
-    "title": "Unterlagen für das obligatorische Fach Informatik in der Klasse 1bW",
+    "title": "Unterlagen für das obligatorische Fach Informatik in der Klasse 1hP",
     "section": "Beurteilung",
     "text": "Beurteilung\nDie Note wird aus dem Durchschnitt der beiden schriftlichen Prüfungen sowie der Benotung der mündlichen Beteiligung berechnet. Der Durchschnitt der Prüfungen zählt zu 90%, die mündliche Beteiligung zu 10%.\nAb dem zweiten Semester wird konstruktive Kritik an den Unterlagen, welche durch ein mir zugewiesenes Issue (der Zugang findet sich unter dem GitHub-Logo  in der Kopfzeile) eingebracht wird, mit maximal einem Notenpunkt auf die jeweils thematisch passende Prüfung angerechnet.\nFalls jemand eine persönliche Besprechung wünscht,  kann hier einen Termin für eine Sprechstunde reserviert werden (Rent-A-Mock).",
     "crumbs": [
-      "Obligatorisches Fach Informatik (1pH)"
+      "Obligatorisches Fach Informatik (1hP)"
     ]
   },
   {
