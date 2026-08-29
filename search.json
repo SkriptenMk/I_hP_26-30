@@ -170,5 +170,82 @@
       "Einführung",
       "<span class='chapter-number'>3</span>  <span class='chapter-title'>Eine sehr kurze Einführung in Python</span>"
     ]
+  },
+  {
+    "objectID": "notebooks/260902_fahne_I/260902_fahne_I.html",
+    "href": "notebooks/260902_fahne_I/260902_fahne_I.html",
+    "title": "4  Problemlösung in der Informatik",
+    "section": "",
+    "text": "4.1 Ausgangslage\nJede Disziplin hat ihre eigene Art, Probleme zu lösen. Das ist in der Informatik nicht anders.\nIn der Informatik versucht man, grosse Probleme in kleinere Teilprobleme zu zerlegen. Das macht man so lange, bis die Teilprobleme klein genug sind, damit sie einfach zu lösen sind.\nDiese Vorgehensweise wird hier geübt, indem Wege gesucht werden, Muster nachzubilden. Um die Muster in Python darstellen zu können, verwenden wir die Python Bibliothek PyTamaro. Diese Bibliothek wurde von der Università della Svizzera italiana (USI) extra für den Informatik-Unterricht entwickelt.\nBevor die PyTamaro-Bibliothek verwendet werden kann, muss sie im Terminal mit python -m pip install pytamaro installiert werden.\nAus der PyTamaro-Bibliothek brauchen wir für die ersten Übungen nur einen Teil der Funktionen. Diese werden daher in der folgenden Code-Zelle einzeln importiert.\nfrom pytamaro.de import (\n    rechteck, kreis_sektor,\n    blau, rot, weiss, schwarz,\n    neben, ueber, ueberlagere,\n    drehe, kombiniere,\n    zeige_grafik,\n)",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Problemlösung in der Informatik</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260902_fahne_I/260902_fahne_I.html#ausgangslage",
+    "href": "notebooks/260902_fahne_I/260902_fahne_I.html#ausgangslage",
+    "title": "4  Problemlösung in der Informatik",
+    "section": "",
+    "text": "NotePython-Libraries (Bibliotheken)\n\n\n\nProgrammierfunktionen, welche häufig gebraucht werden, von Python aber nicht standardmässig zur Verfügung gestellt werden, werden oft in sogenannten Libraries bereitgestellt.\nEs kann sein, dass eine solche Library erst installiert werden muss. Dies geschieht im Terminal mit dem Befehl python -m pip install &lt;name_der_library&gt;. Damit die Library in einem Jupyter Notebook verwendet werden kann, muss sie in einer Code Zelle mit\nimport name_der_library\nimportiert werden.\nWenn nur einzelne Funktionen einer Library verwendet werden sollen, lautet der Befehl für den Import\nfrom name_der_library import name_der_funktion",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Problemlösung in der Informatik</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260902_fahne_I/260902_fahne_I.html#beispiel-tricolore",
+    "href": "notebooks/260902_fahne_I/260902_fahne_I.html#beispiel-tricolore",
+    "title": "4  Problemlösung in der Informatik",
+    "section": "4.2 Beispiel: Tricolore",
+    "text": "4.2 Beispiel: Tricolore\nDie Vorgehensweise für die Problemlösung in der Informatik wird am Beispiel der Französischen Nationalflagge (Tricolore) gezeigt.\n\nUm die hier abgebildete Tricolore zu rekonstruieren, wird die Grafik in ihre Einzelteile zerlegt. Die Tricolore hat insgesamt ein Seitenverhältnis von 3:2 (das heisst, sie ist drei Einheiten breit und zwei Einheiten hoch). Inerhalb des so definierten Rechtecks besteht sie aus drei gleich grossen Rechtecken in den Farben blau, weiss und rot mit einem Seitenverhältnis von 1:2. Die drei farbigen Rechtecke sind nebeneinander angeordnet.\nDie von PyTamaro in Python für das erstellen von Rechtecken zur Verfügung gestellte Funktion hat die folgende Syntax:\nname = rechteck(breite, höhe, farbe)\nBevor die Zeichnung tatsächlich erstellt wird, soll hier der Befehl im Detail erklärt werden:\nname ist der Name, unter dem das Rechteck gespeichert wird. Dieser Name kann später verwendet werden, um auf das Rechteck zuzugreifen. rechteck ist die Funktion, welche ein Rechteck zeichnet. In der Klammer hinter dem Befehl werden die sogenannten Argumente angegeben. Diese steuern, wie das Rechteck aussieht. breite und höhe sind die Argumente, die die Grösse des Rechtecks bestimmen. Diese Werte können beliebig gewählt werden. farbe ist das Argument, das die Farbe des Rechtecks bestimmt. Aufgrund der Eigenheiten von PyTamaro können ausschliesslich die Farben verwendet werden, welche zuvor importiert worden sind.\nDie drei Rechtecke der Tricolore werden damit mit der folgenden Befehlssequenz erstellt:\n\nbleu = rechteck(50, 100, blau)\nblanc = rechteck(50, 100, weiss)\nrouge = rechteck(50, 100, rot)\n\nUm die so erstellten Rechtecke anzeigen zu können, brauchen wir die Funktion zeige_grafik(name_der_anzuzeigenden_grafik).\n\nzeige_grafik(bleu)\nzeige_grafik(blanc)\nzeige_grafik(rouge)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAls nächstes werden die drei Rechtecke nebeninander angeordnet. Dazu wird die Funktion neben(linke_grafik, rechte_grafik) verwendet. Die beiden Argumente, die der Funktion übergeben werden, sind die linke und die rechte Grafik, die zusammengefügt werden sollen.\nSo können die ersten zwei Drittel der Tricolore erstellt werden:\n\ndeux_tiers = neben(bleu, blanc)\nzeige_grafik(deux_tiers)\n\n\n\n\n\n\n\n\nUm die Tricolore zu vervollständigen, müssen nun noch die bestehenden zwei Drittel mit dem roten Rechteck verbunden werden.\n\ntricolore = neben(deux_tiers, rouge)\nzeige_grafik(tricolore)",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Problemlösung in der Informatik</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260902_fahne_I/260902_fahne_I.html#aufgabe-österreichische-flagge",
+    "href": "notebooks/260902_fahne_I/260902_fahne_I.html#aufgabe-österreichische-flagge",
+    "title": "4  Problemlösung in der Informatik",
+    "section": "4.3 Aufgabe: Österreichische Flagge",
+    "text": "4.3 Aufgabe: Österreichische Flagge\nÜbertragen Sie das obige Beispiel auf die Österreichische Flagge. Das Seitenverhältnis der Österreichischen Flagge ist 2:3.\n\nPyTamaro stellt eine Funktion zur Verfügung, mit welcher einzelne Grafiken übereinander angeordnet werden können. Die Syntax dieser Funktion lautet:\nresultat = ueber(obere_grafik, untere_grafik)\n\n# TODO: Erstellen Sie hier eine Österreichische Flagge",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Problemlösung in der Informatik</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260902_fahne_I/260902_fahne_I.html#aufgabe-schweizerfahne",
+    "href": "notebooks/260902_fahne_I/260902_fahne_I.html#aufgabe-schweizerfahne",
+    "title": "4  Problemlösung in der Informatik",
+    "section": "4.4 Aufgabe: Schweizerfahne",
+    "text": "4.4 Aufgabe: Schweizerfahne\nZeichnen Sie eine korrekt proportionierte Schweizerfahne. Die Dimensionen gemäss Art. 3 Abs. 2 i.V.m. Anhang 2 WSchG finden sie in der folgenden Abbildung.\n\nNeben den Funktionen rechteck(), neben() und ueber() stellt PyTamaro die Funktionen drehe() und uberlagere() zur Verfügung. Für die Syntax wird an dieser Stelle auf das Manual verwiesen.\n\n# TODO: Zeichnen Sie eine Schweizerfahne\n\n\n4.4.1 Aufgabe: Tessiner Wappen\nAls Referenz an die USI und den Kanton Tessin zeichnen Sie bitte das Tessiner Wappen gemäss der folgenden Vorlage.\n\nVerwenden Sie dazu neben den bereits bekannten Funktionen zusätzlich die Funktion kreis_sektor().\n\n# TODO: Zeichnen Sie das Tessiner Wappen",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Problemlösung in der Informatik</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260902_fahne_I/260902_fahne_I.html#musterlösungen",
+    "href": "notebooks/260902_fahne_I/260902_fahne_I.html#musterlösungen",
+    "title": "4  Problemlösung in der Informatik",
+    "section": "4.5 Musterlösungen",
+    "text": "4.5 Musterlösungen\n\n4.5.1 Österreichische Flagge\n\nroter_streifen = rechteck(135, 30, rot)\nweisser_streifen = rechteck(135, 30, weiss)\nzwei_drittel = ueber(roter_streifen, weisser_streifen)\noesterreich = ueber(zwei_drittel, roter_streifen)\nzeige_grafik(oesterreich)",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Problemlösung in der Informatik</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260902_fahne_I/260902_fahne_I.html#schweizerfahne",
+    "href": "notebooks/260902_fahne_I/260902_fahne_I.html#schweizerfahne",
+    "title": "4  Problemlösung in der Informatik",
+    "section": "4.6 Schweizerfahne",
+    "text": "4.6 Schweizerfahne\n\nhintergrund = rechteck(320, 320, rot)\nweisser_balken_horizontal = rechteck(200, 60, weiss)\nweisser_balken_vertikal = drehe(90, weisser_balken_horizontal)\n\nkreuz = ueberlagere(weisser_balken_horizontal, weisser_balken_vertikal)\n\nschweizerfahne = ueberlagere(kreuz, hintergrund)\n\nzeige_grafik(schweizerfahne)\n\n\n\n\n\n\n\n\n\n4.6.1 Tessin\n\nrotes_rechteck = rechteck(160, 240, rot)\nblaues_rechteck = rechteck(160, 240, blau)\nroter_sektor = kreis_sektor(160, 90, rot)\nroter_sektor_gedreht = drehe(180, roter_sektor)\nblauer_sektor = kreis_sektor(160, 90, blau)\nblauer_sektor_gedreht = drehe(270, blauer_sektor)\n\nti_unten = neben(roter_sektor_gedreht, blauer_sektor_gedreht)\nti_oben = neben(rotes_rechteck, blaues_rechteck)\n\ntessin = ueber(ti_oben, ti_unten)\n\nzeige_grafik(tessin)",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Problemlösung in der Informatik</span>"
+    ]
   }
 ]
