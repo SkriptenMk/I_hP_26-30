@@ -21,6 +21,7 @@ book:
         - notebooks/260819_einfuehrung/260819_einfuehrung.ipynb
         - notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.ipynb
         - notebooks/260826_einf_python/260826_einf_python.ipynb
+        - notebooks/260902_fahne_I/260902_fahne_I.ipynb
 
 format:
   html:
