@@ -231,18 +231,7 @@
     "href": "notebooks/260902_fahne_I/260902_fahne_I.html#musterlösungen",
     "title": "4  Problemlösung in der Informatik",
     "section": "4.5 Musterlösungen",
-    "text": "4.5 Musterlösungen\n\n4.5.1 Österreichische Flagge\n\nroter_streifen = rechteck(135, 30, rot)\nweisser_streifen = rechteck(135, 30, weiss)\nzwei_drittel = ueber(roter_streifen, weisser_streifen)\noesterreich = ueber(zwei_drittel, roter_streifen)\nzeige_grafik(oesterreich)",
-    "crumbs": [
-      "Einführung",
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>Problemlösung in der Informatik</span>"
-    ]
-  },
-  {
-    "objectID": "notebooks/260902_fahne_I/260902_fahne_I.html#schweizerfahne",
-    "href": "notebooks/260902_fahne_I/260902_fahne_I.html#schweizerfahne",
-    "title": "4  Problemlösung in der Informatik",
-    "section": "4.6 Schweizerfahne",
-    "text": "4.6 Schweizerfahne\n\nhintergrund = rechteck(320, 320, rot)\nweisser_balken_horizontal = rechteck(200, 60, weiss)\nweisser_balken_vertikal = drehe(90, weisser_balken_horizontal)\n\nkreuz = ueberlagere(weisser_balken_horizontal, weisser_balken_vertikal)\n\nschweizerfahne = ueberlagere(kreuz, hintergrund)\n\nzeige_grafik(schweizerfahne)\n\n\n\n\n\n\n\n\n\n4.6.1 Tessin\n\nrotes_rechteck = rechteck(160, 240, rot)\nblaues_rechteck = rechteck(160, 240, blau)\nroter_sektor = kreis_sektor(160, 90, rot)\nroter_sektor_gedreht = drehe(180, roter_sektor)\nblauer_sektor = kreis_sektor(160, 90, blau)\nblauer_sektor_gedreht = drehe(270, blauer_sektor)\n\nti_unten = neben(roter_sektor_gedreht, blauer_sektor_gedreht)\nti_oben = neben(rotes_rechteck, blaues_rechteck)\n\ntessin = ueber(ti_oben, ti_unten)\n\nzeige_grafik(tessin)",
+    "text": "4.5 Musterlösungen\n\n4.5.1 Österreichische Flagge\n\nroter_streifen = rechteck(135, 30, rot)\nweisser_streifen = rechteck(135, 30, weiss)\nzwei_drittel = ueber(roter_streifen, weisser_streifen)\noesterreich = ueber(zwei_drittel, roter_streifen)\nzeige_grafik(oesterreich)\n\n\n\n\n\n\n\n\n\n\n4.5.2 Schweizerfahne\n\nhintergrund = rechteck(320, 320, rot)\nweisser_balken_horizontal = rechteck(200, 60, weiss)\nweisser_balken_vertikal = drehe(90, weisser_balken_horizontal)\n\nkreuz = ueberlagere(weisser_balken_horizontal, weisser_balken_vertikal)\n\nschweizerfahne = ueberlagere(kreuz, hintergrund)\n\nzeige_grafik(schweizerfahne)\n\n\n\n\n\n\n\n\n\n\n4.5.3 Tessin\n\nrotes_rechteck = rechteck(160, 240, rot)\nblaues_rechteck = rechteck(160, 240, blau)\nroter_sektor = kreis_sektor(160, 90, rot)\nroter_sektor_gedreht = drehe(180, roter_sektor)\nblauer_sektor = kreis_sektor(160, 90, blau)\nblauer_sektor_gedreht = drehe(270, blauer_sektor)\n\nti_unten = neben(roter_sektor_gedreht, blauer_sektor_gedreht)\nti_oben = neben(rotes_rechteck, blaues_rechteck)\n\ntessin = ueber(ti_oben, ti_unten)\n\nzeige_grafik(tessin)",
     "crumbs": [
       "Einführung",
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>Problemlösung in der Informatik</span>"
