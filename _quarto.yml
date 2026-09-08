@@ -22,6 +22,7 @@ book:
         - notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.ipynb
         - notebooks/260826_einf_python/260826_einf_python.ipynb
         - notebooks/260902_fahne_I/260902_fahne_I.ipynb
+        - notebooks/260909_blume/160909_blume.ipynb
 
 format:
   html:
