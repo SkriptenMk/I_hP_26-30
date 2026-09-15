@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>3&nbsp; Eine sehr kurze Einführung in Python – Unterlagen für das obligatorische Fach Informatik in der Klasse 1hP</title>
+<title>6&nbsp; Bedingungen in Python – Unterlagen für das obligatorische Fach Informatik in der Klasse 1hP</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -71,8 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../notebooks/260902_fahne_I/260902_fahne_I.html" rel="next">
-<link href="../../notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.html" rel="prev">
+<link href="../../notebooks/260909_blume/260909_blume.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -152,7 +151,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/260819_einfuehrung/260819_einfuehrung.html">Einführung</a></li><li class="breadcrumb-item"><a href="../../notebooks/260826_einf_python/260826_einf_python.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Eine sehr kurze Einführung in Python</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/260819_einfuehrung/260819_einfuehrung.html">Einführung</a></li><li class="breadcrumb-item"><a href="../../notebooks/260916_blume_II/260916_blume_II.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bedingungen in Python</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -209,7 +208,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/260826_einf_python/260826_einf_python.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../notebooks/260826_einf_python/260826_einf_python.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Eine sehr kurze Einführung in Python</span></span></a>
   </div>
 </li>
@@ -227,7 +226,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/260916_blume_II/260916_blume_II.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/260916_blume_II/260916_blume_II.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bedingungen in Python</span></span></a>
   </div>
 </li>
@@ -243,18 +242,16 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#rechnen-mit-python" id="toc-rechnen-mit-python" class="nav-link active" data-scroll-target="#rechnen-mit-python"><span class="header-section-number">3.1</span> Rechnen mit Python</a></li>
-  <li><a href="#werte-variablen-zuweisen" id="toc-werte-variablen-zuweisen" class="nav-link" data-scroll-target="#werte-variablen-zuweisen"><span class="header-section-number">3.2</span> Werte Variablen zuweisen</a></li>
-  <li><a href="#einfache-python-funktionen-aufrufen" id="toc-einfache-python-funktionen-aufrufen" class="nav-link" data-scroll-target="#einfache-python-funktionen-aufrufen"><span class="header-section-number">3.3</span> Einfache Python Funktionen aufrufen</a></li>
+  <li><a href="#anwendungsbeispiel" id="toc-anwendungsbeispiel" class="nav-link active" data-scroll-target="#anwendungsbeispiel"><span class="header-section-number">6.4</span> Anwendungsbeispiel</a></li>
   </ul>
-<div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/SkriptenMk/I_bW_26-30/blob/main/notebooks/260825_einf_python/260825_einf_python.ipynb"><i class="bi bi-rocket-takeoff"></i>In Colab öffnen</a></li><li><a href="https://mybinder.org/v2/gh/SkriptenMk/I_bW_26-30/main?labpath=notebooks%2F260825_einf_python%2F260825_einf_python.ipynb"><i class="bi bi-box-arrow-up-right"></i>In Binder öffnen</a></li><li><a href="260825_einf_python.ipynb"><i class="bi bi-download"></i>Notebook herunterladen</a></li></ul></div></nav>
+<div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/SkriptenMk/I_hp_26-30/blob/main/notebooks/260916_blume_II/260916_blume_II.ipynb"><i class="bi bi-rocket-takeoff"></i>In Colab öffnen</a></li><li><a href="https://mybinder.org/v2/gh/SkriptenMk/I_hp_26-30/main?labpath=notebooks%2F260916_blume_II%2F260916_blume_II.ipynb"><i class="bi bi-box-arrow-up-right"></i>In Binder öffnen</a></li><li><a href="260916_blume_II.ipynb"><i class="bi bi-download"></i>Notebook herunterladen</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/260819_einfuehrung/260819_einfuehrung.html">Einführung</a></li><li class="breadcrumb-item"><a href="../../notebooks/260826_einf_python/260826_einf_python.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Eine sehr kurze Einführung in Python</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/260819_einfuehrung/260819_einfuehrung.html">Einführung</a></li><li class="breadcrumb-item"><a href="../../notebooks/260916_blume_II/260916_blume_II.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bedingungen in Python</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Eine sehr kurze Einführung in Python</span></h1>
+<h1 class="title"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bedingungen in Python</span></h1>
 </div>
 
 
@@ -271,189 +268,283 @@ window.Quarto = {
 </header>
 
 
-<p>In diesem Jupyter Notebook erhalten Sie einen ganz kurzen Überblick über die wichtigsten Elemente der Programmiersprache Python. Damit wird die Grundlage für die kommenden Themen gelegt.</p>
-<p>Wenn Sie dieses Jupyter Notebook durchgearbeitet haben, sollten Sie in der Lage sein</p>
-<ul>
-<li>mit Python Berechnungen in den Grundrechenarten vorzunehmen;</li>
-<li>Variablen Werte zuzuweisen sowie</li>
-<li>einfache, von Python direkt zur Verfügung gestellte Funktionen aufzurufen.</li>
-</ul>
-<section id="rechnen-mit-python" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="rechnen-mit-python"><span class="header-section-number">3.1</span> Rechnen mit Python</h2>
-<p>Es gibt verschiedene Möglichkeiten mit Hilfe eines Computers arithmetische Operationen durchzuführen. Hier lernen Sie, wie Sie solche mit Python vornehmen können.</p>
-<p>Python stellt Ihnen die folgenden arithmetischen Operationen zur Verfügung:</p>
-<div id="tbl-grundrechenarten" class="quarto-float quarto-figure quarto-figure-center anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-grundrechenarten-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;3.1: Zusammenstellung der Grundrechenarten.
-</figcaption>
-<div aria-describedby="tbl-grundrechenarten-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<p>Es gibt Programmieraufgaben, bei denen einzelne Anweisungen nur ausgeführt werden sollen, wenn bestimmte Bedingungen erfüllt sind. Allgemein funktioniert das nach dem Schema</p>
+<pre class="text"><code>WENN bedingung WAHR
+    MACHE
+SONST
+    MACHE</code></pre>
+<p>Im folgenden Beispiel wird der Computer mit Python angewiesen, zu prüfen, ob der einer Variablen zugewiesene Wert durch drei Teilbar ist. Wenn dies der Fall ist, soll der Text <code>Die Zahl ist durch 3 teilbar.</code> ausgegeben werden, anderenfalls <code>Die Zahl ist nicht durch 3 teilbar.</code>.</p>
+<div id="371e5d4d" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>zahl <span class="op">=</span> <span class="dv">15</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> zahl <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Die Zahl ist durch 3 teilbar.'</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Die Zahl ist nicht durch 3 teilbar.'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Die Zahl ist durch 3 teilbar.</code></pre>
+</div>
+</div>
+<p>Es können auch mehrere Bedingungen nacheinander geprüft werden. Zur Demonstration wird das obige Beispiel um die Prüfung der Teilbarkeit durch fünf ergänzt.</p>
+<div id="0bbbd87f" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>zahl <span class="op">=</span> <span class="dv">25</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> zahl <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Die Zahl ist durch 3 teilbar.'</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> zahl <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Die Zahl ist durch 5 teilbar.'</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Die Zahl ist weder durch 3 noch durch 5 teilbar.'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Die Zahl ist durch 5 teilbar.</code></pre>
+</div>
+</div>
+<p>Allerdings werfen die beiden obigen Beispiele zusammen ein neues Problem auf: Was wenn eine Zahl sowohl durch drei als auch durch fünf Teilbar ist?</p>
+<p>Es kann auch das vorliegen mehrerer Bedingungen gleichzeitig geprüft werden:</p>
+<div id="98d82dbe" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>zahl <span class="op">=</span> <span class="dv">15</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> zahl <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span> <span class="kw">and</span> zahl <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Die Zahl ist durch drei und durch fünf teilbar.'</span>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> zahl <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Die Zahl ist nur durch drei teilbar.'</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> zahl <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Die Zahl ist nur durch fünf teilbar.'</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Die Zahl ist weder durch drei noch durch fünf teilbar.'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Die Zahl ist durch drei und durch fünf teilbar.</code></pre>
+</div>
+</div>
+<p>Es ist auch möglich, zu prüfen, ob eine Zahl durch drei oder durch fünf teilbar ist:</p>
+<div id="b358295c" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>zahl <span class="op">=</span> <span class="dv">27</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> zahl <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span> <span class="kw">or</span> zahl <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Die Zahl ist entweder durch drei oder durch fünf teilbar (oder beides).'</span>)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Die Zahl ist weder durch drei noch durch fünf teilbar.'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Die Zahl ist entweder durch drei oder durch fünf teilbar (oder beides).</code></pre>
+</div>
+</div>
+<p>Die wissenschaftliche Disziplin, die sich mit der Kombination des Wahrheitsgehalts von verschiedenen Aussagen beschäftigt, ist die Aussagelogik.</p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Aussagelogik
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Ob die Kombination zweier Aussagen insgesamt wahr oder falsch ist, hängt vom logischen Operator ab, mit dem sie verbunden werden. Gezeigt wird dies oft in sogenannten Wahrheitstabellen. In diesen Wahrheitstabellen werden wahre Aussagen häufig mit einer 1 und falsche Aussagen mit einer 0 gekennzeichnet.</p>
+<section id="der-nicht-operator-lnot" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="der-nicht-operator-lnot"><span class="header-section-number">6.1</span> Der <strong>nicht</strong>-Operator (<span class="math inline">\(\lnot\)</span>)</h2>
+<p>Der nicht-Operator ist ein sogenannter unärer Operator, weil er ausschliesslich einen Operanden braucht. Die Wahrheitstabelle für den nicht-Operator sieht folgendermassen aus:</p>
 <table class="caption-top table">
-<colgroup>
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-<col style="width: 20%">
-</colgroup>
 <thead>
 <tr class="header">
-<th style="text-align: left;">Operation</th>
-<th style="text-align: left;">Operationszeichen</th>
-<th style="text-align: left;">Algebraisch</th>
-<th style="text-align: left;">Python</th>
-<th style="text-align: left;">Numerisch</th>
+<th style="text-align: center;"><span class="math inline">\(A\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(\lnot A\)</span> oder <span class="math inline">\(\bar{A}\)</span></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;">Addition</td>
-<td style="text-align: left;"><span class="math inline">\(+\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(a + b\)</span></td>
-<td style="text-align: left;"><code>4 + 5</code></td>
-<td style="text-align: left;"><span class="math inline">\(4 + 5 = 9\)</span></td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;">Subtraktion</td>
-<td style="text-align: left;"><span class="math inline">\(-\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(a - b\)</span></td>
-<td style="text-align: left;"><code>5 - 4</code></td>
-<td style="text-align: left;"><span class="math inline">\(5 - 4 = 1\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Multiplikation</td>
-<td style="text-align: left;"><span class="math inline">\(\cdot\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(a \cdot b\)</span></td>
-<td style="text-align: left;"><code>3 * 4</code></td>
-<td style="text-align: left;"><span class="math inline">\(3 \cdot 4 = 12\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Potenzierung</td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"><span class="math inline">\(a ^ b\)</span></td>
-<td style="text-align: left;"><code>2 ** 3</code></td>
-<td style="text-align: left;"><span class="math inline">\(2 ^ 3 = 8\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Division</td>
-<td style="text-align: left;"><span class="math inline">\(\frac{}{}\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\frac{a}{b}\)</span></td>
-<td style="text-align: left;"><code>7 / 2</code></td>
-<td style="text-align: left;"><span class="math inline">\(\frac{7}{2} = 3.5\)</span></td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Ganzzahldivision</td>
-<td style="text-align: left;"><span class="math inline">\(\lfloor \rfloor\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(\lfloor \frac{a}{b} \rfloor\)</span></td>
-<td style="text-align: left;"><code>7 // 2</code></td>
-<td style="text-align: left;"><span class="math inline">\(\lfloor \frac{7}{2} \rfloor = 3\)</span></td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Modulo</td>
-<td style="text-align: left;"><span class="math inline">\(\bmod\)</span></td>
-<td style="text-align: left;"><span class="math inline">\(a\mod b\)</span></td>
-<td style="text-align: left;"><code>7 % 2</code></td>
-<td style="text-align: left;"><span class="math inline">\(7 \mod 2 = 1\)</span></td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="der-und-operator-land" class="level2" data-number="6.2">
+<h2 data-number="6.2" class="anchored" data-anchor-id="der-und-operator-land"><span class="header-section-number">6.2</span> Der <strong>und</strong>-Operator (<span class="math inline">\(\land\)</span>)</h2>
+<p>Die Konjunktion (und-Operator) verbindet zwei Aussagen miteinander. Dabei ist die Aussage der beiden Aussagen im Verbund nur dann wahr, wenn auch die beiden einzelnen Aussagen wahr sind.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(A\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(B\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(A \land B\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="der-oder-operator-lor" class="level2" data-number="6.3">
+<h2 data-number="6.3" class="anchored" data-anchor-id="der-oder-operator-lor"><span class="header-section-number">6.3</span> Der <strong>oder</strong>-Operator (<span class="math inline">\(\lor\)</span>)</h2>
+<p>Die Disjunktion (oder-Operator) verbindet zwei Aussagen miteinander. Dabei ist die Aussage der beiden Aussagen im Verbund wahr, sobald mindestens eine der Aussagen im Verbund wahr ist.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th style="text-align: center;"><span class="math inline">\(A\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(B\)</span></th>
+<th style="text-align: center;"><span class="math inline">\(A \lor B\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+</tr>
+</tbody>
+</table>
+</section>
 </div>
+</div>
+<section id="anwendungsbeispiel" class="level2" data-number="6.4">
+<h2 data-number="6.4" class="anchored" data-anchor-id="anwendungsbeispiel"><span class="header-section-number">6.4</span> Anwendungsbeispiel</h2>
+<p>Angewandt auf die Blume vom letzten Mal, kann mit Bedingungen eine Blume gezeichnet werden, welche Blütenblätter in unterschiedlichen Farben aufweist.</p>
+<div id="e28f5bca" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pytamaro.de <span class="im">import</span> <span class="op">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="cfabe0f3" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>weisses_blatt <span class="op">=</span> ellipse(<span class="dv">50</span>, <span class="dv">150</span>, weiss)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>rosa_rand <span class="op">=</span> ellipse(<span class="dv">55</span>, <span class="dv">155</span>, rgb_farbe(<span class="dv">255</span>, <span class="dv">0</span>, <span class="dv">102</span>))</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>bluetenblatt_mit_rand <span class="op">=</span> ueberlagere(weisses_blatt, rosa_rand)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>standardbluetenblatt <span class="op">=</span> fixiere(unten_mitte, bluetenblatt_mit_rand)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>gruenes_blatt <span class="op">=</span> ellipse(<span class="dv">55</span>, <span class="dv">155</span>, rgb_farbe(<span class="dv">128</span>, <span class="dv">255</span>, <span class="dv">0</span>))</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>dreier_blatt <span class="op">=</span> fixiere(unten_mitte, gruenes_blatt)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>gelbes_blatt <span class="op">=</span> ellipse(<span class="dv">55</span>, <span class="dv">155</span>, rgb_farbe(<span class="dv">255</span>, <span class="dv">255</span>, <span class="dv">0</span>))</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>fuenfer_blatt <span class="op">=</span> fixiere(unten_mitte, gelbes_blatt)</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>kombi_blatt <span class="op">=</span> ellipse(<span class="dv">55</span>, <span class="dv">155</span>, rgb_farbe(<span class="dv">181</span>, <span class="dv">240</span>, <span class="dv">16</span>))</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>kombi_blatt <span class="op">=</span> fixiere(unten_mitte, kombi_blatt)</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>zeige_grafik(standardbluetenblatt)</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>zeige_grafik(dreier_blatt)</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>zeige_grafik(fuenfer_blatt)</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>zeige_grafik(kombi_blatt)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="260916_blume_II_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
-<p>Python ist so programmiert, dass die Rangfolge der verschiedenen arithmetischen Operationen (Punkt vor Strich, Klammern zuerst) eingehalten wird.</p>
-<p>Damit Sie ein Gefühl für die Funktionsweise von Python als ‘Rechner’ erhalten, führen Sie die folgenden Berechnungen durch. Die Berechnung kann direkt in der Code-Zelle unterhalb der jeweiligen Aufgabenstellung durchgeführt werden.</p>
-<ol type="a">
-<li><span class="math inline">\(2 + 3 \cdot 4\)</span></li>
-</ol>
-<div id="f6536fd3" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Berechnung durchführen</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<ol start="2" type="a">
-<li><span class="math inline">\((2 + 3) \cdot 4\)</span></li>
-</ol>
-<div id="cfe2cc4a" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Berechnung durchführen</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<ol start="3" type="a">
-<li><span class="math inline">\(2^5+2^3+2^1\)</span></li>
-</ol>
-<div id="e89a4e19" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Berechnung durchführen</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<ol start="4" type="a">
-<li><span class="math inline">\(\lfloor \frac{40}{7} \rfloor\)</span></li>
-</ol>
-<div id="ef944cd4" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Berechnung durchführen</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<ol start="5" type="a">
-<li><span class="math inline">\(40 \mod 7\)</span></li>
-</ol>
-<div id="282db4f8" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Berechnung durchführen</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="werte-variablen-zuweisen" class="level2" data-number="3.2">
-<h2 data-number="3.2" class="anchored" data-anchor-id="werte-variablen-zuweisen"><span class="header-section-number">3.2</span> Werte Variablen zuweisen</h2>
-<p>Die oben durchgeführten Berechnungen haben das Resultat jeweils direkt ausgegeben. In vielen Fällen ist das Resultat einer konkreten Berechnung jedoch lediglich ein Zwischenresultat. In diesen Fällen will man mit diesem Zwischenresultat weiterrechnen können. Hier kommen Variablen ins Spiel.</p>
-<p>Die Resultate Ihrer Berechnungen werden nicht nur angezeigt, sie werden auch im Arbeitsspeicher abgelegt. Variablen dienen nun dazu, einen ansprechbaren Verweis auf den Ort des abgelegten Resultates anzulegen. Das heisst, wir können die Resultate der Berechnungen nicht nur ausgeben, wir können sie einer Variable zuweisen. Dazu wird in Python das Zeichen <code>=</code> verwendet (ich habe das Zeichen in diesem Zusammenhang bewusst nicht Gleichheitszeichen genannt, weil es hier keine Gleichheit, sondern eine Zuweisung zum Ausdruck bringt). Dabei muss die Variable links des Zuweisungszeichens und der zuzuweisende Wert rechts davon stehen.</p>
-<p>Variablennamen dürfen aus Buchstaben, Ziffern und Unterstrichen bestehen, dürfen aber nicht mit einer Ziffer beginnen. Ausgenommen sind die sogenannten ‘<a href="https://www.w3schools.com/python/python_ref_keywords.asp">reservierten Wörter</a>’. Diese Wörter haben in Python eine feste Bedeutung und dürfen deshalb nicht als Variablennamen verwendet werden. Als Konvention hat sich eingebürgert, dass Python-Variablen in Snake Case geschrieben werden. Snake Case sieht folgendermassen aus: <code>ich_bin_eine_python_variable</code>. Dies ermöglicht es, Variablen mit Namen zu versehen, welche eine kurze Erklärung zu den ihnen zugewiesenen Werten abgeben.</p>
-<p>Für die erste Berechnung von oben kann das folgendermassen aussehen:</p>
-<div id="91534952" class="cell" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>resultat_a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Nun wird das Resultat der Berechnung der Variable <code>resultat_a</code> zugewiesen und nicht mehr ausgegeben. Wir können den zugewiesenen Wert jederzeit ausgeben, indem wir die Variable aufrufen.</p>
-<div id="5d42b05f" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>resultat_a</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Die Berechnung und der Aufruf der Variable können auch in der gleichen Code-Zelle stehen. Ausgegeben wird allerdings immer nur der Wert der letzten Code-Zeile.</p>
-<div id="16a847dc" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>resultat_a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">3</span> <span class="op">*</span> <span class="dv">4</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>resultat_a</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Spielen Sie die verschiedenen Möglichkeiten mit allen obigen Berechnungen durch.</p>
-<div id="5c068cf2" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Resultate von Berechnungen Variablen zuweisen</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-<p>Variablen können jedoch nicht ausschliesslich Werte von Berechnungen zugewiesen werden. Es ist auch möglich, Variablen direkt Werte zuzuweisen. Ausserdem kann mit den Variablen weitergerechnet werden. Das zeigt das folgende Beispiel.</p>
-<div id="de426c77" class="cell" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="dv">4</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> (a<span class="op">**</span><span class="dv">2</span> <span class="op">+</span> b<span class="op">**</span><span class="dv">2</span>)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">2</span>)</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>c</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="4">
-<pre><code>5.0</code></pre>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="260916_blume_II_files/figure-html/cell-7-output-2.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<p>Diese Berechnung ermöglicht noch eine Ergänzung zu den oben in der Tabelle angeführten arithmetischen Operationen. Wurzeln können als Potenz dargestellt werden. Für die Quadratwurzel ist der Exponent ein Zweitel, für die dritte Wurzel ein Drittel etc. Dabei dürfen die Exponenten auch als Dezimalzahl geschrieben werden.</p>
-<p>Führen Sie die obige Berechnung mit den Zahlen a = 5 und b = 12 durch.</p>
-<div id="78a6eaad" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Berechnung mit a = 5 und b = 12 durchführen</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="260916_blume_II_files/figure-html/cell-7-output-3.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
-</section>
-<section id="einfache-python-funktionen-aufrufen" class="level2" data-number="3.3">
-<h2 data-number="3.3" class="anchored" data-anchor-id="einfache-python-funktionen-aufrufen"><span class="header-section-number">3.3</span> Einfache Python Funktionen aufrufen</h2>
-<p>Die erste Funktion, welche bei der Neuinstallation einer Programmiersprache traditionellerweise aufgerufen wird, haben Sie bereits kennengelernt.</p>
-<p><code>print('Hello World')</code></p>
-<p>Die Funktion <code>print()</code> gibt aus, was ihr innerhalb der Klammern übergeben wird. Was einer Funktion beim Aufruf übergeben wird, nennt man Argument. So, wie wir die Funktion bisher verwendet haben, ist das Argument die Zeichenfolge in den Anführungszeichen. Anstelle eines solchen Strings (Zeichenkette, ein von Python zur Verfügung gestellter Datentyp - was genau Datentypen sind, wird gleich unten angetönt und später im Detail besprochen) können der Funktion auch Variablen übergeben werden. So kann ihr zum Beispiel die Variable <code>resultat_a</code> aus obigen Berechnungen übergeben werden.</p>
-<div id="c11ffa3b" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(resultat_a)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<blockquote class="blockquote">
-<p><strong>Hinweis:</strong> Erscheint hier die Fehlermeldung <code>NameError: name 'resultat_a' is not defined</code>, wurde die Zelle, in der die Variable definiert wird, in dieser Sitzung noch nicht ausgeführt. Führen Sie zuerst die Zelle mit der Zuweisung aus und anschliessend diese Zelle noch einmal.</p>
-</blockquote>
-<p>Der Unterschied zum direkten Aufruf einer Variable: Ohne <code>print()</code> zeigt das Notebook nur den Wert der letzten Zeile einer Code-Zelle an. Mit <code>print()</code> können Sie beliebig viele Werte an beliebiger Stelle einer Code-Zelle ausgeben. Probieren Sie das aus, indem Sie in der folgenden Code-Zelle alle von Ihnen bisher verwendeten Variablen nacheinander mit <code>print()</code> ausgeben.</p>
-<div id="c33a97c1" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Ausgabe der bisher definierten Variablen</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="260916_blume_II_files/figure-html/cell-7-output-4.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
-<p>Eine zweite nützliche Funktion, die Python direkt zur Verfügung stellt, ist <code>type()</code>. Sie verrät, welchen Datentyp ein Wert hat. Wie bei <code>print()</code> wird der zu untersuchende Wert als Argument in den Klammern übergeben.</p>
-<div id="typ1code" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">type</span>(<span class="dv">7</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Die Ausgabe <code>int</code> steht für Integer, den Datentyp der ganzen Zahlen. Untersuchen Sie in der folgenden Code-Zelle nacheinander die Werte <code>3.5</code>, <code>'Hello World'</code> sowie die Variablen <code>resultat_a</code> und <code>c</code>. Verwenden Sie dazu <code>print()</code> in Kombination mit <code>type()</code>, also zum Beispiel <code>print(type(3.5))</code> - so werden alle Resultate untereinander ausgegeben.</p>
-<p>Sie werden dabei neben <code>int</code> auf zwei weitere Datentypen stossen: <code>float</code> (Dezimalzahlen, sogenannte Fliesskommazahlen) und <code>str</code> (Strings, also Zeichenketten). Was es mit diesen Datentypen im Einzelnen auf sich hat, wird später im Detail besprochen. Für den Moment genügt es zu wissen, dass jeder Wert in Python einen Datentyp hat und dass <code>type()</code> diesen sichtbar macht.</p>
-<div id="typ3todo" class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Datentypen der angegebenen Werte und Variablen ausgeben</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="1ab7f7bc" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>anzahl_blaetter <span class="op">=</span> <span class="dv">36</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>blume <span class="op">=</span> kombi_blatt</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(anzahl_blaetter):</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    winkel <span class="op">=</span> i <span class="op">*</span> <span class="dv">360</span> <span class="op">/</span> anzahl_blaetter</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    standard_gedreht <span class="op">=</span> drehe(winkel, standardbluetenblatt)</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    dreier_gedreht <span class="op">=</span> drehe(winkel, dreier_blatt)</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    fuenfer_gedreht <span class="op">=</span> drehe(winkel, fuenfer_blatt)</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    kombi_gedreht <span class="op">=</span> drehe(winkel, kombi_blatt)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span> <span class="kw">and</span> i <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>        blume <span class="op">=</span> kombiniere(blume, kombi_gedreht)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>        blume <span class="op">=</span> kombiniere(blume, dreier_gedreht)</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> i <span class="op">%</span> <span class="dv">5</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>        blume <span class="op">=</span> kombiniere(blume, fuenfer_gedreht)</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>        blume <span class="op">=</span> kombiniere(blume, standard_gedreht)</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a>zeige_grafik(blume)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="260916_blume_II_files/figure-html/cell-8-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="ae502840" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>scheibe <span class="op">=</span> ellipse(<span class="dv">30</span>, <span class="dv">30</span>, rgb_farbe(<span class="dv">255</span>, <span class="dv">0</span>, <span class="dv">0</span>))</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">8</span>):</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    tmp <span class="op">=</span> ellipse(<span class="dv">30</span> <span class="op">-</span> <span class="dv">3</span><span class="op">*</span>i, <span class="dv">30</span> <span class="op">-</span> <span class="dv">3</span><span class="op">*</span>i, rgb_farbe(<span class="dv">255</span>, i<span class="op">*</span><span class="dv">26</span>, i<span class="op">*</span><span class="dv">26</span>))</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    scheibe <span class="op">=</span> ueberlagere(tmp, scheibe)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>zeige_grafik(scheibe)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="260916_blume_II_files/figure-html/cell-9-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="01c4206b" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>blume <span class="op">=</span> ueberlagere(scheibe, blume)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>zeige_grafik(blume)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="260916_blume_II_files/figure-html/cell-10-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
 </div>
 
 
@@ -862,14 +953,11 @@ Table&nbsp;3.1: Zusammenstellung der Grundrechenarten.
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.html" class="pagination-link" aria-label="Einrichten der Arbeitsumgebung">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Einrichten der Arbeitsumgebung</span></span>
+      <a href="../../notebooks/260909_blume/260909_blume.html" class="pagination-link" aria-label="Wiederholungen in Python (For-Schleifen)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Wiederholungen in Python (For-Schleifen)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../notebooks/260902_fahne_I/260902_fahne_I.html" class="pagination-link" aria-label="Problemlösung in der Informatik">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Problemlösung in der Informatik</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

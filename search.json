@@ -258,5 +258,49 @@
       "Einführung",
       "<span class='chapter-number'>5</span>  <span class='chapter-title'>Wiederholungen in Python (For-Schleifen)</span>"
     ]
+  },
+  {
+    "objectID": "notebooks/260916_blume_II/260916_blume_II.html",
+    "href": "notebooks/260916_blume_II/260916_blume_II.html",
+    "title": "6  Bedingungen in Python",
+    "section": "",
+    "text": "6.4 Anwendungsbeispiel\nEs gibt Programmieraufgaben, bei denen einzelne Anweisungen nur ausgeführt werden sollen, wenn bestimmte Bedingungen erfüllt sind. Allgemein funktioniert das nach dem Schema\nIm folgenden Beispiel wird der Computer mit Python angewiesen, zu prüfen, ob der einer Variablen zugewiesene Wert durch drei Teilbar ist. Wenn dies der Fall ist, soll der Text Die Zahl ist durch 3 teilbar. ausgegeben werden, anderenfalls Die Zahl ist nicht durch 3 teilbar..\nEs können auch mehrere Bedingungen nacheinander geprüft werden. Zur Demonstration wird das obige Beispiel um die Prüfung der Teilbarkeit durch fünf ergänzt.\nAllerdings werfen die beiden obigen Beispiele zusammen ein neues Problem auf: Was wenn eine Zahl sowohl durch drei als auch durch fünf Teilbar ist?\nEs kann auch das vorliegen mehrerer Bedingungen gleichzeitig geprüft werden:\nEs ist auch möglich, zu prüfen, ob eine Zahl durch drei oder durch fünf teilbar ist:\nDie wissenschaftliche Disziplin, die sich mit der Kombination des Wahrheitsgehalts von verschiedenen Aussagen beschäftigt, ist die Aussagelogik.\nAngewandt auf die Blume vom letzten Mal, kann mit Bedingungen eine Blume gezeichnet werden, welche Blütenblätter in unterschiedlichen Farben aufweist.\nfrom pytamaro.de import *\nweisses_blatt = ellipse(50, 150, weiss)\nrosa_rand = ellipse(55, 155, rgb_farbe(255, 0, 102))\n\nbluetenblatt_mit_rand = ueberlagere(weisses_blatt, rosa_rand)\n\nstandardbluetenblatt = fixiere(unten_mitte, bluetenblatt_mit_rand)\n\ngruenes_blatt = ellipse(55, 155, rgb_farbe(128, 255, 0))\ndreier_blatt = fixiere(unten_mitte, gruenes_blatt)\n\ngelbes_blatt = ellipse(55, 155, rgb_farbe(255, 255, 0))\nfuenfer_blatt = fixiere(unten_mitte, gelbes_blatt)\n\nkombi_blatt = ellipse(55, 155, rgb_farbe(181, 240, 16))\nkombi_blatt = fixiere(unten_mitte, kombi_blatt)\n\nzeige_grafik(standardbluetenblatt)\nzeige_grafik(dreier_blatt)\nzeige_grafik(fuenfer_blatt)\nzeige_grafik(kombi_blatt)\nanzahl_blaetter = 36\n\nblume = kombi_blatt\n\nfor i in range(anzahl_blaetter):\n    winkel = i * 360 / anzahl_blaetter\n    standard_gedreht = drehe(winkel, standardbluetenblatt)\n    dreier_gedreht = drehe(winkel, dreier_blatt)\n    fuenfer_gedreht = drehe(winkel, fuenfer_blatt)\n    kombi_gedreht = drehe(winkel, kombi_blatt)\n    if i % 3 == 0 and i % 5 == 0:\n        blume = kombiniere(blume, kombi_gedreht)\n    elif i % 3 == 0:\n        blume = kombiniere(blume, dreier_gedreht)\n    elif i % 5 == 0:\n        blume = kombiniere(blume, fuenfer_gedreht)\n    else:\n        blume = kombiniere(blume, standard_gedreht)\n\nzeige_grafik(blume)\nscheibe = ellipse(30, 30, rgb_farbe(255, 0, 0))\n\nfor i in range(1, 8):\n    tmp = ellipse(30 - 3*i, 30 - 3*i, rgb_farbe(255, i*26, i*26))\n    scheibe = ueberlagere(tmp, scheibe)\n\nzeige_grafik(scheibe)\nblume = ueberlagere(scheibe, blume)\nzeige_grafik(blume)",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Bedingungen in Python</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260916_blume_II/260916_blume_II.html#der-nicht-operator-lnot",
+    "href": "notebooks/260916_blume_II/260916_blume_II.html#der-nicht-operator-lnot",
+    "title": "6  Bedingungen in Python",
+    "section": "6.1 Der nicht-Operator (\\(\\lnot\\))",
+    "text": "6.1 Der nicht-Operator (\\(\\lnot\\))\nDer nicht-Operator ist ein sogenannter unärer Operator, weil er ausschliesslich einen Operanden braucht. Die Wahrheitstabelle für den nicht-Operator sieht folgendermassen aus:\n\n\n\n\\(A\\)\n\\(\\lnot A\\) oder \\(\\bar{A}\\)\n\n\n\n\n1\n0\n\n\n0\n1",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Bedingungen in Python</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260916_blume_II/260916_blume_II.html#der-und-operator-land",
+    "href": "notebooks/260916_blume_II/260916_blume_II.html#der-und-operator-land",
+    "title": "6  Bedingungen in Python",
+    "section": "6.2 Der und-Operator (\\(\\land\\))",
+    "text": "6.2 Der und-Operator (\\(\\land\\))\nDie Konjunktion (und-Operator) verbindet zwei Aussagen miteinander. Dabei ist die Aussage der beiden Aussagen im Verbund nur dann wahr, wenn auch die beiden einzelnen Aussagen wahr sind.\n\n\n\n\\(A\\)\n\\(B\\)\n\\(A \\land B\\)\n\n\n\n\n1\n1\n1\n\n\n1\n0\n0\n\n\n0\n1\n0\n\n\n0\n0\n0",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Bedingungen in Python</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260916_blume_II/260916_blume_II.html#der-oder-operator-lor",
+    "href": "notebooks/260916_blume_II/260916_blume_II.html#der-oder-operator-lor",
+    "title": "6  Bedingungen in Python",
+    "section": "6.3 Der oder-Operator (\\(\\lor\\))",
+    "text": "6.3 Der oder-Operator (\\(\\lor\\))\nDie Disjunktion (oder-Operator) verbindet zwei Aussagen miteinander. Dabei ist die Aussage der beiden Aussagen im Verbund wahr, sobald mindestens eine der Aussagen im Verbund wahr ist.\n\n\n\n\\(A\\)\n\\(B\\)\n\\(A \\lor B\\)\n\n\n\n\n1\n1\n1\n\n\n1\n0\n1\n\n\n0\n1\n1\n\n\n0\n0\n0",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>Bedingungen in Python</span>"
+    ]
   }
 ]
