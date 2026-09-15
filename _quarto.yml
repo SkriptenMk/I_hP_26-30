@@ -23,6 +23,7 @@ book:
         - notebooks/260826_einf_python/260826_einf_python.ipynb
         - notebooks/260902_fahne_I/260902_fahne_I.ipynb
         - notebooks/260909_blume/260909_blume.ipynb
+        - notebooks/260916_blume_II/260916_blume_II.ipynb
 
 format:
   html:
