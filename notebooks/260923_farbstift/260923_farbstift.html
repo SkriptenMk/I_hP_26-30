@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1&nbsp; ‘Organisation’ von Information auf einem Computer – Unterlagen für das obligatorische Fach Informatik in der Klasse 1hP</title>
+<title>7&nbsp; Farbstiftschachtel (verschachtelte for-schleifen) – Unterlagen für das obligatorische Fach Informatik in der Klasse 1hP</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,6 +26,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -36,8 +71,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.html" rel="next">
-<link href="../../index.html" rel="prev">
+<link href="../../notebooks/260916_blume_II/260916_blume_II.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -88,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/260819_einfuehrung/260819_einfuehrung.html">Einführung</a></li><li class="breadcrumb-item"><a href="../../notebooks/260819_einfuehrung/260819_einfuehrung.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einführung</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/260819_einfuehrung/260819_einfuehrung.html">Einführung</a></li><li class="breadcrumb-item"><a href="../../notebooks/260923_farbstift/260923_farbstift.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Farbstiftschachtel (verschachtelte <code>for-schleifen</code>)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -133,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/260819_einfuehrung/260819_einfuehrung.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../notebooks/260819_einfuehrung/260819_einfuehrung.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
   </div>
 </li>
@@ -169,7 +203,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/260923_farbstift/260923_farbstift.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/260923_farbstift/260923_farbstift.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Farbstiftschachtel (verschachtelte <code>for-schleifen</code>)</span></span></a>
   </div>
 </li>
@@ -185,29 +219,17 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#in-welcher-form-daten-auf-dem-computer-abgelegt-werden" id="toc-in-welcher-form-daten-auf-dem-computer-abgelegt-werden" class="nav-link active" data-scroll-target="#in-welcher-form-daten-auf-dem-computer-abgelegt-werden"><span class="header-section-number">1.1</span> In welcher Form Daten auf dem Computer abgelegt werden</a>
-  <ul class="collapse">
-  <li><a href="#binärdateien" id="toc-binärdateien" class="nav-link" data-scroll-target="#binärdateien"><span class="header-section-number">1.1.1</span> Binärdateien</a></li>
-  <li><a href="#textdateien" id="toc-textdateien" class="nav-link" data-scroll-target="#textdateien"><span class="header-section-number">1.1.2</span> Textdateien</a></li>
-  </ul></li>
-  <li><a href="#die-organisation-des-massenspeichers-unter-windows" id="toc-die-organisation-des-massenspeichers-unter-windows" class="nav-link" data-scroll-target="#die-organisation-des-massenspeichers-unter-windows"><span class="header-section-number">1.2</span> Die Organisation des Massenspeichers unter Windows</a>
-  <ul class="collapse">
-  <li><a href="#der-start-bei-c-ein-historisches-überbleibsel" id="toc-der-start-bei-c-ein-historisches-überbleibsel" class="nav-link" data-scroll-target="#der-start-bei-c-ein-historisches-überbleibsel"><span class="header-section-number">1.2.1</span> Der Start bei „C:“ – Ein historisches Überbleibsel</a></li>
-  <li><a href="#weitere-buchstaben-im-alphabet" id="toc-weitere-buchstaben-im-alphabet" class="nav-link" data-scroll-target="#weitere-buchstaben-im-alphabet"><span class="header-section-number">1.2.2</span> Weitere Buchstaben im Alphabet</a></li>
-  </ul></li>
-  <li><a href="#die-dateiadresse" id="toc-die-dateiadresse" class="nav-link" data-scroll-target="#die-dateiadresse"><span class="header-section-number">1.3</span> Die Dateiadresse</a>
-  <ul class="collapse">
-  <li><a href="#wie-ein-pfad-aufgebaut-ist" id="toc-wie-ein-pfad-aufgebaut-ist" class="nav-link" data-scroll-target="#wie-ein-pfad-aufgebaut-ist"><span class="header-section-number">1.3.1</span> Wie ein Pfad aufgebaut ist</a></li>
-  </ul></li>
+  <li><a href="#kartonschachtel-6-wasservermalbare-farbstifte-school-line" id="toc-kartonschachtel-6-wasservermalbare-farbstifte-school-line" class="nav-link active" data-scroll-target="#kartonschachtel-6-wasservermalbare-farbstifte-school-line"><span class="header-section-number">7.1</span> Kartonschachtel 6 wasservermalbare Farbstifte SCHOOL LINE</a></li>
+  <li><a href="#etui-120-farben-supracolor-aquarelle" id="toc-etui-120-farben-supracolor-aquarelle" class="nav-link" data-scroll-target="#etui-120-farben-supracolor-aquarelle"><span class="header-section-number">7.2</span> Etui 120 Farben SUPRACOLOR Aquarelle</a></li>
   </ul>
-<div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/SkriptenMk/I_bW_26-30/blob/main/notebooks/260818_einfuehrung/260818_einfuehrung.ipynb"><i class="bi bi-rocket-takeoff"></i>In Colab öffnen</a></li><li><a href="https://mybinder.org/v2/gh/SkriptenMk/I_bW_26-30/main?labpath=notebooks%2F260818_einfuehrung%2F260818_einfuehrung.ipynb"><i class="bi bi-box-arrow-up-right"></i>In Binder öffnen</a></li><li><a href="260818_einfuehrung.ipynb"><i class="bi bi-download"></i>Notebook herunterladen</a></li></ul></div></nav>
+<div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/SkriptenMk/I_hP_26-30/blob/main/notebooks/260923_farbstift/260923_farbstift.ipynb"><i class="bi bi-rocket-takeoff"></i>In Colab öffnen</a></li><li><a href="https://mybinder.org/v2/gh/SkriptenMk/I_hP_26-30/main?labpath=notebooks%2F260923_farbstift%2F260923_farbstift.ipynb"><i class="bi bi-box-arrow-up-right"></i>In Binder öffnen</a></li><li><a href="260923_farbstift.ipynb"><i class="bi bi-download"></i>Notebook herunterladen</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/260819_einfuehrung/260819_einfuehrung.html">Einführung</a></li><li class="breadcrumb-item"><a href="../../notebooks/260819_einfuehrung/260819_einfuehrung.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einführung</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/260819_einfuehrung/260819_einfuehrung.html">Einführung</a></li><li class="breadcrumb-item"><a href="../../notebooks/260923_farbstift/260923_farbstift.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Farbstiftschachtel (verschachtelte <code>for-schleifen</code>)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">‘Organisation’ von Information auf einem Computer</span></h1>
+<h1 class="title"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Farbstiftschachtel (verschachtelte <code>for-schleifen</code>)</span></h1>
 </div>
 
 
@@ -224,63 +246,68 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Um eine wissenschaftliche Disziplin zu beschreiben, hilft es, wenn man sich überlegt, welche Frage sie in ihrem Kern zu beantworten versucht. Diese Grundfrage lautet für die Informatik:</p>
-<p><em>Kann diese Aufgabe algorithmisch gelöst werden?</em></p>
-<p>Bevor wir uns dieser Grundfrage nähern, müssen wir allerdings klären, in welcher Umgebung Algorithmen verarbeitet werden. In der Informatik ist das der Computer.</p>
-<p>Ein Algorithmus muss Daten lesen, verändern und abspeichern können. Aus Sicht der Software wird Information dabei auf dem Computer primär in zwei grundlegenden Kategorien verwaltet:</p>
-<ul>
-<li>Im Arbeitsspeicher (RAM): Das ist das Kurzzeitgedächtnis des Computers. Hier liegen alle Daten, mit denen gerade im Moment aktiv gerechnet wird. Er ist extrem schnell, aber flüchtig (sobald der Strom weg ist, sind die Daten gelöscht).</li>
-<li>Im Massenspeicher (Festplatte/SSD): Das ist das Langzeitgedächtnis. Hier lagern Betriebssystem, Programme und Dokumente dauerhaft. Er ist langsamer als der Arbeitsspeicher, behält die Daten aber auch, wenn der Computer ausgeschaltet wird.</li>
-</ul>
-<section id="in-welcher-form-daten-auf-dem-computer-abgelegt-werden" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="in-welcher-form-daten-auf-dem-computer-abgelegt-werden"><span class="header-section-number">1.1</span> In welcher Form Daten auf dem Computer abgelegt werden</h2>
-<p>Information bzw. Daten werden auf dem Computer als Datei (engl. File) gespeichert. Dabei werden im Alltag zwei grundlegende Arten von Dateien unterschieden:</p>
-<ul>
-<li>Binärdateien</li>
-<li>Textdateien</li>
-</ul>
-<section id="binärdateien" class="level3" data-number="1.1.1">
-<h3 data-number="1.1.1" class="anchored" data-anchor-id="binärdateien"><span class="header-section-number">1.1.1</span> Binärdateien</h3>
-<p>Binärdateien sind Dateien, die nur mit einem spezifischen Programm sinnvoll gelesen und bearbeitet werden können. Ein Beispiel für eine Binärdatei ist eine Word-Datei. Die Datei <code>text.docx</code> kann nur in Word oder in Programmen, welche Word-kompatibel sind, korrekt angezeigt und bearbeitet werden. Ein anderes Beispiel ist eine PDF-Datei (text.pdf), die einen PDF-Reader benötigt. Versucht man, eine solche Datei in einem einfachen Texteditor zu öffnen, sieht man meist nur einen unleserlichen Buchstabensalat.</p>
+<p>Schweizer Schulkinder werden mit Prismalo-Farbstiften von Caran D’Ache sozialisiert. Praktisch alle kennen die Schachtel mit sechs Farbstiften.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="sechser_schachtel_horizontal.png" class="img-fluid figure-img"></p>
+<figcaption>Caran D’Ache Farbstifte</figcaption>
+</figure>
+</div>
+<p>In dieser Übung werden wir mit Sechser-Schachtel anfangen und uns bis zur Schachtel mit 120 Farbstiften hocharbeiten. Damit der Aufwand für die Grundstruktur des Farbstiftes nicht zu gross wird, stelle ich Ihnen unten eine Funktion <code>farbstift()</code> zur Verfügung. Sie nimmt den Rot-, Grün- und Blauwert der RGB-Farben als Argumente entgegen und gibt einen entsprechend eingefärbten stilisierten Farbstift zurück.</p>
+<div id="51ab52d1" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pytamaro.de <span class="im">import</span> <span class="op">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="664cb2de" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> farbstift(r, g, b):</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    farbe <span class="op">=</span> rgb_farbe(r, g, b)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    schaft <span class="op">=</span> rechteck(<span class="dv">200</span>, <span class="dv">25</span>, farbe)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    holzspitze <span class="op">=</span> dreieck(<span class="dv">25</span>, <span class="dv">25</span>, <span class="dv">60</span>, rgb_farbe(<span class="dv">238</span>,<span class="dv">232</span>,<span class="dv">170</span>))</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>    farbspitze <span class="op">=</span> dreieck(<span class="dv">10</span>, <span class="dv">10</span>, <span class="dv">60</span>, farbe)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    holzspitze_fixiert <span class="op">=</span> fixiere(oben_mitte, holzspitze)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    farbspitze_fixiert <span class="op">=</span> fixiere(oben_mitte, farbspitze)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    spitze <span class="op">=</span> kombiniere(farbspitze_fixiert, holzspitze_fixiert)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    spitze_ausgerichtet <span class="op">=</span> drehe(<span class="op">-</span><span class="dv">90</span>, spitze)</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    farbstift_gespitzt <span class="op">=</span> neben(schaft, spitze_ausgerichtet)</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> farbstift_gespitzt</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="kartonschachtel-6-wasservermalbare-farbstifte-school-line" class="level2" data-number="7.1">
+<h2 data-number="7.1" class="anchored" data-anchor-id="kartonschachtel-6-wasservermalbare-farbstifte-school-line"><span class="header-section-number">7.1</span> Kartonschachtel 6 wasservermalbare Farbstifte SCHOOL LINE</h2>
+<p>Als Beispiel zeichne ich hier die Schachtel der obigen Abbildung.</p>
+<div id="73ed7bac" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>gelber_farbstift    <span class="op">=</span> farbstift(<span class="dv">255</span>, <span class="dv">255</span>,   <span class="dv">0</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>roter_farbstift     <span class="op">=</span> farbstift(<span class="dv">255</span>,   <span class="dv">0</span>,   <span class="dv">0</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>blauer_farbstift    <span class="op">=</span> farbstift(  <span class="dv">0</span>,   <span class="dv">0</span>, <span class="dv">255</span>)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>gruener_farbstift   <span class="op">=</span> farbstift(  <span class="dv">0</span>, <span class="dv">255</span>,   <span class="dv">0</span>)</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>brauner_farbstift   <span class="op">=</span> farbstift(<span class="dv">139</span>,  <span class="dv">69</span>,  <span class="dv">19</span>)</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>schwarzer_farbstift <span class="op">=</span> farbstift(  <span class="dv">0</span>,   <span class="dv">0</span>,   <span class="dv">0</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>schachtel  <span class="op">=</span> leere_grafik()</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>schachtel1 <span class="op">=</span> ueber(gelber_farbstift, schachtel)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>schachtel2 <span class="op">=</span> ueber(schachtel1, roter_farbstift)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>schachtel3 <span class="op">=</span> ueber(schachtel2, blauer_farbstift)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>schachtel4 <span class="op">=</span> ueber(schachtel3, gruener_farbstift)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>schachtel5 <span class="op">=</span> ueber(schachtel4, brauner_farbstift)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>schachtel6 <span class="op">=</span> ueber(schachtel5, schwarzer_farbstift)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>zeige_grafik(schachtel6)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="260923_farbstift_files/figure-html/cell-4-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
 </section>
-<section id="textdateien" class="level3" data-number="1.1.2">
-<h3 data-number="1.1.2" class="anchored" data-anchor-id="textdateien"><span class="header-section-number">1.1.2</span> Textdateien</h3>
-<p>Eine Textdatei kann im Gegensatz dazu in jedem beliebigen Texteditor geöffnet und sofort gelesen werden. Ein Texteditor ist ein einfaches Programm, mit welchem reiner Text verarbeitet wird. Reiner Text zeichnet sich durch das Fehlen jeglicher optischer Formatierungen (wie Fettgedrucktes, unterschiedliche Schriftgrössen oder Farben) aus. Entsprechend besitzen diese Editoren auch keine Formatierungsmenüs. Optisch erinnern sie ein bisschen an ein weisses Blatt Papier in einer Schreibmaschine.</p>
-<p>Genau genommen bestehen alle Dateien aus Bits; bei Textdateien folgt deren Interpretation aber einem allgemein bekannten Standard.</p>
-<p>Texteditoren sind in allen Betriebssystemen vorinstalliert:</p>
-<ul>
-<li>Unter Windows heisst dieses Standardprogramm schlicht Editor (bzw. Notepad).</li>
-<li>Auf dem Mac nutzt man dafür TextEdit (wobei man das Programm erst über das Menü „Format“ in den Modus „In reinen Text umwandeln“ versetzen muss).</li>
-<li>Wer auf einem Linux-Rechner arbeitet, nutzt meist Editoren wie Nano, Gedit oder Vim.</li>
-</ul>
-</section>
-</section>
-<section id="die-organisation-des-massenspeichers-unter-windows" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="die-organisation-des-massenspeichers-unter-windows"><span class="header-section-number">1.2</span> Die Organisation des Massenspeichers unter Windows</h2>
-<p>Text- und Binärdateien werden im Massenspeicher abgelegt. Die nächste Hürde, die es zu überwinden gilt, ist die Organisation der Dateiablage. Auf einem Computer sind unzählige Dateien gespeichert. Um den Überblick zu behalten, ist der Massenspeicher hierarchisch in einer Ordnerstruktur (auch Verzeichnisstruktur genannt) organisiert.</p>
-<p>Unter Windows 11 wird jedes Speichergerät mit einem Laufwerksbuchstaben, gefolgt von einem Doppelpunkt, gekennzeichnet.</p>
-<section id="der-start-bei-c-ein-historisches-überbleibsel" class="level3" data-number="1.2.1">
-<h3 data-number="1.2.1" class="anchored" data-anchor-id="der-start-bei-c-ein-historisches-überbleibsel"><span class="header-section-number">1.2.1</span> Der Start bei „C:“ – Ein historisches Überbleibsel</h3>
-<p>Wer den Windows-Explorer öffnet, sieht fast immer ein Hauptlaufwerk namens <strong><code>C:</code></strong> (oft beschriftet mit „Lokaler Datenträger“). Auf diesem Laufwerk ist das Betriebssystem Windows 11 selbst sowie all deine installierten Programme und persönlichen Daten abgelegt.</p>
-<p>Dass das Hauptlaufwerk den Buchstaben <strong>C</strong> trägt, liegt an der technischen Entwicklungsgeschichte der Computerspeicher. Laufwerk <code>A:</code> und <code>B:</code> waren Anfangs der 1980er-Jahren für Diskettenlaufwerke (<em>Floppy Disks</em>) reserviert. Speicher war extrem teuer, Computer verfügten daher noch nicht über interne Festplatten. Das Betriebssystem wurde daher über eine Diskette im Laufwerk <code>A:</code> gestartet. Die eigenen Dateien speicherte man auf einer zweiten Diskette im Laufwerk <code>B:</code>. Laufwerk <code>C:</code> kam erst ins Spiel, als die ersten Festplatten für PCs auf den Markt kamen. Da <code>A:</code> und <code>B:</code> bereits fest für die Disketten verplant waren, bekam die Festplatte einfach den nächsten freien Buchstaben: das <strong><code>C:</code></strong>.</p>
-</section>
-<section id="weitere-buchstaben-im-alphabet" class="level3" data-number="1.2.2">
-<h3 data-number="1.2.2" class="anchored" data-anchor-id="weitere-buchstaben-im-alphabet"><span class="header-section-number">1.2.2</span> Weitere Buchstaben im Alphabet</h3>
-<p>Wenn zusätzliche Speichermedien am Computer angeschlossen werden, verteilt Windows die nächsten freien Buchstaben im Alphabet einfach weiter. <code>D:</code>, <code>E:</code>, <code>F:</code>… werden für weitere eingebaute Festplatten, DVD-Laufwerke oder eingesteckte USB-Sticks und externe Festplatten verwendet. Netzlaufwerke, wie beispielsweise ein Schulserver, werden ebenfalls als Laufwerke eingebunden. Um Verwechslungen zu vermeiden, werden dafür oft Buchstaben vom Ende des Alphabets (wie z. B. <code>Z:</code>) verwendet.</p>
-</section>
-</section>
-<section id="die-dateiadresse" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="die-dateiadresse"><span class="header-section-number">1.3</span> Die Dateiadresse</h2>
-<p>Damit eine Datei auf dem Computer angezeigt bzw. bearbeitet werden kann, muss sie über eine Adresse bzw. den sogenannten Pfad angesprochen werden können.</p>
-<section id="wie-ein-pfad-aufgebaut-ist" class="level3" data-number="1.3.1">
-<h3 data-number="1.3.1" class="anchored" data-anchor-id="wie-ein-pfad-aufgebaut-ist"><span class="header-section-number">1.3.1</span> Wie ein Pfad aufgebaut ist</h3>
-<p>Ein typischer Pfad unter Windows 11 sieht beispielsweise so aus:</p>
-<p><code>C:\Schule\Informatik\hausaufgabe.txt</code></p>
-<p>Von links nach rechts gelesen, beginnt der Pfad mit dem Buchstaben des Laufwerks. Anschliessend kommt ein Ordner (hier <code>Schule</code>) und dann ein Unterordner (hier <code>Informatik</code>) und dann die Datei (hier <code>hausaufgabe.txt</code>). Die Anzahl der Unterordner ist dabei theoretisch unbegrenzt. Windows trennt dabei die einzelnen Ebenen durch einen Backslash (<code>\</code>) voneinander ab.</p>
-<p>Windows nutzt traditionell den nach links geneigten Backslash (im Schweizerdeutschen Tastaturlayout erzeugt über die Tastenkombination <code>Alt Gr</code> + <code>&lt;</code>). Das ist ein historisches Erbe aus den Urzeiten von Microsofts Betriebssystem DOS. Fast der ganze Rest der Computerwelt - darunter das Internet (URLs wie <code>[https://google.com/suche](https://google.com/suche)</code>; eine URL funktioniert nach demselben Prinzip wie ein Dateipfad: eine hierarchische Adresse), macOS, iPhones und Linux - nutzt den nach rechts geneigten normalen Schrägstrich (<code>/</code>).</p>
+<section id="etui-120-farben-supracolor-aquarelle" class="level2" data-number="7.2">
+<h2 data-number="7.2" class="anchored" data-anchor-id="etui-120-farben-supracolor-aquarelle"><span class="header-section-number">7.2</span> Etui 120 Farben SUPRACOLOR Aquarelle</h2>
+<p>Für eine Schachtel mit sechs Farbstiften funktioniert die manuelle Methode leidlich. Die Schachtel mit 120 Farbstiften ist aber sehr aufwändig.</p>
+<p>Wie wir gesehen haben, können repetitive Aufgaben mit <code>for</code>-Schleifen automatisiert werden. Für die Farbstifte müssen drei Änderungen parallel vorgenommen werden. Dazu können mehrere <code>for</code>-Schleifen ineinander verschachtelt werden.</p>
+<div id="23052dab" class="cell" data-execution_count="20">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: verschachtelte Schleife für 120 Farbstifte</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
@@ -686,14 +713,11 @@ ul.task-list li input[type="checkbox"] {
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../index.html" class="pagination-link" aria-label="Obligatorisches Fach Informatik (1hP)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Obligatorisches Fach Informatik (1hP)</span>
+      <a href="../../notebooks/260916_blume_II/260916_blume_II.html" class="pagination-link" aria-label="Bedingungen in Python">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bedingungen in Python</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.html" class="pagination-link" aria-label="Einrichten der Arbeitsumgebung">
-        <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Einrichten der Arbeitsumgebung</span></span> <i class="bi bi-arrow-right-short"></i>
-      </a>
   </div>
 </nav>
 </div> <!-- /content -->

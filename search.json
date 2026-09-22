@@ -302,5 +302,27 @@
       "Einführung",
       "<span class='chapter-number'>6</span>  <span class='chapter-title'>Bedingungen in Python</span>"
     ]
+  },
+  {
+    "objectID": "notebooks/260923_farbstift/260923_farbstift.html",
+    "href": "notebooks/260923_farbstift/260923_farbstift.html",
+    "title": "7  Farbstiftschachtel (verschachtelte for-schleifen)",
+    "section": "",
+    "text": "7.1 Kartonschachtel 6 wasservermalbare Farbstifte SCHOOL LINE\nSchweizer Schulkinder werden mit Prismalo-Farbstiften von Caran D’Ache sozialisiert. Praktisch alle kennen die Schachtel mit sechs Farbstiften.\nIn dieser Übung werden wir mit Sechser-Schachtel anfangen und uns bis zur Schachtel mit 120 Farbstiften hocharbeiten. Damit der Aufwand für die Grundstruktur des Farbstiftes nicht zu gross wird, stelle ich Ihnen unten eine Funktion farbstift() zur Verfügung. Sie nimmt den Rot-, Grün- und Blauwert der RGB-Farben als Argumente entgegen und gibt einen entsprechend eingefärbten stilisierten Farbstift zurück.\nAls Beispiel zeichne ich hier die Schachtel der obigen Abbildung.\ngelber_farbstift    = farbstift(255, 255,   0)\nroter_farbstift     = farbstift(255,   0,   0)\nblauer_farbstift    = farbstift(  0,   0, 255)\ngruener_farbstift   = farbstift(  0, 255,   0)\nbrauner_farbstift   = farbstift(139,  69,  19)\nschwarzer_farbstift = farbstift(  0,   0,   0)\n\nschachtel  = leere_grafik()\nschachtel1 = ueber(gelber_farbstift, schachtel)\nschachtel2 = ueber(schachtel1, roter_farbstift)\nschachtel3 = ueber(schachtel2, blauer_farbstift)\nschachtel4 = ueber(schachtel3, gruener_farbstift)\nschachtel5 = ueber(schachtel4, brauner_farbstift)\nschachtel6 = ueber(schachtel5, schwarzer_farbstift)\n\nzeige_grafik(schachtel6)",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Farbstiftschachtel (verschachtelte `for-schleifen`)</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/260923_farbstift/260923_farbstift.html#etui-120-farben-supracolor-aquarelle",
+    "href": "notebooks/260923_farbstift/260923_farbstift.html#etui-120-farben-supracolor-aquarelle",
+    "title": "7  Farbstiftschachtel (verschachtelte for-schleifen)",
+    "section": "7.2 Etui 120 Farben SUPRACOLOR Aquarelle",
+    "text": "7.2 Etui 120 Farben SUPRACOLOR Aquarelle\nFür eine Schachtel mit sechs Farbstiften funktioniert die manuelle Methode leidlich. Die Schachtel mit 120 Farbstiften ist aber sehr aufwändig.\nWie wir gesehen haben, können repetitive Aufgaben mit for-Schleifen automatisiert werden. Für die Farbstifte müssen drei Änderungen parallel vorgenommen werden. Dazu können mehrere for-Schleifen ineinander verschachtelt werden.\n\n# TODO: verschachtelte Schleife für 120 Farbstifte",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>Farbstiftschachtel (verschachtelte `for-schleifen`)</span>"
+    ]
   }
 ]
