@@ -1,0 +1,17 @@
+format:
+  html:
+    code-links:
+      - text: In Colab öffnen
+        icon: rocket-takeoff
+        href: https://colab.research.google.com/github/SkriptenMk/I_hP_26-30/blob/main/notebooks/260923_farbstift/260923_farbstift.ipynb
+      - text: In Binder öffnen
+        icon: box-arrow-up-right
+        href: https://mybinder.org/v2/gh/SkriptenMk/I_hP_26-30/main?labpath=notebooks%2F260923_farbstift%2F260923_farbstift.ipynb
+      - text: Notebook herunterladen
+        icon: download
+        href: 260923_farbstift.ipynb
+  pdf:
+    header-includes: |
+      \hyphenation{
+        Ganzzahl-division
+      }
