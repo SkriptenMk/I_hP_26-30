@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.19">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Appendix A — Datenstrukturen: Python-Listen (Musterlösung) – Unterlagen für das obligatorische Fach Informatik in der Klasse 1hP</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../notebooks/261021_listen/261021_listen.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-fd0503e23dce65854c81c5baaade3bdf.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="nav-sidebar floating quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/261021_listen/261021_listen_loesung.html">Appendices</a></li><li class="breadcrumb-item"><a href="../../notebooks/261021_listen/261021_listen_loesung.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Datenstrukturen: Python-Listen (Musterlösung)</span></a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+    <div class="sidebar-title mb-0 py-0">
+      <a href="../../">Unterlagen für das obligatorische Fach Informatik in der Klasse 1hP</a> 
+        <div class="sidebar-tools-main">
+    <a href="../../Unterlagen-für-das-obligatorische-Fach-Informatik-in-der-Klasse-1hP.pdf" title="Download PDF" class="quarto-navigation-tool px-1" aria-label="Download PDF"><i class="bi bi-file-pdf"></i></a>
+</div>
+    </div>
+      </div>
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Obligatorisches Fach Informatik (1hP)</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
+ <span class="menu-text">Einführung</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/260819_einfuehrung/260819_einfuehrung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Einführung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/260826_arbeitsumgebung/260826_arbeitsumgebung.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Einrichten der Arbeitsumgebung</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/260826_einf_python/260826_einf_python.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Eine sehr kurze Einführung in Python</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/260902_fahne_I/260902_fahne_I.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Problemlösung in der Informatik</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/260909_blume/260909_blume.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Wiederholungen in Python (For-Schleifen)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/260916_blume_II/260916_blume_II.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Bedingungen in Python</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/260923_farbstift/260923_farbstift.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Farbstiftschachtel (verschachtelte <code>for-schleifen</code>)</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/261021_listen/261021_listen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Datenstrukturen: Python-Listen</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">Appendices</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/261021_listen/261021_listen_loesung.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Datenstrukturen: Python-Listen (Musterlösung)</span></span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#elemente-hinzufügen-die-methode-.append" id="toc-elemente-hinzufügen-die-methode-.append" class="nav-link active" data-scroll-target="#elemente-hinzufügen-die-methode-.append"><span class="header-section-number">A.1</span> Elemente hinzufügen: Die Methode <code>.append()</code></a></li>
+  <li><a href="#über-listen-iterieren" id="toc-über-listen-iterieren" class="nav-link" data-scroll-target="#über-listen-iterieren"><span class="header-section-number">A.2</span> Über Listen iterieren</a>
+  <ul class="collapse">
+  <li><a href="#namenskonventionen" id="toc-namenskonventionen" class="nav-link" data-scroll-target="#namenskonventionen"><span class="header-section-number">A.2.1</span> Namenskonventionen</a></li>
+  </ul></li>
+  <li><a href="#listen-erzeugen-mit-list-und-mit-listen-rechnen" id="toc-listen-erzeugen-mit-list-und-mit-listen-rechnen" class="nav-link" data-scroll-target="#listen-erzeugen-mit-list-und-mit-listen-rechnen"><span class="header-section-number">A.3</span> Listen erzeugen mit <code>list()</code> und mit Listen rechnen</a>
+  <ul class="collapse">
+  <li><a href="#die-funktion-list" id="toc-die-funktion-list" class="nav-link" data-scroll-target="#die-funktion-list"><span class="header-section-number">A.3.1</span> Die Funktion <code>list()</code></a></li>
+  <li><a href="#operationen-mit-listen" id="toc-operationen-mit-listen" class="nav-link" data-scroll-target="#operationen-mit-listen"><span class="header-section-number">A.3.2</span> Operationen mit Listen</a></li>
+  </ul></li>
+  <li><a href="#animationen-das-digitale-daumenkino" id="toc-animationen-das-digitale-daumenkino" class="nav-link" data-scroll-target="#animationen-das-digitale-daumenkino"><span class="header-section-number">A.4</span> Animationen: Das digitale Daumenkino</a>
+  <ul class="collapse">
+  <li><a href="#wie-entsteht-bewegung-auf-dem-bildschirm" id="toc-wie-entsteht-bewegung-auf-dem-bildschirm" class="nav-link" data-scroll-target="#wie-entsteht-bewegung-auf-dem-bildschirm"><span class="header-section-number">A.4.1</span> Wie entsteht Bewegung auf dem Bildschirm?</a></li>
+  <li><a href="#was-ist-ein-gif" id="toc-was-ist-ein-gif" class="nav-link" data-scroll-target="#was-ist-ein-gif"><span class="header-section-number">A.4.2</span> Was ist ein GIF?</a></li>
+  <li><a href="#animationen-mit-pytamaro" id="toc-animationen-mit-pytamaro" class="nav-link" data-scroll-target="#animationen-mit-pytamaro"><span class="header-section-number">A.4.3</span> Animationen mit PyTamaro</a></li>
+  </ul></li>
+  <li><a href="#anwendung-ein-animierter-pacman" id="toc-anwendung-ein-animierter-pacman" class="nav-link" data-scroll-target="#anwendung-ein-animierter-pacman"><span class="header-section-number">A.5</span> Anwendung: Ein animierter PacMan</a>
+  <ul class="collapse">
+  <li><a href="#schritt-1-statischer-pacman" id="toc-schritt-1-statischer-pacman" class="nav-link" data-scroll-target="#schritt-1-statischer-pacman"><span class="header-section-number">A.5.1</span> Schritt 1: Statischer PacMan</a></li>
+  <li><a href="#schritt-2-dynamischer-pacman" id="toc-schritt-2-dynamischer-pacman" class="nav-link" data-scroll-target="#schritt-2-dynamischer-pacman"><span class="header-section-number">A.5.2</span> Schritt 2: Dynamischer PacMan</a></li>
+  </ul></li>
+  <li><a href="#abschlussübung-die-bahnhofsuhr-der-sbb" id="toc-abschlussübung-die-bahnhofsuhr-der-sbb" class="nav-link" data-scroll-target="#abschlussübung-die-bahnhofsuhr-der-sbb"><span class="header-section-number">A.6</span> Abschlussübung: Die Bahnhofsuhr der SBB</a>
+  <ul class="collapse">
+  <li><a href="#schritt-1-stückliste" id="toc-schritt-1-stückliste" class="nav-link" data-scroll-target="#schritt-1-stückliste"><span class="header-section-number">A.6.1</span> Schritt 1: Stückliste</a></li>
+  <li><a href="#schritt-2-konstruktion-der-einzelnen-elemente" id="toc-schritt-2-konstruktion-der-einzelnen-elemente" class="nav-link" data-scroll-target="#schritt-2-konstruktion-der-einzelnen-elemente"><span class="header-section-number">A.6.2</span> Schritt 2: Konstruktion der einzelnen Elemente</a></li>
+  <li><a href="#schritt-3-statische-kombination-der-einzelnen-elemente" id="toc-schritt-3-statische-kombination-der-einzelnen-elemente" class="nav-link" data-scroll-target="#schritt-3-statische-kombination-der-einzelnen-elemente"><span class="header-section-number">A.6.3</span> Schritt 3: Statische Kombination der einzelnen Elemente</a></li>
+  <li><a href="#schritt-4-die-uhr-zum-laufen-bringen" id="toc-schritt-4-die-uhr-zum-laufen-bringen" class="nav-link" data-scroll-target="#schritt-4-die-uhr-zum-laufen-bringen"><span class="header-section-number">A.6.4</span> Schritt 4: Die Uhr zum Laufen bringen</a></li>
+  </ul></li>
+  <li><a href="#rückblick" id="toc-rückblick" class="nav-link" data-scroll-target="#rückblick"><span class="header-section-number">A.7</span> Rückblick</a></li>
+  </ul>
+<div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/SkriptenMk/I_hP_26-30/blob/main/notebooks/261021_listen/261021_listen.ipynb"><i class="bi bi-rocket-takeoff"></i>In Colab öffnen</a></li><li><a href="https://mybinder.org/v2/gh/SkriptenMk/I_hP_26-30/main?labpath=notebooks%2F261021_listen%2F261021_listen.ipynb"><i class="bi bi-box-arrow-up-right"></i>In Binder öffnen</a></li><li><a href="261021_listen.ipynb"><i class="bi bi-download"></i>Notebook herunterladen</a></li><li><a href="https://colab.research.google.com/github/SkriptenMk/I_bW_26-30/blob/main/notebooks/261020_listen/261020_listen_loesung.ipynb"><i class="bi bi-rocket-takeoff"></i>In Colab öffnen</a></li><li><a href="https://mybinder.org/v2/gh/SkriptenMk/I_bW_26-30/main?labpath=notebooks%2F261020_listen%2F261020_listen_loesung.ipynb"><i class="bi bi-box-arrow-up-right"></i>In Binder öffnen</a></li><li><a href="261020_listen_loesung.ipynb"><i class="bi bi-download"></i>Notebook herunterladen</a></li></ul></div></nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/261021_listen/261021_listen_loesung.html">Appendices</a></li><li class="breadcrumb-item"><a href="../../notebooks/261021_listen/261021_listen_loesung.html"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Datenstrukturen: Python-Listen (Musterlösung)</span></a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title"><span id="sec-loesung-listen" class="quarto-section-identifier">Appendix A — Datenstrukturen: Python-Listen (Musterlösung)</span></h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>Bisher hat jede Variable auf genau einen Wert verwiesen: eine Zahl, einen String oder eine Grafik. Mit der Python-Liste lernen wir in diesem Kapitel eine erste Datenstruktur kennen. Eine Datenstruktur fasst mehrere Werte nach einem bestimmten Ordnungsprinzip zusammen, bei der Liste in einer festen Reihenfolge, und ermöglicht es, diese Werte gezielt anzusprechen und zu bearbeiten.</p>
+<p>Bearbeitet werden Listen einerseits mit eingebauten Funktionen wie <code>len()</code> und mit Operatoren wie <code>[]</code>, andererseits mit sogenannten <em>Methoden</em>. Methoden sind Funktionen, die zu einem bestimmten Datentyp gehören und mit einem Punkt direkt auf einem Wert aufgerufen werden, z. B. <code>einkaufsliste.append('Brot')</code>. Im Unterschied zu den bisher verwendeten Funktionen verändern viele Listenmethoden die Liste direkt, statt ein neues Resultat zurückzugeben.</p>
+<p>Das Kapitel führt in drei Etappen von den Grundlagen zu einem grösseren Projekt. Zuerst lernen wir, wie Listen angelegt, gefüllt, durchlaufen und ausgewertet werden. Danach sehen wir, dass eine Animation nichts anderes ist als eine Liste von Grafiken. Mit diesem Wissen bauen wir schliesslich zwei Animationen mit PyTamaro: einen PacMan, der den Mund auf- und zuklappt, und als Abschlussübung die Bahnhofsuhr der SBB.</p>
+<p>Zunächst aber ein Blick darauf, wie eine Liste im Arbeitsspeicher aufgebaut ist.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="INFO Python-Listen sind dynamische Arrays">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>INFO Python-Listen sind dynamische Arrays
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Was ist ein Array?</strong></p>
+<p>Ein Array ist eine der grundlegendsten Datenstrukturen der Informatik. Man kann es sich wie eine Reihe von nummerierten Schliessfächern vorstellen, die lückenlos nebeneinander im Arbeitsspeicher liegen. Alle Fächer sind gleich gross, und jedes hat eine Nummer, den sogenannten <em>Index</em>.</p>
+<p>Weil die Fächer lückenlos aneinandergereiht und gleich gross sind, kann der Computer die Position jedes Fachs direkt berechnen:</p>
+<p>Position = Anfang des Arrays + Index · Grösse eines Fachs</p>
+<p>Der Computer muss also nicht alle Fächer der Reihe nach durchsuchen, um das gewünschte zu finden. Der Zugriff auf das tausendste Element dauert gleich lang wie der Zugriff auf das erste. Diese Berechnung erklärt übrigens auch, weshalb in Python mit 0 zu zählen begonnen wird: Der Index gibt an, wie viele Fächer vom Anfang aus übersprungen werden. Das erste Element liegt direkt am Anfang, also bei Index 0.</p>
+<p><strong>Das Problem: Ein Array hat eine feste Grösse</strong></p>
+<p>Ein klassisches Array wird mit einer festen Anzahl Fächer angelegt. Ist es voll, kann es nicht einfach verlängert werden, denn der Speicherplatz direkt dahinter ist möglicherweise bereits anderweitig belegt.</p>
+<p><strong>Die Lösung: Das dynamische Array</strong></p>
+<p>Python löst dieses Problem mit einem Trick. Beim Anlegen einer Liste reserviert Python etwas mehr Fächer, als im Moment gebraucht werden. Neue Elemente können so am Ende einfach in ein freies Fach gelegt werden. Erst wenn alle reservierten Fächer belegt sind, sucht Python einen neuen, grösseren Speicherbereich, kopiert alle bisherigen Elemente dorthin und gibt den alten Bereich frei. Für uns geschieht das unsichtbar: Die Liste scheint einfach beliebig wachsen zu können. Deshalb spricht man von einem <em>dynamischen</em> Array.</p>
+<p><strong>Was das für die Praxis bedeutet</strong></p>
+<ul>
+<li>Der Zugriff über den Index (<code>liste[5]</code>) ist immer schnell, egal wie lang die Liste ist.</li>
+<li>Das Anhängen am Ende (<code>liste.append(x)</code>) ist in aller Regel schnell.</li>
+<li>Das Einfügen oder Entfernen am Anfang oder in der Mitte einer Liste ist dagegen aufwendig: Alle nachfolgenden Elemente müssen um ein Fach verschoben werden. Bei langen Listen kann das spürbar Zeit kosten.</li>
+</ul>
+<p>Warum dieser Unterschied wichtig ist, wird beim Thema <em>Beurteilung von Algorithmen</em> noch genauer betrachtet.</p>
+</div>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Vertiefung: Warum kann eine Liste Werte unterschiedlicher Typen enthalten?
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Eine Zahl braucht weniger Speicherplatz als ein langer Text. Wie passt das zu gleich grossen Fächern? In den Fächern einer Python-Liste liegen nicht die Werte selbst, sondern Verweise auf die Orte im Arbeitsspeicher, an denen die Werte abgelegt sind, genau wie bei Variablen. Alle Verweise sind gleich gross, unabhängig davon, worauf sie zeigen. Deshalb kann eine Liste problemlos Zahlen, Strings und sogar PyTamaro-Grafiken gleichzeitig enthalten.</p>
+</div>
+</div>
+</div>
+<section id="elemente-hinzufügen-die-methode-.append" class="level2" data-number="A.1">
+<h2 data-number="A.1" class="anchored" data-anchor-id="elemente-hinzufügen-die-methode-.append"><span class="header-section-number">A.1</span> Elemente hinzufügen: Die Methode <code>.append()</code></h2>
+<p>Eine Liste wird mit eckigen Klammern angelegt. Die einzelnen Elemente werden durch Kommas getrennt.</p>
+<div id="ad7ffadb" class="cell" data-execution_count="1">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>einkaufsliste <span class="op">=</span> [<span class="st">'Brot'</span>, <span class="st">'Milch'</span>]</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>einkaufsliste</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="1">
+<pre><code>['Brot', 'Milch']</code></pre>
+</div>
+</div>
+<p>Häufig steht beim Anlegen einer Liste noch nicht fest, welche Elemente sie später enthalten soll. Eine Liste kann deshalb auch leer angelegt und anschliessend schrittweise gefüllt werden. Dafür stellt Python die Methode <code>.append()</code> zur Verfügung. Sie hängt das als Argument übergebene Element am Ende der Liste an.</p>
+<div id="7abb309b" class="cell" data-execution_count="2">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>einkaufsliste.append(<span class="st">'Käse'</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>einkaufsliste</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="2">
+<pre><code>['Brot', 'Milch', 'Käse']</code></pre>
+</div>
+</div>
+<p>Beachten Sie die Schreibweise: Die Methode wird mit einem Punkt direkt an den Namen der Liste angehängt. Damit ist klar, <em>welche</em> Liste verändert werden soll.</p>
+<div class="callout callout-style-default callout-warning callout-titled" title="Achtung: `.append()` verändert die Liste direkt">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Achtung: <code>.append()</code> verändert die Liste direkt
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Bei PyTamaro haben Sie sich daran gewöhnt, das Resultat einer Funktion einer Variablen zuzuweisen:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>blume <span class="op">=</span> kombiniere(blume, bluetenblatt_gedreht)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p><code>kombiniere()</code> verändert die bestehende Grafik nicht, sondern erstellt eine neue. Diese muss deshalb in einer Variablen gespeichert werden.</p>
+<p><code>.append()</code> funktioniert anders: Die Methode verändert die bestehende Liste direkt und gibt kein Resultat zurück, genauer gesagt den speziellen Wert <code>None</code> (engl. für <em>nichts</em>). Wer das Muster von PyTamaro überträgt, verliert seine Liste. Das folgende Beispiel verwendet dafür eine eigene Liste, damit die Einkaufsliste für die weiteren Beispiele erhalten bleibt:</p>
+<div id="3864fc29" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>vorraete <span class="op">=</span> [<span class="st">'Reis'</span>, <span class="st">'Mehl'</span>]</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>vorraete <span class="op">=</span> vorraete.append(<span class="st">'Zucker'</span>)  <span class="co"># FALSCH!</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(vorraete)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>None</code></pre>
+</div>
+</div>
+<p>Die Variable <code>vorraete</code> verweist jetzt nicht mehr auf die Liste, sondern auf <code>None</code>. Richtig ist deshalb immer:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>vorraete.append(<span class="st">'Zucker'</span>)  <span class="co"># richtig: ohne Zuweisung</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</div>
+<p>Besonders nützlich wird <code>.append()</code> in Kombination mit einer For-Schleife. Im folgenden Beispiel wird eine leere Liste angelegt und in jedem Schleifendurchlauf um eine Quadratzahl ergänzt.</p>
+<div id="d27f697d" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>quadratzahlen <span class="op">=</span> []</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> zahl <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">6</span>):</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    quadratzahlen.append(zahl <span class="op">**</span> <span class="dv">2</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>quadratzahlen</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>[1, 4, 9, 16, 25]</code></pre>
+</div>
+</div>
+<div id="64d53b0b" class="cell" data-execution_count="5">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Legen Sie eine leere Liste an und füllen Sie sie mit einer</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># For-Schleife mit allen Vielfachen von 7 zwischen 7 und 70.</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>vielfache <span class="op">=</span> []</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> zahl <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">7</span>, <span class="dv">71</span>, <span class="dv">7</span>):</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    vielfache.append(zahl)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>vielfache</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>[7, 14, 21, 28, 35, 42, 49, 56, 63, 70]</code></pre>
+</div>
+</div>
+</section>
+<section id="über-listen-iterieren" class="level2" data-number="A.2">
+<h2 data-number="A.2" class="anchored" data-anchor-id="über-listen-iterieren"><span class="header-section-number">A.2</span> Über Listen iterieren</h2>
+<p>Bisher haben wir For-Schleifen ausschliesslich mit <code>range()</code> verwendet. Eine For-Schleife kann aber auch über eine Liste laufen. Die Schleifenvariable nimmt dabei in jedem Durchlauf der Reihe nach den Wert des nächsten Elements an. Man sagt, die Schleife <em>iteriert</em> über die Liste.</p>
+<div id="0972b65b" class="cell" data-execution_count="6">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> artikel <span class="kw">in</span> einkaufsliste:</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(artikel)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Brot
+Milch
+Käse</code></pre>
+</div>
+</div>
+<p>Das ist kein Sonderfall: Auch <code>range(5)</code> liefert der Schleife einfach der Reihe nach die Werte 0, 1, 2, 3 und 4. Eine Liste liefert stattdessen ihre Elemente. Man spricht daher von einem <em>iterable</em>.</p>
+<section id="namenskonventionen" class="level3" data-number="A.2.1">
+<h3 data-number="A.2.1" class="anchored" data-anchor-id="namenskonventionen"><span class="header-section-number">A.2.1</span> Namenskonventionen</h3>
+<p>Python ist es gleichgültig, wie die Schleifenvariable heisst. Für Menschen, die den Code lesen, macht der Name dagegen einen grossen Unterschied. Es haben sich deshalb die folgenden Konventionen eingebürgert:</p>
+<ul>
+<li><strong>Listen erhalten einen Namen im Plural</strong>, weil sie mehrere Elemente enthalten: <code>farben</code>, <code>zahlen</code>, <code>namen</code>. Alternativ kann ein Sammelbegriff verwendet werden, wie bei <code>einkaufsliste</code>.</li>
+<li><strong>Die Schleifenvariable erhält den passenden Namen im Singular</strong>, weil sie in jedem Durchlauf genau <em>ein</em> Element bezeichnet: <code>for farbe in farben</code>, <code>for zahl in zahlen</code>, <code>for name in namen</code>.</li>
+<li><strong>Einbuchstabige Namen wie <code>i</code> werden nur für Zähler verwendet</strong>, also wenn die Schleife mit <code>range()</code> über Zahlen läuft, die eine Position oder eine Anzahl Wiederholungen bezeichnen. Diese Konvention stammt aus der Mathematik, wo <code>i</code> traditionell für einen Index steht.</li>
+</ul>
+<p>Vergleichen Sie die beiden folgenden Schleifen. Sie tun genau dasselbe, aber nur bei der zweiten ist auf den ersten Blick klar, was passiert.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> x:</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(i)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> artikel <span class="kw">in</span> einkaufsliste:</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(artikel)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Gut gewählte Namen machen den Code fast zu einem lesbaren Satz: <em>Für jeden Artikel in der Einkaufsliste: gib den Artikel aus.</em></p>
+</section>
+</section>
+<section id="listen-erzeugen-mit-list-und-mit-listen-rechnen" class="level2" data-number="A.3">
+<h2 data-number="A.3" class="anchored" data-anchor-id="listen-erzeugen-mit-list-und-mit-listen-rechnen"><span class="header-section-number">A.3</span> Listen erzeugen mit <code>list()</code> und mit Listen rechnen</h2>
+<section id="die-funktion-list" class="level3" data-number="A.3.1">
+<h3 data-number="A.3.1" class="anchored" data-anchor-id="die-funktion-list"><span class="header-section-number">A.3.1</span> Die Funktion <code>list()</code></h3>
+<p>Im Abschnitt über For-Schleifen haben wir gesehen, dass <code>range()</code> der Schleife der Reihe nach Zahlen liefert. Eine Liste ist das Ergebnis von <code>range()</code> allerdings nicht:</p>
+<div id="87479453" class="cell" data-execution_count="7">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="bu">range</span>(<span class="dv">5</span>)</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>range(0, 5)</code></pre>
+</div>
+</div>
+<p>Python zeigt nicht die Zahlen 0 bis 4 an, sondern nur <code>range(0, 5)</code>. Ein <code>range</code> erzeugt die Zahlen erst dann, wenn sie gebraucht werden, zum Beispiel in einer For-Schleife. Das spart Speicherplatz, bedeutet aber auch: Mit einem <code>range</code> lassen sich viele Listenoperationen nicht durchführen.</p>
+<p>Die Funktion <code>list()</code> löst dieses Problem. Sie nimmt als Argument eine Folge von Werten entgegen und erzeugt daraus eine Liste:</p>
+<div id="1a510d21" class="cell" data-execution_count="8">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">5</span>))</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<pre><code>[0, 1, 2, 3, 4]</code></pre>
+</div>
+</div>
+<div id="0256dec9" class="cell" data-execution_count="9">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">60</span>, <span class="dv">55</span>, <span class="op">-</span><span class="dv">1</span>))</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>[60, 59, 58, 57, 56]</code></pre>
+</div>
+</div>
+<p><code>list()</code> funktioniert nicht nur mit <code>range</code>, sondern mit allem, über das eine For-Schleife laufen kann. Ein String ist zum Beispiel eine Folge von Zeichen:</p>
+<div id="1caceef1" class="cell" data-execution_count="10">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(<span class="st">'Hallo'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="10">
+<pre><code>['H', 'a', 'l', 'l', 'o']</code></pre>
+</div>
+</div>
+<p>Ohne Argument erzeugt <code>list()</code> eine leere Liste. <code>list()</code> und <code>[]</code> bedeuten also dasselbe.</p>
+</section>
+<section id="operationen-mit-listen" class="level3" data-number="A.3.2">
+<h3 data-number="A.3.2" class="anchored" data-anchor-id="operationen-mit-listen"><span class="header-section-number">A.3.2</span> Operationen mit Listen</h3>
+<p>Für Listen stellt Python verschiedene Operatoren und eingebaute Funktionen zur Verfügung. Die folgenden Beispiele verwenden diese Liste:</p>
+<div id="c5c02950" class="cell" data-execution_count="11">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>zahlen <span class="op">=</span> [<span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">5</span>]</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<p><strong>Zugriff über den Index</strong></p>
+<p>Mit eckigen Klammern wird ein einzelnes Element angesprochen. Wie in der INFO-Box zu den Arrays erklärt, beginnt die Zählung bei 0. Negative Indizes zählen vom Ende her: <code>-1</code> ist das letzte Element.</p>
+<div id="05ea0e30" class="cell" data-execution_count="12">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(zahlen[<span class="dv">0</span>])</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(zahlen[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>3
+5</code></pre>
+</div>
+</div>
+<p>Mit einem Doppelpunkt wird ein Ausschnitt (engl. <em>slice</em>) erzeugt. Wie bei <code>range()</code> ist der Startwert eingeschlossen, der Endwert nicht.</p>
+<div id="50966cc4" class="cell" data-execution_count="13">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>zahlen[<span class="dv">1</span>:<span class="dv">3</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="13">
+<pre><code>[1, 4]</code></pre>
+</div>
+</div>
+<p><strong>Listen verbinden mit <code>+</code></strong></p>
+<p>Der Operator <code>+</code> hängt zwei Listen aneinander und erzeugt daraus eine neue Liste. Die ursprünglichen Listen bleiben unverändert.</p>
+<div id="fdbda03b" class="cell" data-execution_count="14">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>[<span class="dv">1</span>, <span class="dv">2</span>] <span class="op">+</span> [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<pre><code>[1, 2, 3, 4, 5]</code></pre>
+</div>
+</div>
+<p>Damit lassen sich auch zwei <code>range</code> zu einer einzigen Liste verbinden. Weil <code>+</code> nur mit Listen funktioniert, müssen beide zuerst mit <code>list()</code> umgewandelt werden:</p>
+<div id="5658c3e7" class="cell" data-execution_count="15">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>hin_und_zurueck <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">5</span>)) <span class="op">+</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">5</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>))</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>hin_und_zurueck</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>[0, 1, 2, 3, 4, 5, 4, 3, 2, 1]</code></pre>
+</div>
+</div>
+<p>Diese Verbindung zweier <code>range</code> wird uns beim animierten PacMan wieder begegnen.</p>
+<p>Beide Seiten von <code>+</code> müssen Listen sein. <code>[1, 2] + 3</code> führt zu einem Fehler, richtig ist <code>[1, 2] + [3]</code>.</p>
+<p><strong>Listen vervielfachen mit <code>*</code></strong></p>
+<p>Der Operator <code>*</code> wiederholt eine Liste. Das ist praktisch, um eine Liste mit lauter gleichen Startwerten anzulegen.</p>
+<div id="4c84176f" class="cell" data-execution_count="16">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>[<span class="dv">0</span>] <span class="op">*</span> <span class="dv">5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<pre><code>[0, 0, 0, 0, 0]</code></pre>
+</div>
+</div>
+<p><strong>Prüfen mit <code>in</code> und <code>not in</code></strong></p>
+<p>Der Operator <code>in</code> prüft, ob ein Wert in der Liste vorkommt. Das Ergebnis ist ein Wahrheitswert (<code>True</code> oder <code>False</code>) und kann deshalb direkt in einer Bedingung verwendet werden.</p>
+<div id="8b533415" class="cell" data-execution_count="17">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">4</span> <span class="kw">in</span> zahlen)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">7</span> <span class="kw">in</span> zahlen)</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="dv">7</span> <span class="kw">not</span> <span class="kw">in</span> zahlen)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>True
+False
+True</code></pre>
+</div>
+</div>
+<p><strong>Eingebaute Funktionen</strong></p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Funktion</th>
+<th>Bedeutung</th>
+<th>Beispiel</th>
+<th>Ergebnis</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>len()</code></td>
+<td>Anzahl Elemente</td>
+<td><code>len(zahlen)</code></td>
+<td><code>5</code></td>
+</tr>
+<tr class="even">
+<td><code>sum()</code></td>
+<td>Summe aller Elemente</td>
+<td><code>sum(zahlen)</code></td>
+<td><code>14</code></td>
+</tr>
+<tr class="odd">
+<td><code>min()</code></td>
+<td>kleinstes Element</td>
+<td><code>min(zahlen)</code></td>
+<td><code>1</code></td>
+</tr>
+<tr class="even">
+<td><code>max()</code></td>
+<td>grösstes Element</td>
+<td><code>max(zahlen)</code></td>
+<td><code>5</code></td>
+</tr>
+<tr class="odd">
+<td><code>sorted()</code></td>
+<td>sortierte Kopie der Liste</td>
+<td><code>sorted(zahlen)</code></td>
+<td><code>[1, 1, 3, 4, 5]</code></td>
+</tr>
+</tbody>
+</table>
+<p><code>sum()</code> funktioniert nur, wenn alle Elemente Zahlen sind. <code>min()</code>, <code>max()</code> und <code>sorted()</code> funktionieren auch mit Strings. Dann wird alphabetisch verglichen.</p>
+<div class="callout callout-style-default callout-note callout-titled" title="INFO Neue Liste oder veränderte Liste?">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>INFO Neue Liste oder veränderte Liste?
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Die Operatoren und Funktionen in diesem Abschnitt verändern die ursprüngliche Liste nicht. Sie erzeugen ein neues Ergebnis, das einer Variablen zugewiesen werden muss, wenn man es weiterverwenden will. Sie verhalten sich also wie die PyTamaro-Funktionen:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>sortiert <span class="op">=</span> <span class="bu">sorted</span>(zahlen)   <span class="co"># zahlen bleibt unverändert</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Methoden wie <code>.append()</code> dagegen verändern die Liste direkt und geben <code>None</code> zurück. Achten Sie deshalb immer darauf, ob Sie mit einer Funktion oder mit einer Methode arbeiten. Zu erkennen ist der Unterschied daran, ob die Variable, welche die Liste bezeichnet, als Argument übergeben wird, oder ob die Methode mit einem Punkt an die Variable angehängt wird.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="animationen-das-digitale-daumenkino" class="level2" data-number="A.4">
+<h2 data-number="A.4" class="anchored" data-anchor-id="animationen-das-digitale-daumenkino"><span class="header-section-number">A.4</span> Animationen: Das digitale Daumenkino</h2>
+<p>Mit Listen, For-Schleifen und <code>.append()</code> sind alle Werkzeuge beisammen, um Grafiken in Bewegung zu versetzen. Zuerst klären wir aber, wie Bewegung auf einem Bildschirm überhaupt entsteht.</p>
+<section id="wie-entsteht-bewegung-auf-dem-bildschirm" class="level3" data-number="A.4.1">
+<h3 data-number="A.4.1" class="anchored" data-anchor-id="wie-entsteht-bewegung-auf-dem-bildschirm"><span class="header-section-number">A.4.1</span> Wie entsteht Bewegung auf dem Bildschirm?</h3>
+<p>Vielleicht haben Sie als Kind einmal ein Daumenkino gebastelt: Auf jede Seite eines kleinen Blocks wird ein Bild gezeichnet, das sich vom vorherigen nur ein wenig unterscheidet. Lässt man die Seiten schnell unter dem Daumen durchblättern, scheint sich die Figur zu bewegen.</p>
+<p>Der Trick beruht auf unserer Wahrnehmung: Folgen Einzelbilder schnell genug aufeinander (ab etwa 10 bis 15 Bildern pro Sekunde), verbindet unser Gehirn sie zu einer flüssigen Bewegung. Nach genau diesem Prinzip funktionieren auch Kinofilme (24 Bilder pro Sekunde), Videos und Computerspiele. Die Anzahl Bilder pro Sekunde nennt man <em>Bildrate</em> (engl. <em>frame rate</em>, abgekürzt <em>fps</em> für <em>frames per second</em>).</p>
+</section>
+<section id="was-ist-ein-gif" class="level3" data-number="A.4.2">
+<h3 data-number="A.4.2" class="anchored" data-anchor-id="was-ist-ein-gif"><span class="header-section-number">A.4.2</span> Was ist ein GIF?</h3>
+<p>GIF steht für <em>Graphics Interchange Format</em>. Es ist ein Dateiformat für Bilder, das bereits 1987 entwickelt wurde und bis heute weit verbreitet ist. Eine GIF-Datei kann nicht nur ein einzelnes Bild enthalten, sondern mehrere Bilder hintereinander. Ein <em>animiertes GIF</em> ist deshalb nichts anderes als ein digitales Daumenkino. In der Datei sind gespeichert:</p>
+<ul>
+<li>die Einzelbilder in ihrer Reihenfolge,</li>
+<li>für jedes Einzelbild, wie lange es angezeigt wird,</li>
+<li>ob die Animation am Ende wieder von vorne beginnt.</li>
+</ul>
+<p>Weil jeder Browser GIFs ohne Zusatzprogramm abspielen kann, werden sie gerne für kurze Animationen, Sticker und Memes verwendet. Ein Nachteil: Ein GIF kann höchstens 256 verschiedene Farben darstellen. Für Fotos und lange Videos sind andere Formate besser geeignet, für einfache Grafiken wie unsere reicht es aber gut.</p>
+</section>
+<section id="animationen-mit-pytamaro" class="level3" data-number="A.4.3">
+<h3 data-number="A.4.3" class="anchored" data-anchor-id="animationen-mit-pytamaro"><span class="header-section-number">A.4.3</span> Animationen mit PyTamaro</h3>
+<p>Für PyTamaro ist ein Daumenkino einfach eine <strong>Liste von Grafiken</strong>. Die Funktion <code>zeige_animation()</code> nimmt eine solche Liste entgegen und spielt die Grafiken der Reihe nach im Notebook ab.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>zeige_animation(grafiken, dauer, loop)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Parameter</th>
+<th>Bedeutung</th>
+<th>Standardwert</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>grafiken</code></td>
+<td>Liste der Einzelbilder, in der Reihenfolge, in der sie gezeigt werden</td>
+<td>–</td>
+</tr>
+<tr class="even">
+<td><code>dauer</code></td>
+<td>Wie viele Millisekunden jedes Einzelbild angezeigt wird</td>
+<td><code>40</code></td>
+</tr>
+<tr class="odd">
+<td><code>loop</code></td>
+<td><code>True</code>: Die Animation beginnt endlos von vorne. <code>False</code>: Sie läuft einmal ab.</td>
+<td><code>True</code></td>
+</tr>
+</tbody>
+</table>
+<p>Nur <code>grafiken</code> muss angegeben werden. Wird <code>dauer</code> weggelassen, zeigt PyTamaro jedes Bild 40 Millisekunden lang. Das ergibt 1000 / 40 = 25 Bilder pro Sekunde, ungefähr die Bildrate eines Kinofilms.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th><code>dauer</code></th>
+<th>Bilder pro Sekunde</th>
+<th>Wirkung</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>40</code></td>
+<td>25</td>
+<td>flüssig</td>
+</tr>
+<tr class="even">
+<td><code>100</code></td>
+<td>10</td>
+<td>leicht ruckelnd</td>
+</tr>
+<tr class="odd">
+<td><code>500</code></td>
+<td>2</td>
+<td>Diashow</td>
+</tr>
+</tbody>
+</table>
+<p>Die Argumente können auch mit ihrem Namen übergeben werden, z. B. <code>zeige_animation(bilder, dauer=50)</code>. Das macht den Code leichter lesbar. In den folgenden Übungen wird diese Schreibweise teilweise verwendet.</p>
+<p>Das folgende Beispiel zeigt einen Kreis, der wächst:</p>
+<div id="c6fe8c6b" class="cell" data-execution_count="18">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pytamaro.de <span class="im">import</span> <span class="op">*</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>hintergrund <span class="op">=</span> rechteck(<span class="dv">120</span>, <span class="dv">120</span>, weiss)</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>bilder <span class="op">=</span> []</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> durchmesser <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">10</span>, <span class="dv">110</span>, <span class="dv">10</span>):</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>    kreis <span class="op">=</span> ellipse(durchmesser, durchmesser, rot)</span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>    bild <span class="op">=</span> kombiniere(kreis, hintergrund)</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>    bilder.append(bild)</span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>zeige_animation(bilder, <span class="dv">100</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;IPython.core.display.Image object&gt;</code></pre>
+</div>
+</div>
+<p>Das Vorgehen ist immer dasselbe:</p>
+<ol type="1">
+<li>Eine leere Liste anlegen.</li>
+<li>In einer Schleife jedes Einzelbild erzeugen und mit <code>.append()</code> anhängen.</li>
+<li>Die fertige Liste an <code>zeige_animation()</code> übergeben.</li>
+</ol>
+<p>Soll die Animation als Datei gespeichert werden, etwa um sie zu verschicken oder auf einer Webseite zu verwenden, steht <code>speichere_animation()</code> zur Verfügung. Sie funktioniert gleich, verlangt aber zusätzlich als erstes Argument einen Dateinamen, der auf <code>.gif</code> enden muss:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>speichere_animation(<span class="st">'kreis.gif'</span>, bilder, <span class="dv">100</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="callout callout-style-default callout-warning callout-titled" title="Häufige Fehler bei Animationen">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Warning</span>Häufige Fehler bei Animationen
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong>Alle Einzelbilder müssen gleich gross sein.</strong> Andernfalls erscheint die Meldung <em>Alle Grafiken in der Liste müssen die gleiche Größe haben</em>. Ein Daumenkino hat schliesslich auch lauter gleich grosse Seiten. Im Beispiel oben sorgt der weisse Hintergrund dafür: Der Kreis wächst, das Bild nicht.</p>
+<p><strong>Die Liste darf nicht leer sein.</strong> Die Meldung <em>Die Liste der Grafiken darf nicht leer sein</em> bedeutet meist, dass <code>.append()</code> in der Schleife vergessen ging oder falsch eingerückt ist.</p>
+<p><strong><code>dauer</code> muss eine ganze Zahl sein.</strong> <code>zeige_animation(bilder, 1000 / 12)</code> führt zu einem Fehler, weil <code>/</code> immer eine Dezimalzahl ergibt. Richtig ist <code>zeige_animation(bilder, 83)</code> oder <code>zeige_animation(bilder, 1000 // 12)</code>.</p>
+</div>
+</div>
+</section>
+</section>
+<section id="anwendung-ein-animierter-pacman" class="level2" data-number="A.5">
+<h2 data-number="A.5" class="anchored" data-anchor-id="anwendung-ein-animierter-pacman"><span class="header-section-number">A.5</span> Anwendung: Ein animierter PacMan</h2>
+<p>Als erste Anwendung bauen wir einen PacMan, der an Ort bleibt und dabei den Mund auf- und zuklappt.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pacman.png" class="img-fluid figure-img"></p>
+<figcaption>PacMan</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="pacman.gif" class="img-fluid figure-img"></p>
+<figcaption>PacMan animiert</figcaption>
+</figure>
+</div>
+<p>Wir gehen in zwei Schritten vor: Zuerst zeichnen wir einen einzelnen, statischen PacMan. Anschliessend erzeugen wir daraus nach dem beschriebenen Muster (leere Liste, Schleife, <code>.append()</code>) die Einzelbilder der Animation.</p>
+<div id="e233c162" class="cell" data-execution_count="19">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stellt sicher, dass alle deutschen PyTamaro-Funktionen zur Verfügung stehen</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pytamaro.de <span class="im">import</span> <span class="op">*</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="schritt-1-statischer-pacman" class="level3" data-number="A.5.1">
+<h3 data-number="A.5.1" class="anchored" data-anchor-id="schritt-1-statischer-pacman"><span class="header-section-number">A.5.1</span> Schritt 1: Statischer PacMan</h3>
+<p>Der Körper des PacMan ist ein Kreissektor, dem ein Stück fehlt: der Mund. Ein Sektor von 300° lässt eine Lücke von 60°, die mit <code>drehe()</code> so ausgerichtet wird, dass der Mund nach rechts zeigt. Ein transparenter Kreis als Hintergrund sorgt dafür, dass das Bild, bzw. dessen Bounding-Box, immer gleich gross ist, egal wie weit der Mund offen steht. Das wird im zweiten Schritt wichtig, denn alle Einzelbilder einer Animation müssen gleich gross sein. Zuletzt wird das Auge mit einem transparenten Positionshalter an die richtige Stelle gesetzt.</p>
+<p>In der folgenden Code-Zelle wird ein PacMan mit aufgesperrtem Mund gezeichnet.</p>
+<div id="125e07b4" class="cell" data-execution_count="20">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Zeichne einen statischen PacMan</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a>hintergrund <span class="op">=</span> ellipse(<span class="dv">80</span>, <span class="dv">80</span>, transparent)</span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a>pacman <span class="op">=</span> kreis_sektor(<span class="dv">40</span>, <span class="dv">300</span>, gelb)</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>pacman <span class="op">=</span> drehe(<span class="dv">30</span>, pacman)</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>pacman <span class="op">=</span> fixiere(mitte_links, pacman)</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>hintergrund <span class="op">=</span> fixiere(mitte_links, hintergrund)</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>pacman <span class="op">=</span> kombiniere(pacman, hintergrund)</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>auge <span class="op">=</span> ellipse(<span class="dv">10</span>, <span class="dv">10</span>, schwarz)</span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a>auge_positionshalter <span class="op">=</span> rechteck(<span class="dv">30</span>, <span class="dv">20</span>, transparent)</span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a>auge_positionshalter <span class="op">=</span> fixiere(unten_links, auge_positionshalter)</span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a>auge <span class="op">=</span> kombiniere(auge, auge_positionshalter)</span>
+<span id="cb43-12"><a href="#cb43-12" aria-hidden="true" tabindex="-1"></a>auge <span class="op">=</span> fixiere(oben_rechts, auge)</span>
+<span id="cb43-13"><a href="#cb43-13" aria-hidden="true" tabindex="-1"></a>pacman <span class="op">=</span> fixiere(oben_rechts, pacman)</span>
+<span id="cb43-14"><a href="#cb43-14" aria-hidden="true" tabindex="-1"></a>pacman <span class="op">=</span> kombiniere(auge, pacman)</span>
+<span id="cb43-15"><a href="#cb43-15" aria-hidden="true" tabindex="-1"></a>zeige_grafik(pacman)</span>
+<span id="cb43-16"><a href="#cb43-16" aria-hidden="true" tabindex="-1"></a>speichere_grafik(<span class="st">'pacman.png'</span>, pacman)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="261021_listen_loesung_files/figure-html/cell-21-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="schritt-2-dynamischer-pacman" class="level3" data-number="A.5.2">
+<h3 data-number="A.5.2" class="anchored" data-anchor-id="schritt-2-dynamischer-pacman"><span class="header-section-number">A.5.2</span> Schritt 2: Dynamischer PacMan</h3>
+<p>Für die Animation braucht es eine Liste von PacMan-Bildern mit unterschiedlich weit geöffnetem Mund. Der Öffnungswinkel <code>winkel</code> soll von 0° auf 60° anwachsen und danach wieder auf 0° zurückgehen. Genau dafür eignet sich die Verbindung zweier <code>range</code> mit <code>+</code>, wie sie im Abschnitt <em>Operationen mit Listen</em> gezeigt wurde. In jedem Schleifendurchlauf wird ein Kreissektor von <code>360 - winkel</code> Grad gezeichnet und um <code>winkel / 2</code> gedreht, damit der Mund symmetrisch nach rechts geöffnet ist. Alles, was sich von Bild zu Bild nicht verändert (Hintergrund und Auge), wird einmal vor der Schleife erstellt.</p>
+<p>Die Liste enthält 120 Bilder. Bei der Standarddauer von 40 Millisekunden pro Bild dauert ein Auf- und Zuklappen 4,8 Sekunden.</p>
+<div id="e935448b" class="cell" data-execution_count="21">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Erstelle einen animierten PacMan</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>pacmen <span class="op">=</span> []</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a>hintergrund <span class="op">=</span> ellipse(<span class="dv">80</span>, <span class="dv">80</span>, transparent)</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a>hintergrund <span class="op">=</span> fixiere(mitte_links, hintergrund)</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a>auge <span class="op">=</span> ellipse(<span class="dv">10</span>, <span class="dv">10</span>, schwarz)</span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>auge_positionshalter <span class="op">=</span> rechteck(<span class="dv">30</span>, <span class="dv">20</span>, transparent)</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a>auge_positionshalter <span class="op">=</span> fixiere(unten_links, auge_positionshalter)</span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a>auge <span class="op">=</span> kombiniere(auge, auge_positionshalter)</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a>auge <span class="op">=</span> fixiere(oben_rechts, auge)</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a>winkel_liste <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">60</span>)) <span class="op">+</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">60</span>, <span class="dv">0</span>, <span class="op">-</span><span class="dv">1</span>))</span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> winkel <span class="kw">in</span> winkel_liste:</span>
+<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a>    pacman <span class="op">=</span> kreis_sektor(<span class="dv">40</span>, <span class="dv">360</span><span class="op">-</span>winkel, rot)</span>
+<span id="cb44-17"><a href="#cb44-17" aria-hidden="true" tabindex="-1"></a>    pacman <span class="op">=</span> drehe(winkel<span class="op">/</span><span class="dv">2</span>, pacman)</span>
+<span id="cb44-18"><a href="#cb44-18" aria-hidden="true" tabindex="-1"></a>    pacman <span class="op">=</span> fixiere(mitte_links, pacman)</span>
+<span id="cb44-19"><a href="#cb44-19" aria-hidden="true" tabindex="-1"></a>    pacman <span class="op">=</span> kombiniere(pacman, hintergrund)</span>
+<span id="cb44-20"><a href="#cb44-20" aria-hidden="true" tabindex="-1"></a>    pacman <span class="op">=</span> fixiere(oben_rechts, pacman)</span>
+<span id="cb44-21"><a href="#cb44-21" aria-hidden="true" tabindex="-1"></a>    pacman <span class="op">=</span> kombiniere(auge, pacman)</span>
+<span id="cb44-22"><a href="#cb44-22" aria-hidden="true" tabindex="-1"></a>    pacmen.append(pacman)</span>
+<span id="cb44-23"><a href="#cb44-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-24"><a href="#cb44-24" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb44-25"><a href="#cb44-25" aria-hidden="true" tabindex="-1"></a>zeige_animation(pacmen)</span>
+<span id="cb44-26"><a href="#cb44-26" aria-hidden="true" tabindex="-1"></a>speichere_animation(<span class="st">'pacman.gif'</span>, pacmen)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;IPython.core.display.Image object&gt;</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="abschlussübung-die-bahnhofsuhr-der-sbb" class="level2" data-number="A.6">
+<h2 data-number="A.6" class="anchored" data-anchor-id="abschlussübung-die-bahnhofsuhr-der-sbb"><span class="header-section-number">A.6</span> Abschlussübung: Die Bahnhofsuhr der SBB</h2>
+<p>Zum Abschluss setzen wir alles Gelernte in einem grösseren Projekt ein. Die Bahnhofsuhr der SBB ist eine Schweizer Design-Ikone.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="261021_listen_loesung_files/figure-html/3ed52024-1-image.png" class="img-fluid figure-img"></p>
+<figcaption>SBB Bahnhofsuhr, 1944; Quelle: https://guide.museum-gestaltung.ch/de/swiss-design-collection/objects/horloge-19441944, besucht am 18. Oktober 2026.</figcaption>
+</figure>
+</div>
+<p>Entworfen wurde sie von <a href="https://www.emuseum.ch/people/275/hans-hilfiker">Hans Hilfiker (1901 - 1993)</a>. Die genauen Dimensionen der einzelnen Merkmale der Uhr finden sich in der untenstehenden Skizze. Alle Masse sind als Vielfache einer Einheit <em>a</em> angegeben, die einem Hundertstel des Durchmessers entspricht. Wählen wir <em>a</em> = 5, wird die Uhr 500 Pixel gross.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="bahnhofsuhr_transparent.png" class="img-fluid figure-img" style="width:50.0%"></p>
+<figcaption>Dimensionen der einzelnen Elemente der Bahnhofsuhr.</figcaption>
+</figure>
+</div>
+<section id="schritt-1-stückliste" class="level3" data-number="A.6.1">
+<h3 data-number="A.6.1" class="anchored" data-anchor-id="schritt-1-stückliste"><span class="header-section-number">A.6.1</span> Schritt 1: Stückliste</h3>
+<p>Die Uhr besteht aus den folgenden Elementen:</p>
+<ul>
+<li>Zifferblatt:
+<ul>
+<li>Hintergrund</li>
+<li>Rahmen</li>
+<li>Stundenstriche</li>
+<li>Minutenstriche</li>
+</ul></li>
+<li>Zeiger:
+<ul>
+<li>Stundenzeiger</li>
+<li>Minutenzeiger</li>
+<li>Sekundenzeiger</li>
+</ul></li>
+</ul>
+<p>Wir konstruieren die Elemente zuerst einzeln, setzen sie dann zu einer statischen Uhr zusammen und bringen diese schliesslich mit Animationen zum Laufen.</p>
+</section>
+<section id="schritt-2-konstruktion-der-einzelnen-elemente" class="level3" data-number="A.6.2">
+<h3 data-number="A.6.2" class="anchored" data-anchor-id="schritt-2-konstruktion-der-einzelnen-elemente"><span class="header-section-number">A.6.2</span> Schritt 2: Konstruktion der einzelnen Elemente</h3>
+<section id="zifferblatt" class="level4" data-number="A.6.2.1">
+<h4 data-number="A.6.2.1" class="anchored" data-anchor-id="zifferblatt"><span class="header-section-number">A.6.2.1</span> Zifferblatt</h4>
+<p>Der Hintergrund besteht aus einem weissen Kreis mit 100<em>a</em> Durchmesser, der auf einen minimal grösseren schwarzen Kreis gelegt wird. So entsteht der Rahmen.</p>
+<p>Für die Striche nutzen wir einen Trick: Jeder Strich wird über einen transparenten Abstandhalter gesetzt, sodass Strich und Abstandhalter zusammen genau den Radius von 48,5<em>a</em> abdecken. Wird diese Grafik in <code>unten_mitte</code> fixiert, liegt der Fixierpunkt in der Mitte der Uhr, und <code>drehe()</code> dreht den Strich um die Uhrmitte.</p>
+<p>Hier kommen die Listen ins Spiel: Eine erste Schleife erzeugt die 12 Stundenstriche (alle 30°) bzw. die 60 Minutenstriche (alle 6°) und sammelt sie in einer Liste. Eine zweite Schleife iteriert über diese Liste und fügt jeden Strich zur Grafik hinzu. Ausgangspunkt ist dabei <code>leere_grafik()</code>, die für Grafiken die Rolle übernimmt, die <code>[]</code> für Listen spielt.</p>
+<div id="7506026b" class="cell" data-execution_count="22">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Konstruktion Zifferblatt</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">5</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>hintergrund <span class="op">=</span> ellipse(<span class="dv">100</span><span class="op">*</span>a, <span class="dv">100</span><span class="op">*</span>a, weiss)</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a>rand <span class="op">=</span> ellipse(<span class="dv">100</span><span class="op">*</span>a<span class="op">+</span><span class="dv">2</span>, <span class="dv">100</span><span class="op">*</span>a<span class="op">+</span><span class="dv">2</span>, schwarz)</span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a>hintergrund <span class="op">=</span> ueberlagere(hintergrund, rand)</span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>stunde <span class="op">=</span> rechteck(<span class="fl">3.5</span><span class="op">*</span>a, <span class="dv">12</span><span class="op">*</span>a, schwarz)</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a>abstandhalter_stunde <span class="op">=</span> rechteck(<span class="fl">3.5</span><span class="op">*</span>a, (<span class="fl">48.5</span><span class="op">-</span><span class="dv">12</span>)<span class="op">*</span>a, transparent)</span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a>stunde <span class="op">=</span> ueber(stunde, abstandhalter_stunde)</span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>stunde <span class="op">=</span> fixiere(unten_mitte, stunde)</span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a>minute <span class="op">=</span> rechteck(<span class="fl">1.4</span><span class="op">*</span>a, <span class="fl">3.5</span><span class="op">*</span>a, schwarz)</span>
+<span id="cb46-13"><a href="#cb46-13" aria-hidden="true" tabindex="-1"></a>abstandhalter_minute <span class="op">=</span> rechteck(<span class="fl">1.4</span><span class="op">*</span>a, (<span class="fl">48.5</span><span class="op">-</span><span class="fl">3.5</span>)<span class="op">*</span>a, transparent)</span>
+<span id="cb46-14"><a href="#cb46-14" aria-hidden="true" tabindex="-1"></a>minute <span class="op">=</span> ueber(minute, abstandhalter_minute)</span>
+<span id="cb46-15"><a href="#cb46-15" aria-hidden="true" tabindex="-1"></a>minute <span class="op">=</span> fixiere(unten_mitte, minute)</span>
+<span id="cb46-16"><a href="#cb46-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-17"><a href="#cb46-17" aria-hidden="true" tabindex="-1"></a>stunden <span class="op">=</span> []</span>
+<span id="cb46-18"><a href="#cb46-18" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">360</span>, <span class="dv">30</span>):</span>
+<span id="cb46-19"><a href="#cb46-19" aria-hidden="true" tabindex="-1"></a>    strich <span class="op">=</span> drehe(i, stunde)</span>
+<span id="cb46-20"><a href="#cb46-20" aria-hidden="true" tabindex="-1"></a>    stunden.append(strich)</span>
+<span id="cb46-21"><a href="#cb46-21" aria-hidden="true" tabindex="-1"></a>stundenstriche <span class="op">=</span> leere_grafik()</span>
+<span id="cb46-22"><a href="#cb46-22" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> stunde <span class="kw">in</span> stunden:</span>
+<span id="cb46-23"><a href="#cb46-23" aria-hidden="true" tabindex="-1"></a>    stundenstriche <span class="op">=</span> kombiniere(stundenstriche, stunde)</span>
+<span id="cb46-24"><a href="#cb46-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-25"><a href="#cb46-25" aria-hidden="true" tabindex="-1"></a>minuten <span class="op">=</span> []</span>
+<span id="cb46-26"><a href="#cb46-26" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">360</span>, <span class="dv">6</span>):</span>
+<span id="cb46-27"><a href="#cb46-27" aria-hidden="true" tabindex="-1"></a>    strich <span class="op">=</span> drehe(i, minute)</span>
+<span id="cb46-28"><a href="#cb46-28" aria-hidden="true" tabindex="-1"></a>    minuten.append(strich)</span>
+<span id="cb46-29"><a href="#cb46-29" aria-hidden="true" tabindex="-1"></a>minutenstriche <span class="op">=</span> leere_grafik()</span>
+<span id="cb46-30"><a href="#cb46-30" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> minute <span class="kw">in</span> minuten:</span>
+<span id="cb46-31"><a href="#cb46-31" aria-hidden="true" tabindex="-1"></a>    minutenstriche <span class="op">=</span> kombiniere(minutenstriche, minute)</span>
+<span id="cb46-32"><a href="#cb46-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-33"><a href="#cb46-33" aria-hidden="true" tabindex="-1"></a>zifferblatt <span class="op">=</span> ueberlagere(stundenstriche, hintergrund)</span>
+<span id="cb46-34"><a href="#cb46-34" aria-hidden="true" tabindex="-1"></a>zifferblatt <span class="op">=</span> ueberlagere(minutenstriche, zifferblatt)</span>
+<span id="cb46-35"><a href="#cb46-35" aria-hidden="true" tabindex="-1"></a>zeige_grafik(zifferblatt)</span>
+<span id="cb46-36"><a href="#cb46-36" aria-hidden="true" tabindex="-1"></a>speichere_grafik(<span class="st">'zifferblatt.png'</span>, zifferblatt)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="261021_listen_loesung_files/figure-html/cell-23-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="minuten--und-stundenzeiger" class="level4" data-number="A.6.2.2">
+<h4 data-number="A.6.2.2" class="anchored" data-anchor-id="minuten--und-stundenzeiger"><span class="header-section-number">A.6.2.2</span> Minuten- und Stundenzeiger</h4>
+<p>Die beiden Zeiger sind keine Rechtecke, sondern werden zur Spitze hin schmaler. Gemäss Skizze ist der Minutenzeiger an der Spitze 3,6<em>a</em> und am hinteren Ende 5,2<em>a</em> breit; vom Drehpunkt aus ragt er 46<em>a</em> nach vorn und 12<em>a</em> nach hinten. Der Stundenzeiger ist 5,2<em>a</em> bzw. 6,4<em>a</em> breit und ragt 32<em>a</em> nach vorn und 12<em>a</em> nach hinten.</p>
+<p>Jeder Zeiger wird deshalb aus zwei Trapezen zusammengesetzt, die im Drehpunkt aneinanderstossen. Zuerst wird berechnet, wie breit der Zeiger an dieser Stelle ist. Jedes Trapez entsteht dann aus einem Rechteck, an das links und rechts ein schmales rechtwinkliges Dreieck angesetzt wird. Das vordere Trapez wird in <code>unten_mitte</code>, das hintere in <code>oben_mitte</code> fixiert. Beim Kombinieren treffen sich die beiden Fixierpunkte, sodass der fertige Zeiger im Drehpunkt fixiert ist.</p>
+<div id="34c0f964" class="cell" data-execution_count="23">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Konstruiere Minuten- und Stundenzeiger</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Minutenzeiger: Spitze 3.6a, Ende 5.2a, vorn 46a, hinten 12a</span></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a>m_breite_mitte <span class="op">=</span> <span class="fl">3.6</span><span class="op">*</span>a <span class="op">+</span> (<span class="fl">5.2</span><span class="op">*</span>a <span class="op">-</span> <span class="fl">3.6</span><span class="op">*</span>a) <span class="op">*</span> <span class="dv">46</span> <span class="op">/</span> <span class="dv">58</span>   <span class="co"># Breite beim Drehpunkt</span></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a><span class="co"># vorderes Trapez (46a lang, oben 3.6a, unten m_breite_mitte)</span></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> (m_breite_mitte <span class="op">-</span> <span class="fl">3.6</span><span class="op">*</span>a) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>m_vorn <span class="op">=</span> neben(drehe(<span class="dv">90</span>, dreieck(<span class="dv">46</span><span class="op">*</span>a, d, <span class="dv">90</span>, schwarz)),</span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>               neben(rechteck(<span class="fl">3.6</span><span class="op">*</span>a, <span class="dv">46</span><span class="op">*</span>a, schwarz), dreieck(d, <span class="dv">46</span><span class="op">*</span>a, <span class="dv">90</span>, schwarz)))</span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>m_vorn <span class="op">=</span> fixiere(unten_mitte, m_vorn)</span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a><span class="co"># hinteres Trapez (12a lang, oben m_breite_mitte, unten 5.2a)</span></span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> (<span class="fl">5.2</span><span class="op">*</span>a <span class="op">-</span> m_breite_mitte) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a>m_hinten <span class="op">=</span> neben(drehe(<span class="dv">90</span>, dreieck(<span class="dv">12</span><span class="op">*</span>a, d, <span class="dv">90</span>, schwarz)),</span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a>                 neben(rechteck(m_breite_mitte, <span class="dv">12</span><span class="op">*</span>a, schwarz), dreieck(d, <span class="dv">12</span><span class="op">*</span>a, <span class="dv">90</span>, schwarz)))</span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>m_hinten <span class="op">=</span> fixiere(oben_mitte, m_hinten)</span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a>minutenzeiger <span class="op">=</span> kombiniere(m_vorn, m_hinten)</span>
+<span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-19"><a href="#cb47-19" aria-hidden="true" tabindex="-1"></a><span class="co"># Stundenzeiger: Spitze 5.2a, Ende 6.4a, vorn 32a, hinten 12a</span></span>
+<span id="cb47-20"><a href="#cb47-20" aria-hidden="true" tabindex="-1"></a>s_breite_mitte <span class="op">=</span> <span class="fl">5.2</span><span class="op">*</span>a <span class="op">+</span> (<span class="fl">6.4</span><span class="op">*</span>a <span class="op">-</span> <span class="fl">5.2</span><span class="op">*</span>a) <span class="op">*</span> <span class="dv">32</span> <span class="op">/</span> <span class="dv">44</span></span>
+<span id="cb47-21"><a href="#cb47-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-22"><a href="#cb47-22" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> (s_breite_mitte <span class="op">-</span> <span class="fl">5.2</span><span class="op">*</span>a) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb47-23"><a href="#cb47-23" aria-hidden="true" tabindex="-1"></a>s_vorn <span class="op">=</span> neben(drehe(<span class="dv">90</span>, dreieck(<span class="dv">32</span><span class="op">*</span>a, d, <span class="dv">90</span>, schwarz)),</span>
+<span id="cb47-24"><a href="#cb47-24" aria-hidden="true" tabindex="-1"></a>               neben(rechteck(<span class="fl">5.2</span><span class="op">*</span>a, <span class="dv">32</span><span class="op">*</span>a, schwarz), dreieck(d, <span class="dv">32</span><span class="op">*</span>a, <span class="dv">90</span>, schwarz)))</span>
+<span id="cb47-25"><a href="#cb47-25" aria-hidden="true" tabindex="-1"></a>s_vorn <span class="op">=</span> fixiere(unten_mitte, s_vorn)</span>
+<span id="cb47-26"><a href="#cb47-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-27"><a href="#cb47-27" aria-hidden="true" tabindex="-1"></a>d <span class="op">=</span> (<span class="fl">6.4</span><span class="op">*</span>a <span class="op">-</span> s_breite_mitte) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb47-28"><a href="#cb47-28" aria-hidden="true" tabindex="-1"></a>s_hinten <span class="op">=</span> neben(drehe(<span class="dv">90</span>, dreieck(<span class="dv">12</span><span class="op">*</span>a, d, <span class="dv">90</span>, schwarz)),</span>
+<span id="cb47-29"><a href="#cb47-29" aria-hidden="true" tabindex="-1"></a>                 neben(rechteck(s_breite_mitte, <span class="dv">12</span><span class="op">*</span>a, schwarz), dreieck(d, <span class="dv">12</span><span class="op">*</span>a, <span class="dv">90</span>, schwarz)))</span>
+<span id="cb47-30"><a href="#cb47-30" aria-hidden="true" tabindex="-1"></a>s_hinten <span class="op">=</span> fixiere(oben_mitte, s_hinten)</span>
+<span id="cb47-31"><a href="#cb47-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb47-32"><a href="#cb47-32" aria-hidden="true" tabindex="-1"></a>stundenzeiger <span class="op">=</span> kombiniere(s_vorn, s_hinten)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="sekundenzeiger" class="level4" data-number="A.6.2.3">
+<h4 data-number="A.6.2.3" class="anchored" data-anchor-id="sekundenzeiger"><span class="header-section-number">A.6.2.3</span> Sekundenzeiger</h4>
+<p>Der Sekundenzeiger besteht aus einem schmalen roten Schaft mit einer runden Scheibe am vorderen Ende. Weil er an die Signalkelle erinnert, mit der das Bahnpersonal Züge zur Abfahrt freigibt, wird er oft <em>Kelle</em> genannt. Der Schaft ist 1,4<em>a</em> breit und ragt 31,2<em>a</em> bis zum Mittelpunkt der Kelle nach vorn und 16,5<em>a</em> nach hinten. Die Kelle hat einen Durchmesser von 10,5<em>a</em>. Auch dieser Zeiger wird so zusammengesetzt, dass sein Fixierpunkt im Drehpunkt liegt.</p>
+<div id="14855995" class="cell" data-execution_count="24">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Konstruiere Sekundenzeiger</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>spitze <span class="op">=</span> ellipse(<span class="fl">10.5</span><span class="op">*</span>a, <span class="fl">10.5</span><span class="op">*</span>a, rot)</span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>schaft_vorn <span class="op">=</span> rechteck(<span class="fl">1.4</span><span class="op">*</span>a, <span class="fl">31.2</span><span class="op">*</span>a, rot)</span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>schaft_vorn <span class="op">=</span> fixiere(oben_mitte, schaft_vorn)</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>schaft_mit_spitze <span class="op">=</span> kombiniere(spitze, schaft_vorn)</span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>schaft_mit_spitze <span class="op">=</span> fixiere(unten_mitte, schaft_mit_spitze)</span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a>schaft_hinten <span class="op">=</span> rechteck(<span class="fl">1.4</span><span class="op">*</span>a, <span class="fl">16.5</span><span class="op">*</span>a, rot)</span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>schaft_hinten <span class="op">=</span> fixiere(oben_mitte, schaft_hinten)</span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a>sekundenzeiger <span class="op">=</span> kombiniere(schaft_mit_spitze, schaft_hinten)</span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a>zeige_grafik(sekundenzeiger)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="261021_listen_loesung_files/figure-html/cell-25-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="schritt-3-statische-kombination-der-einzelnen-elemente" class="level3" data-number="A.6.3">
+<h3 data-number="A.6.3" class="anchored" data-anchor-id="schritt-3-statische-kombination-der-einzelnen-elemente"><span class="header-section-number">A.6.3</span> Schritt 3: Statische Kombination der einzelnen Elemente</h3>
+<p>Bevor sich etwas bewegt, prüfen wir, ob alle Teile zusammenpassen. Weil die Zeiger im Drehpunkt und das Zifferblatt in seiner Mitte fixiert sind, genügt <code>kombiniere()</code>, um sie deckungsgleich übereinanderzulegen. Die Reihenfolge bestimmt, was vorne liegt: zuvorderst der Sekundenzeiger, dahinter Minuten- und Stundenzeiger, zuhinterst das Zifferblatt.</p>
+<p>Zu beachten ist die Drehrichtung: In PyTamaro dreht ein positiver Winkel eine Grafik im Gegenuhrzeigersinn. Für eine Drehung im Uhrzeigersinn braucht es deshalb negative Winkel. Im Beispiel zeigt die Uhr ungefähr zehn nach zehn: Der Minutenzeiger wird um 60° im Uhrzeigersinn gedreht (<code>-60</code>), der Stundenzeiger steht kurz nach der Zehn, also gut 50° links von der Zwölf (<code>54</code>).</p>
+<div id="74b6e1c2" class="cell" data-execution_count="25">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Kombiniere die einzelnen Elemente zu einer Uhr (10:10)</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a>zehn_uhr <span class="op">=</span> drehe(<span class="dv">54</span>, stundenzeiger)</span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a>zehn_nach <span class="op">=</span> drehe(<span class="op">-</span><span class="dv">60</span>, minutenzeiger)</span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>uhrzeit <span class="op">=</span> kombiniere(zehn_nach, zehn_uhr)</span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>uhrzeit <span class="op">=</span> kombiniere(sekundenzeiger, uhrzeit)</span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>uhrzeit <span class="op">=</span> kombiniere(uhrzeit, zifferblatt)</span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>zeige_grafik(uhrzeit)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="261021_listen_loesung_files/figure-html/cell-26-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="schritt-4-die-uhr-zum-laufen-bringen" class="level3" data-number="A.6.4">
+<h3 data-number="A.6.4" class="anchored" data-anchor-id="schritt-4-die-uhr-zum-laufen-bringen"><span class="header-section-number">A.6.4</span> Schritt 4: Die Uhr zum Laufen bringen</h3>
+<p>Die drei Zeiger der SBB-Uhr bewegen sich in unterschiedlichem Takt. Minuten- und Stundenzeiger springen einmal pro Minute: Auf einen elektrischen Impuls hin rückt der Minutenzeiger um 6° und der Stundenzeiger um 0,5° weiter. Der Sekundenzeiger dagegen dreht sich in 58,5 Sekunden fliessend einmal um das Zifferblatt und wartet dann 1,5 Sekunden auf der Zwölf auf den nächsten Minutenimpuls.</p>
+<p>Eine einzige Animation für alle drei Zeiger wäre deshalb riesig: Für eine flüssige Bewegung braucht der Sekundenzeiger 20 Bilder pro Sekunde, über einen Zwölfstundenumlauf ergäbe das über 860 000 Bilder. Wir erzeugen deshalb zwei getrennte Animationen, eine für den Sekundenzeiger und eine für Minuten- und Stundenzeiger, und legen sie erst im Browser über das Zifferblatt.</p>
+<p>Damit alle Bilder später deckungsgleich übereinanderliegen, wird jedes Einzelbild mit einem transparenten Hintergrund von der Grösse des Zifferblatts (100<em>a</em> × 100<em>a</em>) kombiniert. Gleichzeitig ist damit die Bedingung erfüllt, dass alle Bilder einer Animation gleich gross sein müssen.</p>
+<section id="der-sekundenzeiger" class="level4" data-number="A.6.4.1">
+<h4 data-number="A.6.4.1" class="anchored" data-anchor-id="der-sekundenzeiger"><span class="header-section-number">A.6.4.1</span> Der Sekundenzeiger</h4>
+<p>Die Animation des Sekundenzeigers dauert genau eine Minute und besteht aus 1200 Bildern à 50 Millisekunden. Für die Umdrehung in 58,5 Sekunden sind 1170 Bilder nötig; von Bild zu Bild dreht sich der Zeiger um 360° / 1170 weiter. Für den Halt von 1,5 Sekunden wird anschliessend 30-mal dasselbe Bild mit dem Zeiger auf der Zwölf angehängt.</p>
+<div id="6c7aecc2" class="cell" data-execution_count="26">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Sekundenzeiger animieren</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>sekunden <span class="op">=</span> []</span>
+<span id="cb50-3"><a href="#cb50-3" aria-hidden="true" tabindex="-1"></a>hintergrund_transparent <span class="op">=</span> ellipse(<span class="dv">100</span><span class="op">*</span>a, <span class="dv">100</span><span class="op">*</span>a, transparent)</span>
+<span id="cb50-4"><a href="#cb50-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-5"><a href="#cb50-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1170</span>):</span>
+<span id="cb50-6"><a href="#cb50-6" aria-hidden="true" tabindex="-1"></a>    sekunde <span class="op">=</span> drehe(<span class="op">-</span>i <span class="op">*</span> <span class="dv">360</span> <span class="op">/</span> <span class="dv">1170</span>, sekundenzeiger)</span>
+<span id="cb50-7"><a href="#cb50-7" aria-hidden="true" tabindex="-1"></a>    sekunde <span class="op">=</span> kombiniere(sekunde, hintergrund_transparent)</span>
+<span id="cb50-8"><a href="#cb50-8" aria-hidden="true" tabindex="-1"></a>    sekunden.append(sekunde)</span>
+<span id="cb50-9"><a href="#cb50-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-10"><a href="#cb50-10" aria-hidden="true" tabindex="-1"></a>sekunden_stop <span class="op">=</span> kombiniere(sekundenzeiger, hintergrund_transparent)</span>
+<span id="cb50-11"><a href="#cb50-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">30</span>):</span>
+<span id="cb50-12"><a href="#cb50-12" aria-hidden="true" tabindex="-1"></a>    sekunden.append(sekunden_stop)</span>
+<span id="cb50-13"><a href="#cb50-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb50-14"><a href="#cb50-14" aria-hidden="true" tabindex="-1"></a>zeige_animation(sekunden, dauer<span class="op">=</span><span class="dv">50</span>)</span>
+<span id="cb50-15"><a href="#cb50-15" aria-hidden="true" tabindex="-1"></a>speichere_animation(<span class="st">'sekunden.gif'</span>, sekunden, dauer<span class="op">=</span><span class="dv">50</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;IPython.core.display.Image object&gt;</code></pre>
+</div>
+</div>
+</section>
+<section id="minuten--und-stundenzeiger-1" class="level4" data-number="A.6.4.2">
+<h4 data-number="A.6.4.2" class="anchored" data-anchor-id="minuten--und-stundenzeiger-1"><span class="header-section-number">A.6.4.2</span> Minuten- und Stundenzeiger</h4>
+<p>Für den Minutenzeiger allein ist die Aufgabe einfach: 60 Bilder, jedes um weitere 6° gedreht und je eine Minute lang angezeigt. Ein Umlauf dauert also eine Stunde. Python erlaubt in Zahlen den Unterstrich als Tausendertrennzeichen: <code>60_000</code> ist dasselbe wie <code>60000</code>.</p>
+<div id="d4446298" class="cell" data-execution_count="27">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb52"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Minutenzeiger animieren</span></span>
+<span id="cb52-2"><a href="#cb52-2" aria-hidden="true" tabindex="-1"></a>minuten <span class="op">=</span> []</span>
+<span id="cb52-3"><a href="#cb52-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">60</span>):</span>
+<span id="cb52-4"><a href="#cb52-4" aria-hidden="true" tabindex="-1"></a>    minute <span class="op">=</span> drehe(<span class="op">-</span>i <span class="op">*</span> <span class="dv">6</span>, minutenzeiger)</span>
+<span id="cb52-5"><a href="#cb52-5" aria-hidden="true" tabindex="-1"></a>    minute <span class="op">=</span> kombiniere(minute, hintergrund_transparent)</span>
+<span id="cb52-6"><a href="#cb52-6" aria-hidden="true" tabindex="-1"></a>    minuten.append(minute)</span>
+<span id="cb52-7"><a href="#cb52-7" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb52-8"><a href="#cb52-8" aria-hidden="true" tabindex="-1"></a>zeige_animation(minuten, dauer<span class="op">=</span><span class="dv">60_000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-display">
+<pre><code>&lt;IPython.core.display.Image object&gt;</code></pre>
+</div>
+</div>
+<p>Weil der Stundenzeiger im selben Moment springt wie der Minutenzeiger, fassen wir beide in <strong>einer</strong> Animation zusammen. Für jede der 720 Minuten eines Zwölfstundenumlaufs werden beide Zeiger auf ihre Position gedreht und mit <code>kombiniere()</code> übereinandergelegt. Da bei beiden Zeigern die Fixierposition im Drehpunkt liegt, treffen sie sich genau in der Mitte der Uhr. Diese Animation wird nicht im Notebook abgespielt, sondern direkt als <code>zeiger.gif</code> gespeichert.</p>
+<div id="db88ac1b" class="cell" data-execution_count="28">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb54"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># </span><span class="al">TODO</span><span class="co">: Minuten- und Stundenzeiger animieren</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a>zeiger <span class="op">=</span> []</span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> k <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">720</span>):                        <span class="co"># 12 h × 60 min</span></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a>    minute <span class="op">=</span> drehe(<span class="op">-</span>k <span class="op">*</span> <span class="dv">6</span>, minutenzeiger)</span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a>    stunde <span class="op">=</span> drehe(<span class="op">-</span>k <span class="op">*</span> <span class="fl">0.5</span>, stundenzeiger)</span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>    bild <span class="op">=</span> kombiniere(minute, stunde)       <span class="co"># Minutenzeiger vorne</span></span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>    bild <span class="op">=</span> kombiniere(bild, hintergrund_transparent)</span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a>    zeiger.append(bild)</span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a>speichere_animation(<span class="st">"zeiger.gif"</span>, zeiger, dauer<span class="op">=</span><span class="dv">60000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="überlagerung-mit-html-und-css" class="level4" data-number="A.6.4.3">
+<h4 data-number="A.6.4.3" class="anchored" data-anchor-id="überlagerung-mit-html-und-css"><span class="header-section-number">A.6.4.3</span> Überlagerung mit HTML und CSS</h4>
+<p>Zusammengesetzt wird die Uhr erst im Browser. Das Zifferblatt (PNG) und die beiden Animationen (GIF) haben einen transparenten Hintergrund und sind gleich gross. Mit CSS legen wir sie wie Folien auf einem Hellraumprojektor übereinander. Der folgende Code-Block kann in eine Markdown-Zelle des Jupyter Notebooks eingefügt werden; die drei Bilddateien müssen im selben Ordner wie das Notebook liegen:</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb55"><pre class="sourceCode html code-with-copy"><code class="sourceCode html"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;</span><span class="kw">div</span><span class="ot"> style</span><span class="op">=</span><span class="st">"position:relative; width:100%; max-width:500px"</span><span class="dt">&gt;</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"zifferblatt.png"</span><span class="ot"> style</span><span class="op">=</span><span class="st">"width:100%"</span><span class="dt">&gt;</span></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"zeiger.gif"</span><span class="ot">      style</span><span class="op">=</span><span class="st">"position:absolute; top:0; left:0; width:100%"</span><span class="dt">&gt;</span></span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a>  <span class="dt">&lt;</span><span class="kw">img</span><span class="ot"> src</span><span class="op">=</span><span class="st">"sekunden.gif"</span><span class="ot">    style</span><span class="op">=</span><span class="st">"position:absolute; top:0; left:0; width:100%"</span><span class="dt">&gt;</span></span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;/</span><span class="kw">div</span><span class="dt">&gt;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<ul>
+<li><code>position:relative</code> macht den äusseren <code>div</code> zum Bezugsrahmen.</li>
+<li><code>position:absolute; top:0; left:0</code> setzt die beiden GIFs in die linke obere Ecke dieses Rahmens, also genau über das Zifferblatt.</li>
+<li><code>width:100%</code> macht alle Bilder so breit wie den Rahmen, <code>max-width</code> legt die Grösse der Uhr fest.</li>
+<li>Die <strong>Reihenfolge im HTML</strong> bestimmt die Stapelung: Was später steht, liegt weiter vorne. Der Sekundenzeiger mit der roten Kelle steht deshalb zuletzt.</li>
+</ul>
+<p>Jede Animation läuft im Browser in ihrem eigenen Takt. So entsteht eine Uhr mit drei unterschiedlich schnellen Zeigern, ohne dass alle Bilder in einer einzigen Datei stecken müssen. Ein Nachteil bleibt: Die Animationen sind nicht miteinander gekoppelt, sodass der Minutensprung nicht immer exakt mit dem Halt der Kelle zusammenfällt.</p>
+<p>In der nächsten Zelle ist genau dieser Block eingefügt. Sie zeigt die fertige Uhr.</p>
+<div style="position:relative; width:100%; max-width:500px">
+<p><img src="zifferblatt.png" style="width:100%"> <img src="zeiger.gif" style="position:absolute; top:0; left:0; width:100%"> <img src="sekunden.gif" style="position:absolute; top:0; left:0; width:100%"></p>
+</div>
+</section>
+</section>
+</section>
+<section id="rückblick" class="level2" data-number="A.7">
+<h2 data-number="A.7" class="anchored" data-anchor-id="rückblick"><span class="header-section-number">A.7</span> Rückblick</h2>
+<p>Listen sind in diesem Kapitel in drei Rollen aufgetreten: als Sammlung von Werten, die mit Funktionen, Operatoren und Methoden bearbeitet wird; als Folge von Grafiken, die PyTamaro als Daumenkino abspielt; und als Zwischenablage, in der zuerst alle Teile erzeugt und danach zu einer Grafik zusammengesetzt werden, wie bei den Strichen des Zifferblatts. Das Muster ist dabei immer dasselbe: eine leere Liste anlegen, sie in einer Schleife mit <code>.append()</code> füllen und die fertige Liste weiterverwenden.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../notebooks/261021_listen/261021_listen.html" class="pagination-link" aria-label="Datenstrukturen: Python-Listen">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Datenstrukturen: Python-Listen</span></span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+  </div>
+</nav>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
