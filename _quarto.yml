@@ -25,6 +25,9 @@ book:
         - notebooks/260909_blume/260909_blume.ipynb
         - notebooks/260916_blume_II/260916_blume_II.ipynb
         - notebooks/260923_farbstift/260923_farbstift.ipynb
+        - notebooks/261021_listen/261021_listen.ipynb
+  appendices:                  # Musterlösungen (HTML und PDF)
+    - notebooks/261021_listen/261021_listen_loesung.ipynb
 
 format:
   html:
