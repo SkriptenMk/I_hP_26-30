@@ -1,0 +1,17 @@
+format:
+  html:
+    code-links:
+      - text: In Colab öffnen
+        icon: rocket-takeoff
+        href: https://colab.research.google.com/github/SkriptenMk/I_bW_26-30/blob/main/notebooks/261104_loesungen/261104_loesungen.ipynb
+      - text: In Binder öffnen
+        icon: box-arrow-up-right
+        href: https://mybinder.org/v2/gh/SkriptenMk/I_bW_26-30/main?labpath=notebooks%2F261104_loesungen%2F261104_loesungen.ipynb
+      - text: Notebook herunterladen
+        icon: download
+        href: 261104_loesungen.ipynb
+  pdf:
+    header-includes: |
+      \hyphenation{
+        Ganzzahl-division
+      }
