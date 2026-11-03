@@ -29,7 +29,7 @@ book:
         - notebooks/261104_uebungen/261104_uebungen.ipynb
   appendices:                  # Musterlösungen (HTML und PDF)
     - notebooks/261021_listen/261021_listen_loesung.ipynb
-    - notebooks/261104_uebungen/261104_uebungen_loesung.ipynb
+    - notebooks/261104_loesungen/261104_loesungen.ipynb
 
 format:
   html:
