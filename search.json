@@ -425,6 +425,50 @@
     ]
   },
   {
+    "objectID": "notebooks/261104_uebungen/261104_uebungen.html",
+    "href": "notebooks/261104_uebungen/261104_uebungen.html",
+    "title": "9  Programmierübungen",
+    "section": "",
+    "text": "9.1 Ü Schaltjahr\nIn diesem Notebook erhalten Sie Gelegenheit, das gelernte in kleinen Anwendungsübungen zu vertiefen.\nDie gregorianische Schalttagsregelung besteht aus folgenden drei einzelnen Regeln:\nIn 400 Jahren gibt es also 97 Schaltjahre (und ebenso viele Schalttage). Die mittlere Länge eines gregorianischen Kalenderjahres beträgt damit 365 97⁄400 Tage (als Dezimalzahl: 365,2425 Tage).\n(Wikipedia. «Schaltjahr». 3. Mai 2026. https://de.wikipedia.org/w/index.php?title=Schaltjahr&oldid=266709482. Zugegriffen am 2. November 2026.)\nImplementieren Sie die erforderliche Prüfungskaskade in Python.\n# Testjahr, kann geändert werden\njahr = 2000\n# Variable zur Speicherung des Testresultates\nschaltjahr = False\n\n# TODO: implementieren der Testlogik\n\n# Ausgabe\nif schaltjahr:\n    print(f'Das Jahr {jahr} ist ein Schaltjahr.')\nelse:\n    print(f'Das Jahr {jahr} ist kein Schaltjahr.')",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Programmierübungen</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/261104_uebungen/261104_uebungen.html#ü-schaltjahr",
+    "href": "notebooks/261104_uebungen/261104_uebungen.html#ü-schaltjahr",
+    "title": "9  Programmierübungen",
+    "section": "",
+    "text": "Die durch 4 ganzzahlig teilbaren Jahre sind, abgesehen von den folgenden Ausnahmen, Schaltjahre.\nSäkularjahre, also die Jahre, die ein Jahrhundert abschließen (z. B. 1800, 1900, 2100 und 2200), sind, abgesehen von der folgenden Ausnahme, keine Schaltjahre.\nDie durch 400 ganzzahlig teilbaren Säkularjahre, zum Beispiel das Jahr 2000, sind jedoch Schaltjahre.",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Programmierübungen</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/261104_uebungen/261104_uebungen.html#ü-fakultät",
+    "href": "notebooks/261104_uebungen/261104_uebungen.html#ü-fakultät",
+    "title": "9  Programmierübungen",
+    "section": "9.2 Ü Fakultät",
+    "text": "9.2 Ü Fakultät\nDie Fakultät ist ein spezielles Produkt:\n\\[\nn! = \\prod_{k=1}^{n} k = n(n-1) \\cdot ... \\cdot 3 \\cdot 2 \\cdot 1 \\text{\nfür } n \\in \\mathbb{N}\n\\]\n(Arens, Tilo, Frank Hettlich, Christian Karpfinger, Ulrich Kockelkorn, Klaus Lichtenegger, und Hellmuth Stachel. Mathematik. Springer, 2022. https://doi.org/10.1007/978-3-662-64389-1. Seite 91.)\nImplementieren Sie die Berechnung der Fakultät eines beliebigen \\(n\\) mit Hilfe einer for-loop.\n\n# Beispielzahlen; können abgeändert werden\nn = 5\nf = 1\n\n# TODO: implementieren Sie die Logik gemäss Vorgabe\n\n# Ausgabe\nprint(f'Fakultät {n} ist gleich {f}.')",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Programmierübungen</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/261104_uebungen/261104_uebungen.html#ü-promotion",
+    "href": "notebooks/261104_uebungen/261104_uebungen.html#ü-promotion",
+    "title": "9  Programmierübungen",
+    "section": "9.3 Ü Promotion",
+    "text": "9.3 Ü Promotion\nDie §§ 3 und 9 des Promotionsreglements für die Gymnasien des Kantons Zürich regeln die Bedingungen für die Promotion.\n§ 3 Promotionsfächer im Obergymnasium (11. bis 14. Schuljahr)\n\\(^1\\)Promotionsfächer im Obergymnasium sind die Grundlagen-, Schwerpunkt- und Ergänzungsfächer gemäss den Bestimmungen des Bundesrates und der EDK über die Anerkennung von gymnasialen Maturitätsausweisen vom 16. Januar / 15. Februar 1995 sowie die Fächer Informatik und Einführung in Wirtschaft und Recht, soweit sie in der betreffenden Zeugnisperiode unterrichtet werden.\n\\(^2\\)Für die Promotion zählt jedes Promotionsfach einfach.\n\\(^3\\)Werden in den Schwerpunktfächern «Biologie und Chemie» bzw. «Physik und Anwendungen der Mathematik» die Teilfächer einzeln unterrichtet, so zählen sie je einzeln als Promotionsfach.\n\\(^4\\)Im Schwerpunktfach Philosophie/Pädagogik/Psychologie zählt für die Promotion das gewichtete Mittel der Noten aus den Teilen Philosophie und Pädagogik/Psychologie, soweit sie in der betreffenden Zeugnisperiode unterrichtet werden. Ergibt das gewichtete Mittel eine Viertelnote, ist diese auf die nächste ganze oder halbe Note aufzurunden.\n\\(^5\\)Solange Bildnerisches Gestalten und Musik gleichzeitig im Grundlagenfach unterrichtet werden, zählt für die Promotion das gerundete Mittel aus beiden Noten. Ergibt das Mittel eine Viertelnote, so ist diese auf die nächste ganze oder halbe Note aufzurunden.\n\\(^6\\)Wird in einer Zeugnisperiode das gleiche Fach sowohl als Grundlagenfach wie auch als Schwerpunkt- oder Ergänzungsfach erteilt, so sind im Zeugnis die Noten für beide Bereiche getrennt auszuweisen; für die Promotion zählt das Mittel aus beiden Noten.\n§ 9 Bedingungen\nDie Bedingungen für die Promotion sind erfüllt, wenn in allen Promotionsfächern, die in der betreffenden Zeugnisperiode unterrichtet werden,\n\ndie doppelte Summe aller Notenabweichungen von 4 nach unten nicht grösser ist als die Summe aller Notenabweichungen von 4 nach oben\n\nund\n\nnicht mehr als drei Noten unter 4 erteilt werden.\n\nImplementieren Sie ein Python-Skript, welches anhand einer Notenliste (Python-Liste) überprüft, ob die Promotionsbedingungen erfüllt sind.\n\n# TODO: implementieren Sie das Prüfskript inklusive Ausgabe",
+    "crumbs": [
+      "Einführung",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>Programmierübungen</span>"
+    ]
+  },
+  {
     "objectID": "notebooks/261021_listen/261021_listen_loesung.html",
     "href": "notebooks/261021_listen/261021_listen_loesung.html",
     "title": "Appendix A — Datenstrukturen: Python-Listen (Musterlösung)",
@@ -510,6 +554,50 @@
     "crumbs": [
       "Appendices",
       "<span class='chapter-number'>A</span>  <span class='chapter-title'>Datenstrukturen: Python-Listen (Musterlösung)</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/261104_uebungen/261104_uebungen_loesung.html",
+    "href": "notebooks/261104_uebungen/261104_uebungen_loesung.html",
+    "title": "Appendix B — Programmierübungen",
+    "section": "",
+    "text": "B.1 Ü Schaltjahr\nIn diesem Notebook erhalten Sie Gelegenheit, das gelernte in kleinen Anwendungsübungen zu vertiefen.\nDie gregorianische Schalttagsregelung besteht aus folgenden drei einzelnen Regeln:\nIn 400 Jahren gibt es also 97 Schaltjahre (und ebenso viele Schalttage). Die mittlere Länge eines gregorianischen Kalenderjahres beträgt damit 365 97⁄400 Tage (als Dezimalzahl: 365,2425 Tage).\n(Wikipedia. «Schaltjahr». 3. Mai 2026. https://de.wikipedia.org/w/index.php?title=Schaltjahr&oldid=266709482. Zugegriffen am 2. November 2026.)\nImplementieren Sie die erforderliche Prüfungskaskade in Python.\njahr = 2000\nschaltjahr = False\n\nif jahr % 400 == 0:\n    schaltjahr = True\nelif jahr % 100 == 0:\n    schaltjahr = False\nelif jahr % 4 == 0:\n    schaltjahr = True\nelse:\n    schaltjahr = False\n\nif schaltjahr:\n    print(f'Das Jahr {jahr} ist ein Schaltjahr.')\nelse:\n    print(f'Das Jahr {jahr} ist kein Schaltjahr.')\n\nDas Jahr 2000 ist ein Schaltjahr.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Programmierübungen</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/261104_uebungen/261104_uebungen_loesung.html#ü-schaltjahr",
+    "href": "notebooks/261104_uebungen/261104_uebungen_loesung.html#ü-schaltjahr",
+    "title": "Appendix B — Programmierübungen",
+    "section": "",
+    "text": "Die durch 4 ganzzahlig teilbaren Jahre sind, abgesehen von den folgenden Ausnahmen, Schaltjahre.\nSäkularjahre, also die Jahre, die ein Jahrhundert abschließen (z. B. 1800, 1900, 2100 und 2200), sind, abgesehen von der folgenden Ausnahme, keine Schaltjahre.\nDie durch 400 ganzzahlig teilbaren Säkularjahre, zum Beispiel das Jahr 2000, sind jedoch Schaltjahre.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Programmierübungen</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/261104_uebungen/261104_uebungen_loesung.html#ü-fakultät",
+    "href": "notebooks/261104_uebungen/261104_uebungen_loesung.html#ü-fakultät",
+    "title": "Appendix B — Programmierübungen",
+    "section": "B.2 Ü Fakultät",
+    "text": "B.2 Ü Fakultät\nDie Fakultät ist ein spezielles Produkt:\n\\[\nn! = \\prod_{k=1}^{n} k = n(n-1) \\cdot ... \\cdot 3 \\cdot 2 \\cdot 1 \\text{\nfür } n \\in \\mathbb{N}\n\\]\n(Arens, Tilo, Frank Hettlich, Christian Karpfinger, Ulrich Kockelkorn, Klaus Lichtenegger, und Hellmuth Stachel. Mathematik. Springer, 2022. https://doi.org/10.1007/978-3-662-64389-1. Seite 91.)\nImplementieren Sie die Berechnung der Fakultät eines beliebigen \\(n\\) mit Hilfe einer for-loop.\n\nn = 5\nf = 1\n\nfor i in range(1, n+1):\n    f *= i\n\nprint(f'Fakultät {n} ist gleich {f}.')\n\nFakultät 5 ist gleich 120.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Programmierübungen</span>"
+    ]
+  },
+  {
+    "objectID": "notebooks/261104_uebungen/261104_uebungen_loesung.html#ü-promotion",
+    "href": "notebooks/261104_uebungen/261104_uebungen_loesung.html#ü-promotion",
+    "title": "Appendix B — Programmierübungen",
+    "section": "B.3 Ü Promotion",
+    "text": "B.3 Ü Promotion\nDie §§ 3 und 9 des Promotionsreglements für die Gymnasien des Kantons Zürich regeln die Bedingungen für die Promotion.\n§ 3 Promotionsfächer im Obergymnasium (11. bis 14. Schuljahr)\n\\(^1\\)Promotionsfächer im Obergymnasium sind die Grundlagen-, Schwerpunkt- und Ergänzungsfächer gemäss den Bestimmungen des Bundesrates und der EDK über die Anerkennung von gymnasialen Maturitätsausweisen vom 16. Januar / 15. Februar 1995 sowie die Fächer Informatik und Einführung in Wirtschaft und Recht, soweit sie in der betreffenden Zeugnisperiode unterrichtet werden.\n\\(^2\\)Für die Promotion zählt jedes Promotionsfach einfach.\n\\(^3\\)Werden in den Schwerpunktfächern «Biologie und Chemie» bzw. «Physik und Anwendungen der Mathematik» die Teilfächer einzeln unterrichtet, so zählen sie je einzeln als Promotionsfach.\n\\(^4\\)Im Schwerpunktfach Philosophie/Pädagogik/Psychologie zählt für die Promotion das gewichtete Mittel der Noten aus den Teilen Philosophie und Pädagogik/Psychologie, soweit sie in der betreffenden Zeugnisperiode unterrichtet werden. Ergibt das gewichtete Mittel eine Viertelnote, ist diese auf die nächste ganze oder halbe Note aufzurunden.\n\\(^5\\)Solange Bildnerisches Gestalten und Musik gleichzeitig im Grundlagenfach unterrichtet werden, zählt für die Promotion das gerundete Mittel aus beiden Noten. Ergibt das Mittel eine Viertelnote, so ist diese auf die nächste ganze oder halbe Note aufzurunden.\n\\(^6\\)Wird in einer Zeugnisperiode das gleiche Fach sowohl als Grundlagenfach wie auch als Schwerpunkt- oder Ergänzungsfach erteilt, so sind im Zeugnis die Noten für beide Bereiche getrennt auszuweisen; für die Promotion zählt das Mittel aus beiden Noten.\n§ 9 Bedingungen\nDie Bedingungen für die Promotion sind erfüllt, wenn in allen Promotionsfächern, die in der betreffenden Zeugnisperiode unterrichtet werden,\n\ndie doppelte Summe aller Notenabweichungen von 4 nach unten nicht grösser ist als die Summe aller Notenabweichungen von 4 nach oben\n\nund\n\nnicht mehr als drei Noten unter 4 erteilt werden.\n\nImplementieren Sie ein Python-Skript, welches anhand einer Notenliste (Python-Liste) überprüft, ob die Promotionsbedingungen erfüllt sind.\n\n# faecher = ['D', 'F', 'E', 'M', 'NT', 'WR', 'G', 'GG', 'MB', 'I']\nnoten   = [3.5, 4, 5, 3, 4, 4.5, 4.5, 4.5, 5, 3.5]\nungenuegende = 0\ntiefpunkte = 0\nhochpunkte = 0\n\nfor note in noten:\n    if note &lt; 4:\n        ungenuegende += 1\n        tiefpunkte += 4 - note\n    if note &gt; 4:\n        hochpunkte += note - 4\n\nif 2 * tiefpunkte &lt;= hochpunkte and ungenuegende &lt;= 3:\n    print('Die Promotionsbedingungen sind erfüllt.')\nelse:\n    print('Die Promotionsbedingungen sind nicht erfüllt.')\n\n\nDie Promotionsbedingungen sind nicht erfüllt.",
+    "crumbs": [
+      "Appendices",
+      "<span class='chapter-number'>B</span>  <span class='chapter-title'>Programmierübungen</span>"
     ]
   }
 ]
