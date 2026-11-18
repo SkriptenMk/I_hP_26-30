@@ -31,6 +31,7 @@ book:
   appendices:                  # Musterlösungen (HTML und PDF)
     - notebooks/261021_listen/261021_listen_loesung.ipynb
     - notebooks/261104_loesungen/261104_loesungen.ipynb
+    - notebooks/2611118_funktionen_loesungen/16118_funktionen_loesungen.ipynb
 
 format:
   html:
