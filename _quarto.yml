@@ -27,6 +27,7 @@ book:
         - notebooks/260923_farbstift/260923_farbstift.ipynb
         - notebooks/261021_listen/261021_listen.ipynb
         - notebooks/261104_uebungen/261104_uebungen.ipynb
+        - notebooks/2611118_funktionen/16118_funktionen.ipynb
   appendices:                  # Musterlösungen (HTML und PDF)
     - notebooks/261021_listen/261021_listen_loesung.ipynb
     - notebooks/261104_loesungen/261104_loesungen.ipynb
