@@ -3,10 +3,10 @@ format:
     code-links:
       - text: In Colab öffnen
         icon: rocket-takeoff
-        href: https://colab.research.google.com/github/SkriptenMk/I_bW_26-30/blob/main/notebooks/261118_funktionen/261118_funktionen.ipynb
+        href: https://colab.research.google.com/github/SkriptenMk/I_hP_26-30/blob/main/notebooks/261118_funktionen/261118_funktionen.ipynb
       - text: In Binder öffnen
         icon: box-arrow-up-right
-        href: https://mybinder.org/v2/gh/SkriptenMk/I_bW_26-30/main?labpath=notebooks%2F261118_funktionen%2F261118_funktionen.ipynb
+        href: https://mybinder.org/v2/gh/SkriptenMk/I_hP_26-30/main?labpath=notebooks%2F261118_funktionen%2F261118_funktionen.ipynb
       - text: Notebook herunterladen
         icon: download
         href: 261118_funktionen.ipynb
