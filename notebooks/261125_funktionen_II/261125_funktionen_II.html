@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Appendix C — Musterlösungen Funktionen in Python – Unterlagen für das obligatorische Fach Informatik in der Klasse 1hP</title>
+<title>11&nbsp; Funktionen in Python: Vorgabewerte – Unterlagen für das obligatorische Fach Informatik in der Klasse 1hP</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -71,7 +71,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../notebooks/261104_loesungen/261104_loesungen.html" rel="prev">
+<link href="../../notebooks/261021_listen/261021_listen_loesung.html" rel="next">
+<link href="../../notebooks/261118_funktionen/261118_funktionen.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/scrollable-regions/scrollable-regions.js" type="module"></script>
@@ -82,7 +83,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting-63b5708e65d6cd79cd7618c58d0c21e7.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-4f67ab1e4efc86feb5e21e0983fc9301.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-fd437c11ef914449285a5c26e0daa494.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -152,7 +153,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/261021_listen/261021_listen_loesung.html">Appendices</a></li><li class="breadcrumb-item"><a href="../../notebooks/2611118_funktionen_loesungen/16118_funktionen_loesungen.html"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Musterlösungen Funktionen in Python</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/260819_einfuehrung/260819_einfuehrung.html">Einführung</a></li><li class="breadcrumb-item"><a href="../../notebooks/261125_funktionen_II/261125_funktionen_II.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Funktionen in Python: Vorgabewerte</span></a></li></ol></nav>
         <a class="flex-grow-1" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -248,8 +249,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/2611118_funktionen/16118_funktionen.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notebooks/261118_funktionen/261118_funktionen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Funktionen in Python</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/261125_funktionen_II/261125_funktionen_II.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Funktionen in Python: Vorgabewerte</span></span></a>
   </div>
 </li>
       </ul>
@@ -274,8 +281,14 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notebooks/2611118_funktionen_loesungen/16118_funktionen_loesungen.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../notebooks/261118_funktionen_loesungen/261118_funktionen_loesungen.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Musterlösungen Funktionen in Python</span></span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notebooks/261125_funktionen_II_loesungen/261125_funktionen_II_loesungen.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">D</span>&nbsp; <span class="chapter-title">Funktionen in Python: Vorgabewerte – Lösungen</span></span></a>
   </div>
 </li>
       </ul>
@@ -290,18 +303,20 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#funktion-zur-prüfung-ob-ein-jahr-ein-schaltjahr-ist" id="toc-funktion-zur-prüfung-ob-ein-jahr-ein-schaltjahr-ist" class="nav-link active" data-scroll-target="#funktion-zur-prüfung-ob-ein-jahr-ein-schaltjahr-ist"><span class="header-section-number">C.1</span> Funktion zur Prüfung, ob ein Jahr ein Schaltjahr ist</a></li>
-  <li><a href="#funktion-zur-berechnung-von-n" id="toc-funktion-zur-berechnung-von-n" class="nav-link" data-scroll-target="#funktion-zur-berechnung-von-n"><span class="header-section-number">C.2</span> Funktion zur Berechnung von <span class="math inline">\(n!\)</span></a></li>
-  <li><a href="#funktion-zur-kontrolle-der-promotionsbedingungen" id="toc-funktion-zur-kontrolle-der-promotionsbedingungen" class="nav-link" data-scroll-target="#funktion-zur-kontrolle-der-promotionsbedingungen"><span class="header-section-number">C.3</span> Funktion zur Kontrolle der Promotionsbedingungen</a></li>
+  <li><a href="#anwendungsübungen" id="toc-anwendungsübungen" class="nav-link active" data-scroll-target="#anwendungsübungen"><span class="header-section-number">11.1</span> Anwendungsübungen</a>
+  <ul class="collapse">
+  <li><a href="#teil-a-funktionen-ohne-vorgabewerte" id="toc-teil-a-funktionen-ohne-vorgabewerte" class="nav-link" data-scroll-target="#teil-a-funktionen-ohne-vorgabewerte"><span class="header-section-number">11.1.1</span> Teil A: Funktionen ohne Vorgabewerte</a></li>
+  <li><a href="#teil-b-funktionen-mit-vorgabewerten" id="toc-teil-b-funktionen-mit-vorgabewerten" class="nav-link" data-scroll-target="#teil-b-funktionen-mit-vorgabewerten"><span class="header-section-number">11.1.2</span> Teil B: Funktionen mit Vorgabewerten</a></li>
+  </ul></li>
   </ul>
-<div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/SkriptenMk/I_bW_26-30/blob/main/notebooks/2611118_funktionen_loesungen/16118_funktionen_loesungen.ipynb"><i class="bi bi-rocket-takeoff"></i>In Colab öffnen</a></li><li><a href="https://mybinder.org/v2/gh/SkriptenMk/I_bW_26-30/main?labpath=notebooks%2F2611118_funktionen_loesungen%2F16118_funktionen_loesungen.ipynb"><i class="bi bi-box-arrow-up-right"></i>In Binder öffnen</a></li><li><a href="16118_funktionen_loesungen.ipynb"><i class="bi bi-download"></i>Notebook herunterladen</a></li></ul></div></nav>
+<div class="quarto-code-links"><h2>Code Links</h2><ul><li><a href="https://colab.research.google.com/github/SkriptenMk/I_hP_26-30/blob/main/notebooks/261125_funktionen_II/261125_funktionen_II.ipynb"><i class="bi bi-rocket-takeoff"></i>In Colab öffnen</a></li><li><a href="https://mybinder.org/v2/gh/SkriptenMk/I_hP_26-30/main?labpath=notebooks%2F261125_funktionen_II%2F261125_funktionen_II.ipynb"><i class="bi bi-box-arrow-up-right"></i>In Binder öffnen</a></li><li><a href="261125_funktionen_II.ipynb"><i class="bi bi-download"></i>Notebook herunterladen</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content" tabindex="-1">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/261021_listen/261021_listen_loesung.html">Appendices</a></li><li class="breadcrumb-item"><a href="../../notebooks/2611118_funktionen_loesungen/16118_funktionen_loesungen.html"><span class="chapter-number">C</span>&nbsp; <span class="chapter-title">Musterlösungen Funktionen in Python</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="Breadcrumbs"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notebooks/260819_einfuehrung/260819_einfuehrung.html">Einführung</a></li><li class="breadcrumb-item"><a href="../../notebooks/261125_funktionen_II/261125_funktionen_II.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Funktionen in Python: Vorgabewerte</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Appendix C — Musterlösungen Funktionen in Python</h1>
+<h1 class="title"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Funktionen in Python: Vorgabewerte</span></h1>
 </div>
 
 
@@ -318,163 +333,207 @@ window.Quarto = {
 </header>
 
 
-<p>In diesem Notebook finden sich die Musterlösungen zu den Anwendungsübungen aus dem Kapitel «Funktionen in Python». Die Code-Snippets aus den Programmierübungen werden dabei jeweils als Funktion mit Type Hints und Docstring definiert. Ein <strong>Docstring</strong> ist ein Text in dreifachen Anführungszeichen direkt unter der Kopfzeile der Funktion. Er beschreibt, was die Funktion tut, welche Parameter sie erwartet und was sie zurückgibt. Mit <code>help(name_der_funktion)</code> lässt sich dieser Text jederzeit anzeigen.</p>
-<section id="funktion-zur-prüfung-ob-ein-jahr-ein-schaltjahr-ist" class="level2" data-number="C.1">
-<h2 data-number="C.1" class="anchored" data-anchor-id="funktion-zur-prüfung-ob-ein-jahr-ein-schaltjahr-ist"><span class="header-section-number">C.1</span> Funktion zur Prüfung, ob ein Jahr ein Schaltjahr ist</h2>
-<p>Die Prüfungskaskade aus der Programmierübung wird unverändert übernommen. Anstatt das Resultat mit <code>print()</code> auszugeben, gibt die Funktion den Wahrheitswert über <code>return</code> zurück. So kann das Resultat im aufrufenden Code weiterverwendet werden.</p>
-<div id="939d0bfe" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-18T12:44:53.791087Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-18T12:44:53.791003Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-18T12:44:53.793677Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-18T12:44:53.793299Z&quot;}}" data-execution_count="1">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> check_leapyear(year: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Prüft, ob ein Jahr nach dem gregorianischen Kalender ein Schaltjahr ist.</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameter:</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">        year: das zu prüfende Jahr</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Rückgabewert:</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">        True, wenn year ein Schaltjahr ist, sonst False</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Die Reihenfolge der Prüfungen ist entscheidend: Zuerst wird die</span></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># engste Bedingung (teilbar durch 400) geprüft, dann die Ausnahme</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># (teilbar durch 100) und erst zuletzt die Grundregel (teilbar durch 4).</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> year <span class="op">%</span> <span class="dv">400</span> <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Säkularjahre, die durch 400 teilbar sind, sind Schaltjahre (z. B. 2000).</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        is_leapyear <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> year <span class="op">%</span> <span class="dv">100</span> <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Übrige Säkularjahre sind keine Schaltjahre (z. B. 1900).</span></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        is_leapyear <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> year <span class="op">%</span> <span class="dv">4</span> <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Alle anderen durch 4 teilbaren Jahre sind Schaltjahre (z. B. 2024).</span></span>
-<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        is_leapyear <span class="op">=</span> <span class="va">True</span></span>
-<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
-<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Alle übrigen Jahre sind keine Schaltjahre (z. B. 2001).</span></span>
-<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>        is_leapyear <span class="op">=</span> <span class="va">False</span></span>
-<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> is_leapyear</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Gerade bei repetitiven Berechnungen kommt es vor, dass einzelne Parameter einer Formel meistens, aber eben nicht immer, die gleichen Werte aufweisen.</p>
+<p>Als Beispiel soll eine Funktion definiert werden, welche die Fläche eines Kreises berechnet. Standardmässig soll dabei <span class="math inline">\(\pi \approx 3.14\)</span> gerechnet werden. Es soll aber möglich sein, für <span class="math inline">\(\pi\)</span> einen anderen Wert zu verwenden.</p>
+<div id="d2e0dcbd" class="cell" data-execution_count="3">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> math</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> kreisflaeche(radius: <span class="bu">float</span>, pi: <span class="bu">float</span> <span class="op">=</span> <span class="fl">3.14</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Berechne die Fläche eines Kreises.</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Die Fläche wird nach der Formel A = pi * r**2 berechnet. Für die</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Kreiszahl wird standardmässig der Näherungswert 3.14 verwendet.</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    Bei Bedarf kann ein genauerer Wert (z. B. ``math.pi``) oder eine</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">    andere Näherung (z. B. ``22 / 7``) übergeben werden.</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameters</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co">    ----------</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="co">    radius : float</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co">        Der Radius des Kreises. Der Wert sollte nicht negativ sein.</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co">    pi : float, optional</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">        Der Wert, der für die Kreiszahl verwendet wird. Vorgabewert</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a><span class="co">        ist 3.14.</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a><span class="co">    -------</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">    float</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">        Die Fläche des Kreises in der Quadrateinheit des Radius.</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">    Examples</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a><span class="co">    --------</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a><span class="co">    &gt;&gt;&gt; kreisflaeche(2)</span></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="co">    12.56</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="co">    &gt;&gt;&gt; kreisflaeche(2, pi=3.0)</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="co">    12.0</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pi <span class="op">*</span> radius <span class="op">**</span> <span class="dv">2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="3a43cf9e" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-18T12:44:53.794559Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-18T12:44:53.794488Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-18T12:44:53.796514Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-18T12:44:53.796182Z&quot;}}" data-execution_count="2">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test Schaltjahr-Checker</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(check_leapyear(<span class="dv">2001</span>)) <span class="co"># Erwartetes Resultat False</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(check_leapyear(<span class="dv">1900</span>)) <span class="co"># Erwartetes Resultat False</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(check_leapyear(<span class="dv">2000</span>)) <span class="co"># Erwartetes Resultat True</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>Dadurch, dass in der Definition der Funktion <code>kreisflaeche</code> der Variable <code>pi</code> mit <code>= 3.14</code> der Wert 3.14 zugewiesen wird, wird standardmässig dieser Wert verwendet. Wie alle Variablen, kann aber auch <code>pi</code> überschrieben werden.</p>
+<div id="68ae310f" class="cell" data-execution_count="4">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kreisflaeche(<span class="dv">2</span>))                <span class="co"># 12.56            → Vorgabewert 3.14</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kreisflaeche(<span class="dv">2</span>, math.pi))       <span class="co"># 12.566370614...  → exakter Wert</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(kreisflaeche(<span class="dv">2</span>, pi<span class="op">=</span><span class="dv">22</span><span class="op">/</span><span class="dv">7</span>))       <span class="co"># 12.571...        → Näherungsbruch</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>False
-False
-True</code></pre>
+<pre><code>12.56
+12.566370614359172
+12.571428571428571</code></pre>
 </div>
 </div>
-<p>Da die Bedingungen selbst bereits Wahrheitswerte liefern, lässt sich die Funktion auch in einer einzigen Zeile formulieren. Die Lösung oben ist jedoch leichter nachvollziehbar.</p>
-<div id="5f936588" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-18T12:44:53.797714Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-18T12:44:53.797624Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-18T12:44:53.799640Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-18T12:44:53.799260Z&quot;}}" data-execution_count="3">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> check_leapyear_short(year: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Kurzform von check_leapyear mit einem einzigen logischen Ausdruck."""</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Schaltjahr, wenn durch 4, aber nicht durch 100 teilbar –</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># oder wenn durch 400 teilbar.</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> (year <span class="op">%</span> <span class="dv">4</span> <span class="op">==</span> <span class="dv">0</span> <span class="kw">and</span> year <span class="op">%</span> <span class="dv">100</span> <span class="op">!=</span> <span class="dv">0</span>) <span class="kw">or</span> year <span class="op">%</span> <span class="dv">400</span> <span class="op">==</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<p>In den folgenden Übungen soll das vertieft werden.</p>
+<section id="anwendungsübungen" class="level2" data-number="11.1">
+<h2 data-number="11.1" class="anchored" data-anchor-id="anwendungsübungen"><span class="header-section-number">11.1</span> Anwendungsübungen</h2>
+<p>Die folgenden Übungen stammen aus dem Kapitel <strong>Geometrie – Dreiecke</strong> der Formelsammlung <em>Formeln, Tabellen, Begriffe</em> (S. 86–88). Sie kommen ohne <code>import</code> aus: Es werden nur die Grundrechenarten, Potenzen (<code>**</code>) und die eingebaute Funktion <code>round</code> verwendet.</p>
+<p><strong>Hinweise</strong></p>
+<ul>
+<li>Schreiben Sie zu jeder Funktion Typ-Hinweise und einen Docstring nach dem Muster von <code>kreisflaeche</code>.</li>
+<li>Unter jeder Übung steht eine <strong>Kontrollzelle</strong>. Führen Sie sie nach Ihrer Lösung aus: Läuft sie ohne <code>AssertionError</code> durch, stimmen Ihre Funktionen mit den erwarteten Werten überein.</li>
+</ul>
+<section id="teil-a-funktionen-ohne-vorgabewerte" class="level3" data-number="11.1.1">
+<h3 data-number="11.1.1" class="anchored" data-anchor-id="teil-a-funktionen-ohne-vorgabewerte"><span class="header-section-number">11.1.1</span> Teil A: Funktionen ohne Vorgabewerte</h3>
+<p>In den ersten drei Übungen müssen beim Aufruf <strong>alle</strong> Argumente angegeben werden.</p>
+<section id="übung-1-der-fehlende-winkel" class="level4" data-number="11.1.1.1">
+<h4 data-number="11.1.1.1" class="anchored" data-anchor-id="übung-1-der-fehlende-winkel"><span class="header-section-number">11.1.1.1</span> Übung 1: Der fehlende Winkel</h4>
+<p><em>Formelsammlung S. 86 – Winkelsumme</em></p>
+<p>In jedem Dreieck gilt</p>
+<p><span class="math display">\[\alpha + \beta + \gamma = 180° .\]</span></p>
+<p><strong>Aufgabe</strong></p>
+<ol type="1">
+<li>Ergänzen Sie die Funktion <code>dritter_winkel(alpha, beta)</code>, die aus zwei Innenwinkeln (in Grad) den dritten berechnet. Schreiben Sie Typ-Hinweise und einen Docstring wie im Beispiel <code>kreisflaeche</code>.</li>
+<li>Ein Dreieck hat die Winkel <span class="math inline">\(\alpha = 48°\)</span> und <span class="math inline">\(\beta = 77°\)</span>. Wie gross ist <span class="math inline">\(\gamma\)</span>?</li>
+</ol>
+<div id="49d80d4c" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> dritter_winkel(alpha: <span class="bu">float</span>, beta: <span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Berechne den dritten Innenwinkel eines Dreiecks.</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">    ...</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Ihr Code</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="2b74dc62" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-18T12:44:53.800499Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-18T12:44:53.800422Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-18T12:44:53.802426Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-18T12:44:53.802025Z&quot;}}" data-execution_count="4">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test der Kurzform</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(check_leapyear_short(<span class="dv">2001</span>)) <span class="co"># Erwartetes Resultat False</span></span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(check_leapyear_short(<span class="dv">1900</span>)) <span class="co"># Erwartetes Resultat False</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(check_leapyear_short(<span class="dv">2000</span>)) <span class="co"># Erwartetes Resultat True</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>False
-False
-True</code></pre>
-</div>
+<div id="f50d0784" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Kontrolle – diese Zelle sollte ohne Fehlermeldung durchlaufen</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> dritter_winkel(<span class="dv">50</span>, <span class="dv">60</span>) <span class="op">==</span> <span class="dv">70</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> dritter_winkel(<span class="dv">90</span>, <span class="dv">45</span>) <span class="op">==</span> <span class="dv">45</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> dritter_winkel(<span class="dv">48</span>, <span class="dv">77</span>) <span class="op">==</span> <span class="dv">55</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Übung 1: alle Tests bestanden"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="funktion-zur-berechnung-von-n" class="level2" data-number="C.2">
-<h2 data-number="C.2" class="anchored" data-anchor-id="funktion-zur-berechnung-von-n"><span class="header-section-number">C.2</span> Funktion zur Berechnung von <span class="math inline">\(n!\)</span></h2>
-<p>Die <code>for</code>-Schleife aus der Programmierübung wird in die Funktion übernommen. Der Sonderfall <span class="math inline">\(0! = 1\)</span> muss dabei nicht separat behandelt werden: Für <code>n = 0</code> ist <code>range(1, 1)</code> leer, die Schleife wird also kein einziges Mal durchlaufen und <code>f</code> behält den Startwert <code>1</code>.</p>
-<div id="8ef9cc8d" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-18T12:44:53.803180Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-18T12:44:53.803114Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-18T12:44:53.804974Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-18T12:44:53.804610Z&quot;}}" data-execution_count="5">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> factorial(n: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Berechnet die Fakultät n! einer natürlichen Zahl n.</span></span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameter:</span></span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">        n: natürliche Zahl (einschliesslich 0)</span></span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Rückgabewert:</span></span>
-<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">        das Produkt 1 · 2 · ... · n; für n = 0 der Wert 1</span></span>
-<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Startwert 1 ist das neutrale Element der Multiplikation.</span></span>
-<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Gleichzeitig ist damit 0! = 1 bereits abgedeckt.</span></span>
-<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    f <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Multipliziert f nacheinander mit 1, 2, ..., n.</span></span>
-<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    <span class="co"># range(1, n+1) endet vor n+1, enthält also n noch.</span></span>
-<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, n <span class="op">+</span> <span class="dv">1</span>):</span>
-<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        f <span class="op">*=</span> i</span>
-<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> f</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="übung-2-giebelwand" class="level4" data-number="11.1.1.2">
+<h4 data-number="11.1.1.2" class="anchored" data-anchor-id="übung-2-giebelwand"><span class="header-section-number">11.1.1.2</span> Übung 2: Giebelwand</h4>
+<p><em>Formelsammlung S. 87 – Flächeninhalt</em></p>
+<p>Die Giebelwand eines Hauses ist ein Dreieck. Die Breite des Hauses bildet die Grundseite <span class="math inline">\(a\)</span>, die Höhe des Giebels ist <span class="math inline">\(h_a\)</span>. Für die Fläche gilt</p>
+<p><span class="math display">\[A = \frac{1}{2}\,a\,h_a .\]</span></p>
+<p><strong>Aufgabe</strong></p>
+<ol type="1">
+<li>Definieren Sie eine Funktion <code>flaeche_dreieck(a, h_a)</code> mit Typ-Hinweisen und Docstring.</li>
+<li>Die Giebelwand ist 9.6 m breit und 4.5 m hoch. Wie viele m² müssen gestrichen werden?</li>
+</ol>
+<div id="8aa93cfd" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ihre Lösung</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="0efa1ac6" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-18T12:44:53.805656Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-18T12:44:53.805590Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-18T12:44:53.807393Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-18T12:44:53.807019Z&quot;}}" data-execution_count="6">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test für die Berechnung der Fakultäten</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(factorial(<span class="dv">5</span>)) <span class="co"># Erwartetes Resultat 120</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(factorial(<span class="dv">0</span>)) <span class="co"># Erwartetes Resultat 1</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>120
-1</code></pre>
-</div>
+<div id="1c188d11" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Kontrolle</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> flaeche_dreieck(<span class="dv">6</span>, <span class="dv">4</span>) <span class="op">==</span> <span class="dv">12</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> flaeche_dreieck(<span class="dv">5</span>, <span class="dv">3</span>) <span class="op">==</span> <span class="fl">7.5</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> <span class="bu">round</span>(flaeche_dreieck(<span class="fl">9.6</span>, <span class="fl">4.5</span>), <span class="dv">2</span>) <span class="op">==</span> <span class="fl">21.6</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Übung 2: alle Tests bestanden"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-<section id="funktion-zur-kontrolle-der-promotionsbedingungen" class="level2" data-number="C.3">
-<h2 data-number="C.3" class="anchored" data-anchor-id="funktion-zur-kontrolle-der-promotionsbedingungen"><span class="header-section-number">C.3</span> Funktion zur Kontrolle der Promotionsbedingungen</h2>
-<p>Die Notenliste wird der Funktion als Parameter übergeben. Die Funktion prüft die beiden Bedingungen gemäss § 9 des Promotionsreglements und gibt <code>True</code> zurück, wenn die Promotion erfüllt ist, andernfalls <code>False</code>. Der Type Hint <code>list[float]</code> zeigt an, dass eine Liste von Fliesskommazahlen erwartet wird.</p>
-<div id="41b3b971" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-18T12:44:53.808205Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-18T12:44:53.808136Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-18T12:44:53.810344Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-18T12:44:53.809966Z&quot;}}" data-execution_count="7">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> check_term_result(grades: <span class="bu">list</span>[<span class="bu">float</span>]) <span class="op">-&gt;</span> <span class="bu">bool</span>:</span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Prüft, ob die Promotionsbedingungen gemäss § 9 erfüllt sind.</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Parameter:</span></span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co">        grades: Liste mit den Noten aller Promotionsfächer</span></span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Rückgabewert:</span></span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a><span class="co">        True, wenn die Promotionsbedingungen erfüllt sind, sonst False</span></span>
-<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    insufficient <span class="op">=</span> <span class="dv">0</span>    <span class="co"># Anzahl Noten unter 4</span></span>
-<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    minus_points <span class="op">=</span> <span class="dv">0</span>    <span class="co"># Summe der Abweichungen von 4 nach unten</span></span>
-<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    plus_points <span class="op">=</span> <span class="dv">0</span>     <span class="co"># Summe der Abweichungen von 4 nach oben</span></span>
-<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Jede Note wird einzeln mit der Grenze 4 verglichen.</span></span>
-<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> grade <span class="kw">in</span> grades:</span>
-<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> grade <span class="op">&lt;</span> <span class="dv">4</span>:</span>
-<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>            insufficient <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>            minus_points <span class="op">+=</span> <span class="dv">4</span> <span class="op">-</span> grade</span>
-<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>        <span class="cf">elif</span> grade <span class="op">&gt;</span> <span class="dv">4</span>:</span>
-<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>            plus_points <span class="op">+=</span> grade <span class="op">-</span> <span class="dv">4</span></span>
-<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Eine Note von genau 4 verändert keinen der Zähler.</span></span>
-<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Bedingung a: doppelte Minuspunkte nicht grösser als die Pluspunkte</span></span>
-<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>    condition_a <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> minus_points <span class="op">&lt;=</span> plus_points</span>
-<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Bedingung b: höchstens drei ungenügende Noten</span></span>
-<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>    condition_b <span class="op">=</span> insufficient <span class="op">&lt;=</span> <span class="dv">3</span></span>
-<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Beide Bedingungen müssen gleichzeitig erfüllt sein.</span></span>
-<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> condition_a <span class="kw">and</span> condition_b</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<section id="übung-3-diagonalstrebe-eines-gartentors" class="level4" data-number="11.1.1.3">
+<h4 data-number="11.1.1.3" class="anchored" data-anchor-id="übung-3-diagonalstrebe-eines-gartentors"><span class="header-section-number">11.1.1.3</span> Übung 3: Diagonalstrebe eines Gartentors</h4>
+<p><em>Formelsammlung S. 88 – Satz von Pythagoras</em></p>
+<p>Ein rechteckiges Gartentor soll mit einer diagonalen Strebe verstärkt werden. Die Strebe bildet mit der Breite <span class="math inline">\(a\)</span> und der Höhe <span class="math inline">\(b\)</span> des Tors ein rechtwinkliges Dreieck; sie selbst ist die Hypotenuse <span class="math inline">\(c\)</span>:</p>
+<p><span class="math display">\[a^2 + b^2 = c^2 \qquad\Rightarrow\qquad c = \sqrt{a^2 + b^2} .\]</span></p>
+<p><em>Hinweis:</em> Für die Quadratwurzel braucht es keine Bibliothek, denn <span class="math inline">\(\sqrt{x} = x^{0.5}\)</span>. In Python schreibt man <code>x ** 0.5</code>.</p>
+<p><strong>Aufgabe</strong></p>
+<ol type="1">
+<li>Definieren Sie eine Funktion <code>hypotenuse(a, b)</code> mit Typ-Hinweisen und Docstring.</li>
+<li>Das Tor ist 1.2 m breit und 1.6 m hoch. Wie lang muss die Strebe sein?</li>
+</ol>
+<div id="ee330d60" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ihre Lösung</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<div id="53f99c13" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-18T12:44:53.811113Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-18T12:44:53.811046Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-18T12:44:53.813081Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-18T12:44:53.812745Z&quot;}}" data-execution_count="8">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Test der Promotionsbedingungen</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># faecher = ['D', 'F', 'E', 'M', 'NT', 'WR', 'G', 'GG', 'MB', 'I']</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(check_term_result([<span class="fl">3.5</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="fl">4.5</span>, <span class="fl">4.5</span>, <span class="fl">4.5</span>, <span class="dv">5</span>, <span class="fl">3.5</span>]))   <span class="co"># Erwartetes Resultat False</span></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(check_term_result([<span class="fl">3.5</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="fl">3.5</span>, <span class="dv">4</span>, <span class="fl">4.5</span>, <span class="dv">5</span>, <span class="fl">4.5</span>, <span class="dv">5</span>, <span class="fl">4.5</span>]))   <span class="co"># Erwartetes Resultat True</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(check_term_result([<span class="fl">3.5</span>, <span class="fl">3.5</span>, <span class="fl">3.5</span>, <span class="fl">3.5</span>, <span class="dv">6</span>, <span class="dv">6</span>, <span class="dv">6</span>, <span class="dv">6</span>, <span class="dv">6</span>, <span class="dv">6</span>]))     <span class="co"># Erwartetes Resultat False</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>False
-True
-False</code></pre>
+<div id="8ca2c287" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Kontrolle</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> hypotenuse(<span class="dv">3</span>, <span class="dv">4</span>) <span class="op">==</span> <span class="dv">5</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> hypotenuse(<span class="dv">5</span>, <span class="dv">12</span>) <span class="op">==</span> <span class="dv">13</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> <span class="bu">round</span>(hypotenuse(<span class="fl">1.2</span>, <span class="fl">1.6</span>), <span class="dv">6</span>) <span class="op">==</span> <span class="dv">2</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Übung 3: alle Tests bestanden"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section>
+</section>
+<section id="teil-b-funktionen-mit-vorgabewerten" class="level3" data-number="11.1.2">
+<h3 data-number="11.1.2" class="anchored" data-anchor-id="teil-b-funktionen-mit-vorgabewerten"><span class="header-section-number">11.1.2</span> Teil B: Funktionen mit Vorgabewerten</h3>
+<p>In den folgenden drei Übungen werden die Funktionen aus Teil A um einen Parameter mit Vorgabewert erweitert. Wird das Argument beim Aufruf weggelassen, verhält sich die Funktion so, wie es im häufigsten Fall gewünscht ist.</p>
+<section id="übung-4-winkel-in-grad-oder-gon" class="level4" data-number="11.1.2.1">
+<h4 data-number="11.1.2.1" class="anchored" data-anchor-id="übung-4-winkel-in-grad-oder-gon"><span class="header-section-number">11.1.2.1</span> Übung 4: Winkel in Grad oder Gon</h4>
+<p><em>Formelsammlung S. 86 – Winkelsumme</em></p>
+<p>In der Schweizer Vermessung werden Winkel oft in <strong>Gon</strong> angegeben: Ein voller Kreis hat 400 gon, die Winkelsumme im Dreieck beträgt deshalb 200 gon statt 180°.</p>
+<p><strong>Aufgabe</strong></p>
+<ol type="1">
+<li>Erweitern Sie die Funktion aus Übung 1 zu <code>dritter_winkel(alpha, beta, winkelsumme=180)</code>. Wird <code>winkelsumme</code> weggelassen, rechnet die Funktion wie bisher in Grad. Passen Sie auch den Docstring an.</li>
+<li>Ein Vermessungsteam misst <span class="math inline">\(\alpha = 62\)</span> gon und <span class="math inline">\(\beta = 85\)</span> gon. Wie gross ist <span class="math inline">\(\gamma\)</span>?</li>
+<li>Warum ist 180 ein sinnvoller Vorgabewert?</li>
+</ol>
+<div id="316b67e6" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ihre Lösung</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<p>Weil die Funktion einen Wahrheitswert zurückgibt, kann sie direkt in einer <code>if</code>-Anweisung verwendet werden:</p>
-<div id="aeb19f68" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;execution&quot;,&quot;value&quot;:{&quot;iopub.execute_input&quot;:&quot;2026-11-18T12:44:53.814318Z&quot;,&quot;iopub.status.busy&quot;:&quot;2026-11-18T12:44:53.814210Z&quot;,&quot;iopub.status.idle&quot;:&quot;2026-11-18T12:44:53.816364Z&quot;,&quot;shell.execute_reply&quot;:&quot;2026-11-18T12:44:53.815982Z&quot;}}" data-execution_count="9">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>noten <span class="op">=</span> [<span class="fl">3.5</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="fl">3.5</span>, <span class="dv">4</span>, <span class="fl">4.5</span>, <span class="dv">5</span>, <span class="fl">4.5</span>, <span class="dv">5</span>, <span class="fl">4.5</span>]</span>
-<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> check_term_result(noten):</span>
-<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Die Promotionsbedingungen sind erfüllt.'</span>)</span>
-<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
-<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">'Die Promotionsbedingungen sind nicht erfüllt.'</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Die Promotionsbedingungen sind erfüllt.</code></pre>
+<div id="b783f5b7" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Kontrolle</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> dritter_winkel(<span class="dv">50</span>, <span class="dv">60</span>) <span class="op">==</span> <span class="dv">70</span>              <span class="co"># Vorgabewert: Grad</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> dritter_winkel(<span class="dv">50</span>, <span class="dv">60</span>, winkelsumme<span class="op">=</span><span class="dv">200</span>) <span class="op">==</span> <span class="dv">90</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> dritter_winkel(<span class="dv">50</span>, <span class="dv">60</span>, <span class="dv">200</span>) <span class="op">==</span> <span class="dv">90</span>         <span class="co"># auch als Positionsargument</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> dritter_winkel(<span class="dv">62</span>, <span class="dv">85</span>, winkelsumme<span class="op">=</span><span class="dv">200</span>) <span class="op">==</span> <span class="dv">53</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Übung 4: alle Tests bestanden"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</section>
+<section id="übung-5-vom-plan-zur-wirklichkeit" class="level4" data-number="11.1.2.2">
+<h4 data-number="11.1.2.2" class="anchored" data-anchor-id="übung-5-vom-plan-zur-wirklichkeit"><span class="header-section-number">11.1.2.2</span> Übung 5: Vom Plan zur Wirklichkeit</h4>
+<p><em>Formelsammlung S. 87 – Flächeninhalt; S. 88 – Ähnlichkeitssätze</em></p>
+<p>Auf einem Bauplan im Massstab 1 : 100 misst man die Grundseite und die Höhe einer dreieckigen Giebelwand in <strong>Zentimetern</strong>. Die reale Wand ist zum Dreieck auf dem Plan ähnlich: Alle Längen sind um den Faktor 100 grösser.</p>
+<p><strong>Aufgabe</strong></p>
+<ol type="1">
+<li>Definieren Sie eine Funktion <code>reale_flaeche(a, h_a, massstab=100)</code>. Die Längen werden in cm auf dem Plan übergeben, das Resultat soll die reale Fläche in <strong>m²</strong> sein. Verwenden Sie Ihre Funktion <code>flaeche_dreieck</code> aus Übung 2. <em>Hinweis:</em> 1 m² = 10 000 cm².</li>
+<li>Auf dem Plan ist die Giebelwand 9.6 cm breit und 4.5 cm hoch. Wie gross ist die reale Fläche? Wie gross wäre sie bei einem Plan im Massstab 1 : 50?</li>
+<li>Um welchen Faktor ändert sich die Fläche, wenn der Massstab halbiert wird (1 : 50 statt 1 : 100)? Begründen Sie mit den Ähnlichkeitssätzen.</li>
+</ol>
+<div id="7bb9b5ab" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ihre Lösung</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="c542e5a1" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Kontrolle</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> reale_flaeche(<span class="dv">6</span>, <span class="dv">4</span>) <span class="op">==</span> <span class="dv">12</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> reale_flaeche(<span class="dv">6</span>, <span class="dv">4</span>, massstab<span class="op">=</span><span class="dv">50</span>) <span class="op">==</span> <span class="dv">3</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> <span class="bu">round</span>(reale_flaeche(<span class="fl">9.6</span>, <span class="fl">4.5</span>), <span class="dv">2</span>) <span class="op">==</span> <span class="fl">21.6</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> <span class="bu">round</span>(reale_flaeche(<span class="fl">9.6</span>, <span class="fl">4.5</span>, <span class="dv">50</span>), <span class="dv">2</span>) <span class="op">==</span> <span class="fl">5.4</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Übung 5: alle Tests bestanden"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="übung-6-gerundete-strebenlänge" class="level4" data-number="11.1.2.3">
+<h4 data-number="11.1.2.3" class="anchored" data-anchor-id="übung-6-gerundete-strebenlänge"><span class="header-section-number">11.1.2.3</span> Übung 6: Gerundete Strebenlänge</h4>
+<p><em>Formelsammlung S. 88 – Satz von Pythagoras</em></p>
+<p>Für die Werkstatt genügt es, die Länge der Strebe aus Übung 3 auf Millimeter genau anzugeben, also auf <strong>drei Nachkommastellen</strong> in Metern. Manchmal wird aber eine andere Genauigkeit gewünscht.</p>
+<p><em>Hinweis:</em> Die eingebaute Funktion <code>round(zahl, stellen)</code> rundet auf die gewünschte Anzahl Nachkommastellen, z. B. <code>round(2.71828, 2)</code> → <code>2.72</code>.</p>
+<p><strong>Aufgabe</strong></p>
+<ol type="1">
+<li>Erweitern Sie die Funktion aus Übung 3 zu <code>hypotenuse(a, b, nachkommastellen=3)</code>, die das Resultat rundet.</li>
+<li>Ein Tor ist 1.15 m breit und 1.8 m hoch. Geben Sie die Strebenlänge einmal mit dem Vorgabewert und einmal auf Zentimeter genau an.</li>
+</ol>
+<div id="94c7ebd4" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Ihre Lösung</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div id="e12bc95c" class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Kontrolle</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> hypotenuse(<span class="dv">3</span>, <span class="dv">4</span>) <span class="op">==</span> <span class="dv">5</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> hypotenuse(<span class="dv">1</span>, <span class="dv">1</span>) <span class="op">==</span> <span class="fl">1.414</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> hypotenuse(<span class="dv">1</span>, <span class="dv">1</span>, nachkommastellen<span class="op">=</span><span class="dv">1</span>) <span class="op">==</span> <span class="fl">1.4</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> hypotenuse(<span class="fl">1.15</span>, <span class="fl">1.8</span>) <span class="op">==</span> <span class="fl">2.136</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="cf">assert</span> hypotenuse(<span class="fl">1.15</span>, <span class="fl">1.8</span>, <span class="dv">2</span>) <span class="op">==</span> <span class="fl">2.14</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Übung 6: alle Tests bestanden"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -956,11 +1015,14 @@ False</code></pre>
   </script>
 <nav class="page-navigation" aria-label="Page">
   <div class="nav-page nav-page-previous">
-      <a href="../../notebooks/261104_loesungen/261104_loesungen.html" class="pagination-link" aria-label="Programmierübungen">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">B</span>&nbsp; <span class="chapter-title">Programmierübungen</span></span>
+      <a href="../../notebooks/261118_funktionen/261118_funktionen.html" class="pagination-link" aria-label="Funktionen in Python">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">10</span>&nbsp; <span class="chapter-title">Funktionen in Python</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="../../notebooks/261021_listen/261021_listen_loesung.html" class="pagination-link" aria-label="Datenstrukturen: Python-Listen (Musterlösung)">
+        <span class="nav-page-text"><span class="chapter-number">A</span>&nbsp; <span class="chapter-title">Datenstrukturen: Python-Listen (Musterlösung)</span></span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
